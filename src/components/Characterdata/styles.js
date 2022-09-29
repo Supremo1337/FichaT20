@@ -171,6 +171,6 @@ export const GroupStates = styled.div`
 export const ProgressBar = styled.div`
   width: 100%;
   height: 30%;
-  background: red;
+  background: blue;
   border-radius: 5px;
 `;
