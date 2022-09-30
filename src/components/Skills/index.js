@@ -1,6 +1,18 @@
-import { Content, SkillsTitleandValue, SkillsText, SkillsRow } from "./styles";
+import {
+  Content,
+  SkillsTitleandValue,
+  SkillsText,
+  SkillsRow,
+  CheckSkills,
+  InputSkills,
+  NameSkills,
+  NameCheckGroup,
+  InputSkillsGroup,
+  InputSkillsTotal,
+} from "./styles";
 import { AttributeTitle } from "../Attribute/styles";
 import { TextDiv } from "../Characterdata/styles";
+import OpenWithIcon from "@mui/icons-material/OpenWith";
 
 export default function Skills() {
   return (
@@ -14,8 +26,551 @@ export default function Skills() {
         <SkillsText fontSize={"10px"}>Outros</SkillsText>
       </SkillsTitleandValue>
       <SkillsRow>
-        <SkillsText fontSize={"14px"}>Acrobacia</SkillsText>
+        <NameCheckGroup>
+          <CheckSkills type="checkbox"></CheckSkills>
+          <NameSkills fontSize={"12px"}>
+            Acrobacia<OpenWithIcon sx={{ fontSize: 10 }}></OpenWithIcon>
+          </NameSkills>
+        </NameCheckGroup>
+        <InputSkillsGroup>
+          <InputSkillsTotal right={"5px"}></InputSkillsTotal>
+          <label style={{ position: "relative", right: "7px" }}>=</label>
+          <InputSkills right={"13px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"13px"}></InputSkills>
+        </InputSkillsGroup>
       </SkillsRow>
+      {/* Space */}
+      <SkillsRow>
+        <NameCheckGroup>
+          <CheckSkills type="checkbox"></CheckSkills>
+          <NameSkills fontSize={"12px"}>Adestramento*</NameSkills>
+        </NameCheckGroup>
+        <InputSkillsGroup>
+          <InputSkillsTotal right={"5px"}></InputSkillsTotal>
+          <label style={{ position: "relative", right: "7px" }}>=</label>
+          <InputSkills right={"13px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"13px"}></InputSkills>
+        </InputSkillsGroup>
+      </SkillsRow>
+      {/* Space */}
+      <SkillsRow>
+        <NameCheckGroup>
+          <CheckSkills type="checkbox"></CheckSkills>
+          <NameSkills fontSize={"12px"}>Atlestismo</NameSkills>
+        </NameCheckGroup>
+        <InputSkillsGroup>
+          <InputSkillsTotal right={"5px"}></InputSkillsTotal>
+          <label style={{ position: "relative", right: "7px" }}>=</label>
+          <InputSkills right={"13px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"13px"}></InputSkills>
+        </InputSkillsGroup>
+      </SkillsRow>
+      {/* Space */}
+      <SkillsRow>
+        <NameCheckGroup>
+          <CheckSkills type="checkbox"></CheckSkills>
+          <NameSkills fontSize={"12px"}>Atuação</NameSkills>
+        </NameCheckGroup>
+        <InputSkillsGroup>
+          <InputSkillsTotal right={"5px"}></InputSkillsTotal>
+          <label style={{ position: "relative", right: "7px" }}>=</label>
+          <InputSkills right={"13px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"13px"}></InputSkills>
+        </InputSkillsGroup>
+      </SkillsRow>
+      {/* Space */}
+      <SkillsRow>
+        <NameCheckGroup>
+          <CheckSkills type="checkbox"></CheckSkills>
+          <NameSkills fontSize={"12px"}>Cavalgar</NameSkills>
+        </NameCheckGroup>
+        <InputSkillsGroup>
+          <InputSkillsTotal right={"5px"}></InputSkillsTotal>
+          <label style={{ position: "relative", right: "7px" }}>=</label>
+          <InputSkills right={"13px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"13px"}></InputSkills>
+        </InputSkillsGroup>
+      </SkillsRow>
+      {/* Space */}
+      <SkillsRow>
+        <NameCheckGroup>
+          <CheckSkills type="checkbox"></CheckSkills>
+          <NameSkills fontSize={"12px"}>Conhecimento</NameSkills>
+        </NameCheckGroup>
+        <InputSkillsGroup>
+          <InputSkillsTotal right={"5px"}></InputSkillsTotal>
+          <label style={{ position: "relative", right: "7px" }}>=</label>
+          <InputSkills right={"13px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"13px"}></InputSkills>
+        </InputSkillsGroup>
+      </SkillsRow>
+      {/* Space */}
+      <SkillsRow>
+        <NameCheckGroup>
+          <CheckSkills type="checkbox"></CheckSkills>
+          <NameSkills fontSize={"12px"}>Cura</NameSkills>
+        </NameCheckGroup>
+        <InputSkillsGroup>
+          <InputSkillsTotal right={"5px"}></InputSkillsTotal>
+          <label style={{ position: "relative", right: "7px" }}>=</label>
+          <InputSkills right={"13px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"13px"}></InputSkills>
+        </InputSkillsGroup>
+      </SkillsRow>
+      {/* Space */}
+      <SkillsRow>
+        <NameCheckGroup>
+          <CheckSkills type="checkbox"></CheckSkills>
+          <NameSkills fontSize={"12px"}>Diplomacia</NameSkills>
+        </NameCheckGroup>
+        <InputSkillsGroup>
+          <InputSkillsTotal right={"5px"}></InputSkillsTotal>
+          <label style={{ position: "relative", right: "7px" }}>=</label>
+          <InputSkills right={"13px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"13px"}></InputSkills>
+        </InputSkillsGroup>
+      </SkillsRow>
+      {/* Space */}
+      <SkillsRow>
+        <NameCheckGroup>
+          <CheckSkills type="checkbox"></CheckSkills>
+          <NameSkills fontSize={"12px"}>Enganação</NameSkills>
+        </NameCheckGroup>
+        <InputSkillsGroup>
+          <InputSkillsTotal right={"5px"}></InputSkillsTotal>
+          <label style={{ position: "relative", right: "7px" }}>=</label>
+          <InputSkills right={"13px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"13px"}></InputSkills>
+        </InputSkillsGroup>
+      </SkillsRow>
+      {/* Space */}
+      <SkillsRow>
+        <NameCheckGroup>
+          <CheckSkills type="checkbox"></CheckSkills>
+          <NameSkills fontSize={"12px"}>Fortitude</NameSkills>
+        </NameCheckGroup>
+        <InputSkillsGroup>
+          <InputSkillsTotal right={"5px"}></InputSkillsTotal>
+          <label style={{ position: "relative", right: "7px" }}>=</label>
+          <InputSkills right={"13px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"13px"}></InputSkills>
+        </InputSkillsGroup>
+      </SkillsRow>
+      {/* Space */}
+      <SkillsRow>
+        <NameCheckGroup>
+          <CheckSkills type="checkbox"></CheckSkills>
+          <NameSkills fontSize={"12px"}>
+            Furtividade<OpenWithIcon sx={{ fontSize: 10 }}></OpenWithIcon>
+          </NameSkills>
+        </NameCheckGroup>
+        <InputSkillsGroup>
+          <InputSkillsTotal right={"5px"}></InputSkillsTotal>
+          <label style={{ position: "relative", right: "7px" }}>=</label>
+          <InputSkills right={"13px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"13px"}></InputSkills>
+        </InputSkillsGroup>
+      </SkillsRow>
+      {/* Space */}
+      <SkillsRow>
+        <NameCheckGroup>
+          <CheckSkills type="checkbox"></CheckSkills>
+          <NameSkills fontSize={"12px"}>Guerra</NameSkills>
+        </NameCheckGroup>
+        <InputSkillsGroup>
+          <InputSkillsTotal right={"5px"}></InputSkillsTotal>
+          <label style={{ position: "relative", right: "7px" }}>=</label>
+          <InputSkills right={"13px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"13px"}></InputSkills>
+        </InputSkillsGroup>
+      </SkillsRow>
+      {/* Space */}
+      <SkillsRow>
+        <NameCheckGroup>
+          <CheckSkills type="checkbox"></CheckSkills>
+          <NameSkills fontSize={"12px"}>Iniciativa</NameSkills>
+        </NameCheckGroup>
+        <InputSkillsGroup>
+          <InputSkillsTotal right={"5px"}></InputSkillsTotal>
+          <label style={{ position: "relative", right: "7px" }}>=</label>
+          <InputSkills right={"13px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"13px"}></InputSkills>
+        </InputSkillsGroup>
+      </SkillsRow>
+      {/* Space */}
+      <SkillsRow>
+        <NameCheckGroup>
+          <CheckSkills type="checkbox"></CheckSkills>
+          <NameSkills fontSize={"12px"}>Intimidação</NameSkills>
+        </NameCheckGroup>
+        <InputSkillsGroup>
+          <InputSkillsTotal right={"5px"}></InputSkillsTotal>
+          <label style={{ position: "relative", right: "7px" }}>=</label>
+          <InputSkills right={"13px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"13px"}></InputSkills>
+        </InputSkillsGroup>
+      </SkillsRow>
+      {/* Space */}
+      <SkillsRow>
+        <NameCheckGroup>
+          <CheckSkills type="checkbox"></CheckSkills>
+          <NameSkills fontSize={"12px"}>Intuição</NameSkills>
+        </NameCheckGroup>
+        <InputSkillsGroup>
+          <InputSkillsTotal right={"5px"}></InputSkillsTotal>
+          <label style={{ position: "relative", right: "7px" }}>=</label>
+          <InputSkills right={"13px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"13px"}></InputSkills>
+        </InputSkillsGroup>
+      </SkillsRow>
+      {/* Space */}
+      <SkillsRow>
+        <NameCheckGroup>
+          <CheckSkills type="checkbox"></CheckSkills>
+          <NameSkills fontSize={"12px"}>Investigação</NameSkills>
+        </NameCheckGroup>
+        <InputSkillsGroup>
+          <InputSkillsTotal right={"5px"}></InputSkillsTotal>
+          <label style={{ position: "relative", right: "7px" }}>=</label>
+          <InputSkills right={"13px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"13px"}></InputSkills>
+        </InputSkillsGroup>
+      </SkillsRow>
+      {/* Space */}
+      <SkillsRow>
+        <NameCheckGroup>
+          <CheckSkills type="checkbox"></CheckSkills>
+          <NameSkills fontSize={"12px"}>Jogatina*</NameSkills>
+        </NameCheckGroup>
+        <InputSkillsGroup>
+          <InputSkillsTotal right={"5px"}></InputSkillsTotal>
+          <label style={{ position: "relative", right: "7px" }}>=</label>
+          <InputSkills right={"13px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"13px"}></InputSkills>
+        </InputSkillsGroup>
+      </SkillsRow>
+      {/* Space */}
+      <SkillsRow>
+        <NameCheckGroup>
+          <CheckSkills type="checkbox"></CheckSkills>
+          <NameSkills fontSize={"12px"}>
+            Ladinagem*<OpenWithIcon sx={{ fontSize: 10 }}></OpenWithIcon>
+          </NameSkills>
+        </NameCheckGroup>
+        <InputSkillsGroup>
+          <InputSkillsTotal right={"5px"}></InputSkillsTotal>
+          <label style={{ position: "relative", right: "7px" }}>=</label>
+          <InputSkills right={"13px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"13px"}></InputSkills>
+        </InputSkillsGroup>
+      </SkillsRow>
+      {/* Space */}
+      <SkillsRow>
+        <NameCheckGroup>
+          <CheckSkills type="checkbox"></CheckSkills>
+          <NameSkills fontSize={"12px"}>Luta</NameSkills>
+        </NameCheckGroup>
+        <InputSkillsGroup>
+          <InputSkillsTotal right={"5px"}></InputSkillsTotal>
+          <label style={{ position: "relative", right: "7px" }}>=</label>
+          <InputSkills right={"13px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"13px"}></InputSkills>
+        </InputSkillsGroup>
+      </SkillsRow>
+      {/* Space */}
+      <SkillsRow>
+        <NameCheckGroup>
+          <CheckSkills type="checkbox"></CheckSkills>
+          <NameSkills fontSize={"12px"}>Misticismo*</NameSkills>
+        </NameCheckGroup>
+        <InputSkillsGroup>
+          <InputSkillsTotal right={"5px"}></InputSkillsTotal>
+          <label style={{ position: "relative", right: "7px" }}>=</label>
+          <InputSkills right={"13px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"13px"}></InputSkills>
+        </InputSkillsGroup>
+      </SkillsRow>
+      {/* Space */}
+      <SkillsRow>
+        <NameCheckGroup>
+          <CheckSkills type="checkbox"></CheckSkills>
+          <NameSkills fontSize={"12px"}>Nobreza*</NameSkills>
+        </NameCheckGroup>
+        <InputSkillsGroup>
+          <InputSkillsTotal right={"5px"}></InputSkillsTotal>
+          <label style={{ position: "relative", right: "7px" }}>=</label>
+          <InputSkills right={"13px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"13px"}></InputSkills>
+        </InputSkillsGroup>
+      </SkillsRow>
+      {/* Space */}
+      <SkillsRow>
+        <NameCheckGroup>
+          <CheckSkills type="checkbox"></CheckSkills>
+          <NameSkills fontSize={"12px"}>Ofício(_____)*</NameSkills>
+        </NameCheckGroup>
+        <InputSkillsGroup>
+          <InputSkillsTotal right={"5px"}></InputSkillsTotal>
+          <label style={{ position: "relative", right: "7px" }}>=</label>
+          <InputSkills right={"13px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"13px"}></InputSkills>
+        </InputSkillsGroup>
+      </SkillsRow>
+      {/* Space */}
+      <SkillsRow>
+        <NameCheckGroup>
+          <CheckSkills type="checkbox"></CheckSkills>
+          <NameSkills fontSize={"12px"}>Ofício(_____)*</NameSkills>
+        </NameCheckGroup>
+        <InputSkillsGroup>
+          <InputSkillsTotal right={"5px"}></InputSkillsTotal>
+          <label style={{ position: "relative", right: "7px" }}>=</label>
+          <InputSkills right={"13px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"13px"}></InputSkills>
+        </InputSkillsGroup>
+      </SkillsRow>
+      {/* Space */}
+      <SkillsRow>
+        <NameCheckGroup>
+          <CheckSkills type="checkbox"></CheckSkills>
+          <NameSkills fontSize={"12px"}>Percepção</NameSkills>
+        </NameCheckGroup>
+        <InputSkillsGroup>
+          <InputSkillsTotal right={"5px"}></InputSkillsTotal>
+          <label style={{ position: "relative", right: "7px" }}>=</label>
+          <InputSkills right={"13px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"13px"}></InputSkills>
+        </InputSkillsGroup>
+      </SkillsRow>
+      {/* Space */}
+      <SkillsRow>
+        <NameCheckGroup>
+          <CheckSkills type="checkbox"></CheckSkills>
+          <NameSkills fontSize={"12px"}>Pilotagem*</NameSkills>
+        </NameCheckGroup>
+        <InputSkillsGroup>
+          <InputSkillsTotal right={"5px"}></InputSkillsTotal>
+          <label style={{ position: "relative", right: "7px" }}>=</label>
+          <InputSkills right={"13px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"13px"}></InputSkills>
+        </InputSkillsGroup>
+      </SkillsRow>
+      {/* Space */}
+      <SkillsRow>
+        <NameCheckGroup>
+          <CheckSkills type="checkbox"></CheckSkills>
+          <NameSkills fontSize={"12px"}>Pontaria</NameSkills>
+        </NameCheckGroup>
+        <InputSkillsGroup>
+          <InputSkillsTotal right={"5px"}></InputSkillsTotal>
+          <label style={{ position: "relative", right: "7px" }}>=</label>
+          <InputSkills right={"13px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"13px"}></InputSkills>
+        </InputSkillsGroup>
+      </SkillsRow>
+      {/* Space */}
+      <SkillsRow>
+        <NameCheckGroup>
+          <CheckSkills type="checkbox"></CheckSkills>
+          <NameSkills fontSize={"12px"}>Reflexos</NameSkills>
+        </NameCheckGroup>
+        <InputSkillsGroup>
+          <InputSkillsTotal right={"5px"}></InputSkillsTotal>
+          <label style={{ position: "relative", right: "7px" }}>=</label>
+          <InputSkills right={"13px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"13px"}></InputSkills>
+        </InputSkillsGroup>
+      </SkillsRow>
+      {/* Space */}
+      <SkillsRow>
+        <NameCheckGroup>
+          <CheckSkills type="checkbox"></CheckSkills>
+          <NameSkills fontSize={"12px"}>Religião*</NameSkills>
+        </NameCheckGroup>
+        <InputSkillsGroup>
+          <InputSkillsTotal right={"5px"}></InputSkillsTotal>
+          <label style={{ position: "relative", right: "7px" }}>=</label>
+          <InputSkills right={"13px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"13px"}></InputSkills>
+        </InputSkillsGroup>
+      </SkillsRow>
+      {/* Space */}
+      <SkillsRow>
+        <NameCheckGroup>
+          <CheckSkills type="checkbox"></CheckSkills>
+          <NameSkills fontSize={"12px"}>Sobrevivência</NameSkills>
+        </NameCheckGroup>
+        <InputSkillsGroup>
+          <InputSkillsTotal right={"5px"}></InputSkillsTotal>
+          <label style={{ position: "relative", right: "7px" }}>=</label>
+          <InputSkills right={"13px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"13px"}></InputSkills>
+        </InputSkillsGroup>
+      </SkillsRow>
+      {/* Space */}
+      <SkillsRow>
+        <NameCheckGroup>
+          <CheckSkills type="checkbox"></CheckSkills>
+          <NameSkills fontSize={"12px"}>Vontade</NameSkills>
+        </NameCheckGroup>
+        <InputSkillsGroup>
+          <InputSkillsTotal right={"5px"}></InputSkillsTotal>
+          <label style={{ position: "relative", right: "7px" }}>=</label>
+          <InputSkills right={"13px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"12px"}></InputSkills>
+          <label style={{ position: "relative", right: "12px" }}>+</label>
+          <InputSkills right={"13px"}></InputSkills>
+        </InputSkillsGroup>
+      </SkillsRow>
+      {/* Space */}
     </Content>
   );
 }

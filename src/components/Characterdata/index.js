@@ -54,19 +54,19 @@ export default function Characterdata() {
             <CssTextField
               label="Personagem"
               id="custom-css-outlined-input"
-              defaultValue="Small"
+              defaultValue=""
               size="small"
               />
             <CssTextField
               label="Jogador"
               id="custom-css-outlined-input"
-              defaultValue="Small"
+              defaultValue=""
               size="small"
             />
             <CssTextField
               label="Raça"
               id="custom-css-outlined-input"
-              defaultValue="Small"
+              defaultValue=""
               size="small"
             />
             {/* );
@@ -89,19 +89,19 @@ export default function Characterdata() {
             <CssTextField
               label="Origem"
               id="custom-css-outlined-input"
-              defaultValue="Small"
+              defaultValue=""
               size="small"
             />
             <CssTextField
               label="Classe & Nível"
               id="custom-css-outlined-input"
-              defaultValue="Small"
+              defaultValue=""
               size="small"
             />
             <CssTextField
               label="Divindade"
               id="custom-css-outlined-input"
-              defaultValue="Small"
+              defaultValue=""
               size="small"
             />
             {/* );
