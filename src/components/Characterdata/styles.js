@@ -34,6 +34,10 @@ export const TextDiv = styled.label`
   width: ${(props) => props.width};
   font-size: ${(props) => props.fontSize};
   color: ${(props) => props.color};
+  background: #fff;
+  position: relative;
+  top: ${(props) => props.top};
+  left: ${(props) => props.left};
   //   background: gray;
 `;
 
@@ -80,9 +84,9 @@ export const Box = styled.div`
 `;
 
 export const AttributeTitle = styled.label`
-  width: 40px;
-  margin-left: 10px;
-  border: 2px solid black;
+  width: ${(props) => props.width};
+  margin-left: ${(props) => props.marginLeft};
+  border: ${(props) => props.border};
   text-align: center;
 `;
 
@@ -173,4 +177,30 @@ export const ProgressBar = styled.div`
   height: 30%;
   background: red;
   border-radius: 5px;
+`;
+
+export const Skills = styled.div`
+  width: 25%;
+  height: 900px;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin-left: 10px;
+  padding: 10px;
+`;
+
+export const SkillsTitleandValue = styled.div`
+  width: 100%;
+  height: 30px;
+  background: red;
+  display: flex;
+  justify-content: space-between;
+`;
+
+// Reaproveitarei a label AttributeTitle e TextDiv
+
+export const SkillsText = styled.label`
+  width: 40px;
+  height: 30px;
+  font-size: 10px;
+  background: purple;
 `;

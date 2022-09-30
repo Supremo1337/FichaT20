@@ -20,6 +20,9 @@ import {
   PointsLM,
   ProgressBar,
   GroupStates,
+  Skills,
+  SkillsTitleandValue,
+  SkillsText,
 } from "./styles";
 import { useState } from "react";
 
@@ -48,16 +51,16 @@ export default function Characterdata() {
 
   const Statusmap = [{ title: "Vida" }, { title: "Mana" }];
 
-  const [maxNum1, setMaxNum1] = useState("");
+  const [maxNum, setMaxNum] = useState("");
 
   const Max = (event) => {
     const limit = 3;
-    setMaxNum1(event.target.value.slice(0, limit));
+    setMaxNum(event.target.value.slice(0, limit));
   };
 
-  const [Actualnum, setActualNum] = useState("");
+  const [actualNum, setActualNum] = useState("");
 
-  const Actual = (event) => {
+  const actual = (event) => {
     const limit = 3;
     setActualNum(event.target.value.slice(0, limit));
   };
@@ -69,7 +72,9 @@ export default function Characterdata() {
           {inputs.map((res) => {
             return (
               <BoxPerso>
-                <TextDiv width={"102px"}>{res.title}</TextDiv>
+                <TextDiv width={"102px"} top={"10px"} left={"15px"}>
+                  {res.title}
+                </TextDiv>
                 <NamePerso placeholder={res.placeholder}></NamePerso>
               </BoxPerso>
             );
@@ -79,7 +84,9 @@ export default function Characterdata() {
           {inputs2.map((res) => {
             return (
               <BoxPerso>
-                <TextDiv width={"102px"}>{res.title}</TextDiv>
+                <TextDiv width={"102px"} top={"10px"} left={"15px"}>
+                  {res.title}
+                </TextDiv>
                 <NamePerso placeholder={res.placeholder}></NamePerso>
               </BoxPerso>
             );
@@ -91,7 +98,13 @@ export default function Characterdata() {
           {Boxinputs.map((res) => {
             return (
               <Box>
-                <AttributeTitle>{res.title}</AttributeTitle>
+                <AttributeTitle
+                  width={"40px"}
+                  marginLeft={"10px"}
+                  border={"2px solid black"}
+                >
+                  {res.title}
+                </AttributeTitle>
                 <ModNumber>{res.number}</ModNumber>
                 <AttributeInput placeholder="10" type="number"></AttributeInput>
               </Box>
@@ -102,7 +115,13 @@ export default function Characterdata() {
           {Boxinputs2.map((res) => {
             return (
               <Box>
-                <AttributeTitle>{res.title}</AttributeTitle>
+                <AttributeTitle
+                  width={"40px"}
+                  marginLeft={"10px"}
+                  border={"2px solid black"}
+                >
+                  {res.title}
+                </AttributeTitle>
                 <ModNumber>{res.number}</ModNumber>
                 <AttributeInput placeholder="10" type="number"></AttributeInput>
               </Box>
@@ -119,8 +138,23 @@ export default function Characterdata() {
                 <ButtonsAndInputs>
                   <Buttons></Buttons>
                   <Buttons></Buttons>
-                  <LMInput type="number"></LMInput>/
-                  <PointsLM type="number"></PointsLM>
+                  <LMInput
+                    type="number"
+                    min={maxNum}
+                    max={maxNum}
+                    value={maxNum}
+                    className="slider"
+                    onChange={Max}
+                  ></LMInput>
+                  /
+                  <PointsLM
+                    type="number"
+                    min={actualNum}
+                    max={actualNum}
+                    value={actualNum}
+                    className="slider"
+                    onChange={actual}
+                  ></PointsLM>
                   <Buttons></Buttons>
                   <Buttons></Buttons>
                 </ButtonsAndInputs>
@@ -130,6 +164,16 @@ export default function Characterdata() {
           );
         })}
       </StatusLM>
+      <Skills>
+        <SkillsTitleandValue>
+          <AttributeTitle>PERÍCIAS</AttributeTitle>
+          <TextDiv>Total</TextDiv>
+          <SkillsText>1/2 do Nível</SkillsText>
+          <SkillsText>Mod. de Atributo</SkillsText>
+          <SkillsText>Treino</SkillsText>
+          <SkillsText>Outros</SkillsText>
+        </SkillsTitleandValue>
+      </Skills>
     </Content>
   );
 }
