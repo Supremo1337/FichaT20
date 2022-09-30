@@ -1,11 +1,8 @@
 import { Content, GroupDates, BoxPerso } from "./styles";
 import { alpha, styled } from "@mui/material/styles";
-import InputBase from "@mui/material/InputBase";
 import Box from "@mui/material/Box";
-import InputLabel from "@mui/material/InputLabel";
 import TextField, { TextFieldProps } from "@mui/material/TextField";
-import FormControl from "@mui/material/FormControl";
-import { OutlinedInputProps } from "@mui/material/OutlinedInput";
+
 
 const CssTextField = styled(TextField)({
   "& label.Mui-focused": {

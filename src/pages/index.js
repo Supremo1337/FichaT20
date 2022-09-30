@@ -1,9 +1,9 @@
-import Characterdata from "../src/components/Characterdata";
-import Attribute from "../src/components/Attribute";
+import Characterdata from "../components/Characterdata";
+import Attribute from "../components/Attribute";
 import styled from "styled-components";
-import Lifeandmane from "../src/components/LifeAndMane";
-import Skills from "../src/components/Skills";
-// import FontStyles from "../src/fonts/fontStyles";
+import Lifeandmane from "../components/LifeAndMane";
+import Skills from "../components/Skills";
+// import FontStyles from "../fonts/fontStyles";
 
 const Global = styled.div`
   width: 100%;
