@@ -3,6 +3,7 @@ import Attribute from "../src/components/Attribute";
 import styled from "styled-components";
 import Lifeandmane from "../src/components/LifeAndMane";
 import Skills from "../src/components/Skills";
+// import FontStyles from "../src/fonts/fontStyles";
 
 const Global = styled.div`
   width: 100%;
@@ -10,6 +11,14 @@ const Global = styled.div`
   background: gray;
   display: flex;
 `;
+
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <FontStyles />
+//     <App />
+//   </React.StrictMode>,
+//   document.getElementById("root")
+// );
 
 export default function Home() {
   return (

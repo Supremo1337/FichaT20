@@ -1,6 +1,31 @@
 import { Content, GroupDates, BoxPerso } from "./styles";
+import { alpha, styled } from "@mui/material/styles";
+import InputBase from "@mui/material/InputBase";
 import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
+import InputLabel from "@mui/material/InputLabel";
+import TextField, { TextFieldProps } from "@mui/material/TextField";
+import FormControl from "@mui/material/FormControl";
+import { OutlinedInputProps } from "@mui/material/OutlinedInput";
+
+const CssTextField = styled(TextField)({
+  "& label.Mui-focused": {
+    color: "black",
+  },
+  "& .MuiInput-underline:after": {
+    borderBottomColor: "black",
+  },
+  "& .MuiOutlinedInput-root": {
+    "& fieldset": {
+      borderColor: "black",
+    },
+    "&:hover fieldset": {
+      borderColor: "black",
+    },
+    "&.Mui-focused fieldset": {
+      borderColor: "black",
+    },
+  },
+});
 
 export default function Characterdata() {
   // const inputs = [
@@ -19,81 +44,71 @@ export default function Characterdata() {
       <GroupDates>
         <Box
           component="form"
-          sx={{
-            "& .MuiTextField-root": { m: 1, width: "25ch" },
-          }}
           noValidate
-          autoComplete="off"
+          sx={{
+            display: "grid",
+            gridTemplateColumns: { sm: "1fr 1fr" },
+            "& .MuiTextField-root": { m: 1, width: "40ch" }
+          }}
         >
           <BoxPerso>
             {/* {inputs.map((res) => {
-              return ( */}
-            <TextField
+          return ( */}
+            <CssTextField
               label="Personagem"
-              id="outlined-size-normal"
-              defaultValue=""
+              id="custom-css-outlined-input"
+              defaultValue="Small"
               size="small"
-              color="warning"
-              focused
-            />
-            <TextField
+              />
+            <CssTextField
               label="Jogador"
-              id="outlined-size-normal"
-              defaultValue=""
+              id="custom-css-outlined-input"
+              defaultValue="Small"
               size="small"
-              color="warning"
-              focused
             />
-            <TextField
+            <CssTextField
               label="Raça"
-              id="outlined-size-normal"
-              defaultValue=""
+              id="custom-css-outlined-input"
+              defaultValue="Small"
               size="small"
-              color="warning"
-              focused
             />
             {/* );
-            })} */}
+        })} */}
           </BoxPerso>
         </Box>
         {/* Space */}
         <Box
           component="form"
-          sx={{
-            "& .MuiTextField-root": { m: 1, width: "25ch" },
-          }}
           noValidate
-          autoComplete="off"
+          sx={{
+            display: "grid",
+            gridTemplateColumns: { sm: "1fr 1fr" },
+            "& .MuiTextField-root": { m: 1, width: "40ch" }
+          }}
         >
           <BoxPerso>
             {/* {inputs.map((res) => {
-              return ( */}
-            <TextField
+          return ( */}
+            <CssTextField
               label="Origem"
-              id="outlined-size-normal"
-              defaultValue=""
+              id="custom-css-outlined-input"
+              defaultValue="Small"
               size="small"
-              color="warning"
-              focused
             />
-            <TextField
+            <CssTextField
               label="Classe & Nível"
-              id="outlined-size-normal"
-              defaultValue=""
+              id="custom-css-outlined-input"
+              defaultValue="Small"
               size="small"
-              color="warning"
-              focused
             />
-            <TextField
+            <CssTextField
               label="Divindade"
-              id="outlined-size-normal"
-              defaultValue=""
+              id="custom-css-outlined-input"
+              defaultValue="Small"
               size="small"
-              color="warning"
-              focused
             />
             {/* );
-            })} */}
+        })} */}
           </BoxPerso>
         </Box>
       </GroupDates>

@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
-  width: 26.5%;
+  width: 45%;
   height: 190px;
-  background: red;
+  // background: red;
   display: flex;
   
 `;
@@ -12,7 +12,7 @@ export const GroupDates = styled.div`
   width: 100%;
   height: auto;
   display: flex;
-  background: blue;
+  // background: blue;
   border: 2px solid black;
   border-radius: 10px;
   padding-left: 30px;
@@ -30,7 +30,7 @@ export const Group = styled.div`
 export const BoxPerso = styled.div`
   width: 100%;
   height: auto;
-  background: yellow;
+  // background: yellow;
   display: flex;
   flex-direction: column;
 `;
