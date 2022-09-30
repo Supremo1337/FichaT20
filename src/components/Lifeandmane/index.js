@@ -11,6 +11,7 @@ import {
 import { TextDiv } from "../Characterdata/styles";
 import { useState } from "react";
 
+
 export default function Lifeandmane() {
   const [maxNum, setMaxNum] = useState("");
 
@@ -53,7 +54,37 @@ export default function Lifeandmane() {
             <Buttons></Buttons>
             <Buttons></Buttons>
           </ButtonsAndInputs>
-          <ProgressBar></ProgressBar>
+          <ProgressBar background={"red"}></ProgressBar>
+        </GroupStates>
+      </StatusGroup>
+      {/* Space */}
+      <StatusGroup>
+        <TextDiv color={"#0000ff"}>Mana</TextDiv>
+        <GroupStates>
+          <ButtonsAndInputs>
+            <Buttons></Buttons>
+            <Buttons></Buttons>
+            <LMInput
+              type="number"
+              min={maxNum}
+              max={maxNum}
+              value={maxNum}
+              className="slider"
+              onChange={Max}
+            ></LMInput>
+            /
+            <PointsLM
+              type="number"
+              min={actualNum}
+              max={actualNum}
+              value={actualNum}
+              className="slider"
+              onChange={actual}
+            ></PointsLM>
+            <Buttons></Buttons>
+            <Buttons></Buttons>
+          </ButtonsAndInputs>
+          <ProgressBar background={"blue"}></ProgressBar>
         </GroupStates>
       </StatusGroup>
     </Content>

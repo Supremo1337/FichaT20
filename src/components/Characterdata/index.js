@@ -1,54 +1,102 @@
-import {
-  Content,
-  GroupDates,
-  Group,
-  BoxPerso,
-  TextDiv,
-  NamePerso,
-} from "./styles";
+import { Content, GroupDates, BoxPerso } from "./styles";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
 
 export default function Characterdata() {
-  const inputs = [
-    { title: "Personagem", placeholder: "Nome Do Personagem" },
-    { title: "Jogador", placeholder: "Nome Do Jogador" },
-    { title: "Raça", placeholder: "Raça" },
-  ];
-  const inputs2 = [
-    { title: "Origem", placeholder: "Origem" },
-    { title: "Classe & Nível", placeholder: "Classe e nível" },
-    { title: "Divindade", placeholder: "Divindade" },
-  ];
+  // const inputs = [
+  //   { title: "Personagem" },
+  //   { title: "Jogador" },
+  //   { title: "Raça" },
+  // ];
+  // const inputs2 = [
+  //   { title: "Origem" },
+  //   { title: "Classe & Nível" },
+  //   { title: "Divindade" },
+  // ];
 
   return (
     <Content>
       <GroupDates>
-        <Group>
-          {inputs.map((res) => {
-            return (
-              <BoxPerso>
-                <TextDiv width={"102px"} top={"10px"} left={"15px"}>
-                  {res.title}
-                </TextDiv>
-                <NamePerso placeholder={res.placeholder}></NamePerso>
-              </BoxPerso>
-            );
-          })}
-        </Group>
-        <Group>
-          {inputs2.map((res) => {
-            return (
-              <BoxPerso>
-                <TextDiv width={"102px"} top={"10px"} left={"15px"}>
-                  {res.title}
-                </TextDiv>
-                <NamePerso placeholder={res.placeholder}></NamePerso>
-              </BoxPerso>
-            );
-          })}
-        </Group>
+        <Box
+          component="form"
+          sx={{
+            "& .MuiTextField-root": { m: 1, width: "25ch" },
+          }}
+          noValidate
+          autoComplete="off"
+        >
+          <BoxPerso>
+            {/* {inputs.map((res) => {
+              return ( */}
+            <TextField
+              label="Personagem"
+              id="outlined-size-normal"
+              defaultValue=""
+              size="small"
+              color="warning"
+              focused
+            />
+            <TextField
+              label="Jogador"
+              id="outlined-size-normal"
+              defaultValue=""
+              size="small"
+              color="warning"
+              focused
+            />
+            <TextField
+              label="Raça"
+              id="outlined-size-normal"
+              defaultValue=""
+              size="small"
+              color="warning"
+              focused
+            />
+            {/* );
+            })} */}
+          </BoxPerso>
+        </Box>
+        {/* Space */}
+        <Box
+          component="form"
+          sx={{
+            "& .MuiTextField-root": { m: 1, width: "25ch" },
+          }}
+          noValidate
+          autoComplete="off"
+        >
+          <BoxPerso>
+            {/* {inputs.map((res) => {
+              return ( */}
+            <TextField
+              label="Origem"
+              id="outlined-size-normal"
+              defaultValue=""
+              size="small"
+              color="warning"
+              focused
+            />
+            <TextField
+              label="Classe & Nível"
+              id="outlined-size-normal"
+              defaultValue=""
+              size="small"
+              color="warning"
+              focused
+            />
+            <TextField
+              label="Divindade"
+              id="outlined-size-normal"
+              defaultValue=""
+              size="small"
+              color="warning"
+              focused
+            />
+            {/* );
+            })} */}
+          </BoxPerso>
+        </Box>
       </GroupDates>
-
- 
     </Content>
   );
 }

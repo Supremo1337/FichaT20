@@ -60,6 +60,6 @@ export const GroupStates = styled.div`
 export const ProgressBar = styled.div`
   width: 100%;
   height: 30%;
-  background: red;
+  background: ${(props) =>props.background};
   border-radius: 5px;
 `;

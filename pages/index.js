@@ -7,7 +7,7 @@ import Skills from "../src/components/Skills";
 const Global = styled.div`
   width: 100%;
   height: 900px;
-  background: green;
+  background: gray;
   display: flex;
 `;
 
