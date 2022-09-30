@@ -5,26 +5,7 @@ import {
   BoxPerso,
   TextDiv,
   NamePerso,
-  Logo,
-  Attribute,
-  BoxRow,
-  Box,
-  AttributeTitle,
-  AttributeInput,
-  ModNumber,
-  StatusLM,
-  StatusGroup,
-  ButtonsAndInputs,
-  Buttons,
-  LMInput,
-  PointsLM,
-  ProgressBar,
-  GroupStates,
-  Skills,
-  SkillsTitleandValue,
-  SkillsText,
 } from "./styles";
-import { useState } from "react";
 
 export default function Characterdata() {
   const inputs = [
@@ -37,33 +18,6 @@ export default function Characterdata() {
     { title: "Classe & Nível", placeholder: "Classe e nível" },
     { title: "Divindade", placeholder: "Divindade" },
   ];
-
-  const Boxinputs = [
-    { title: "FOR", number: "0" },
-    { title: "DES", number: "0" },
-    { title: "CON", number: "0" },
-  ];
-  const Boxinputs2 = [
-    { title: "INT", number: "0" },
-    { title: "SAB", number: "0" },
-    { title: "CAR", number: "0" },
-  ];
-
-  const Statusmap = [{ title: "Vida" }, { title: "Mana" }];
-
-  const [maxNum, setMaxNum] = useState("");
-
-  const Max = (event) => {
-    const limit = 3;
-    setMaxNum(event.target.value.slice(0, limit));
-  };
-
-  const [actualNum, setActualNum] = useState("");
-
-  const actual = (event) => {
-    const limit = 3;
-    setActualNum(event.target.value.slice(0, limit));
-  };
 
   return (
     <Content>
@@ -93,87 +47,8 @@ export default function Characterdata() {
           })}
         </Group>
       </GroupDates>
-      <Attribute>
-        <BoxRow>
-          {Boxinputs.map((res) => {
-            return (
-              <Box>
-                <AttributeTitle
-                  width={"40px"}
-                  marginLeft={"10px"}
-                  border={"2px solid black"}
-                >
-                  {res.title}
-                </AttributeTitle>
-                <ModNumber>{res.number}</ModNumber>
-                <AttributeInput placeholder="10" type="number"></AttributeInput>
-              </Box>
-            );
-          })}
-        </BoxRow>
-        <BoxRow>
-          {Boxinputs2.map((res) => {
-            return (
-              <Box>
-                <AttributeTitle
-                  width={"40px"}
-                  marginLeft={"10px"}
-                  border={"2px solid black"}
-                >
-                  {res.title}
-                </AttributeTitle>
-                <ModNumber>{res.number}</ModNumber>
-                <AttributeInput placeholder="10" type="number"></AttributeInput>
-              </Box>
-            );
-          })}
-        </BoxRow>
-      </Attribute>
-      <StatusLM>
-        {Statusmap.map((res) => {
-          return (
-            <StatusGroup>
-              <TextDiv color={"#ff0000"}>{res.title}</TextDiv>
-              <GroupStates>
-                <ButtonsAndInputs>
-                  <Buttons></Buttons>
-                  <Buttons></Buttons>
-                  <LMInput
-                    type="number"
-                    min={maxNum}
-                    max={maxNum}
-                    value={maxNum}
-                    className="slider"
-                    onChange={Max}
-                  ></LMInput>
-                  /
-                  <PointsLM
-                    type="number"
-                    min={actualNum}
-                    max={actualNum}
-                    value={actualNum}
-                    className="slider"
-                    onChange={actual}
-                  ></PointsLM>
-                  <Buttons></Buttons>
-                  <Buttons></Buttons>
-                </ButtonsAndInputs>
-                <ProgressBar></ProgressBar>
-              </GroupStates>
-            </StatusGroup>
-          );
-        })}
-      </StatusLM>
-      <Skills>
-        <SkillsTitleandValue>
-          <AttributeTitle>PERÍCIAS</AttributeTitle>
-          <TextDiv>Total</TextDiv>
-          <SkillsText>1/2 do Nível</SkillsText>
-          <SkillsText>Mod. de Atributo</SkillsText>
-          <SkillsText>Treino</SkillsText>
-          <SkillsText>Outros</SkillsText>
-        </SkillsTitleandValue>
-      </Skills>
+
+ 
     </Content>
   );
 }
