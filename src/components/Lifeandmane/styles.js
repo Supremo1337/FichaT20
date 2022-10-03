@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
-  width: 25%;
+  width: 30%;
   height: 190px;
   background: pink;
   border: 2px solid black;
@@ -15,7 +15,7 @@ export const Content = styled.div`
 export const StatusGroup = styled.div`
   width: 100%;
   height: 50%;
-  background: purple;
+  // background: purple;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -24,7 +24,7 @@ export const StatusGroup = styled.div`
 export const ButtonsAndInputs = styled.div`
   width: 100%;
   height: 30px;
-  background: green;
+  // background: green;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -54,7 +54,7 @@ export const PointsLM = styled.input`
 export const GroupStates = styled.div`
   width: 100%;
   height: 52.5%;
-  background: blue;
+  background: yellow;
 `;
 
 export const ProgressBar = styled.div`

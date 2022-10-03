@@ -1,19 +1,17 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
-  width: 24%;
+  width: 100%;
   height: 955px;
   border: 2px solid black;
   border-radius: 10px;
   margin-left: 10px;
   padding: 10px;
-  margin-right: 20px;
 `;
 
 export const SkillsTitleandValue = styled.div`
   width: 100%;
   height: 35px;
-  background: red;
   display: flex;
   justify-content: space-between;
 `;
@@ -21,20 +19,20 @@ export const SkillsTitleandValue = styled.div`
 // Reaprovei a label "AttributeTitle" e "TextDiv"
 
 export const SkillsText = styled.label`
-  width: 40px;
+  width: ${(props) => props.width};
   height: 100%;
   font-size: ${(props) => props.fontSize};
-  background: purple;
-  padding-top: 7px;
+  padding-top: ${(props) => props.paddingTop};
   display: flex;
-  margin-left: -22px;
-  text-align: top;
+  margin-left: ${(props) => props.marginLeft};
+  position: relative;
+  left: ${(props) => props.left};
+  background: green;
 `;
 
 export const SkillsRow = styled.div`
   width: 100%;
   height: 30px;
-  background: yellow;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,27 +41,23 @@ export const SkillsRow = styled.div`
 export const NameCheckGroup = styled.div`
   display: flex;
   align-items: center;
-  background: red;
 `;
 
 export const CheckSkills = styled.input`
   width: 15px;
   height: 15px;
-  background: red;
 `;
 
 export const NameSkills = styled.label`
   font-size: 10px;
-  background: green;
   padding-top: 7px;
   display: flex;
   text-align: top;
 `;
 
 export const InputSkillsGroup = styled.div`
-  width: 65%;
+  width: 70%;
   height: auto;
-  background: blue;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -80,9 +74,9 @@ export const InputSkillsTotal = styled.input`
 `;
 
 export const InputSkills = styled.input`
-  width: 25px;
-  height: 15px;
-  background: #fff;
+  width: ${(props) => props.width};
+  height:${(props) => props.height};
+  background: none;
   border: 0px;
   border-bottom: 2px solid black;
   position: relative;

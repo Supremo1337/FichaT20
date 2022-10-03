@@ -15,37 +15,75 @@ import { TextDiv } from "../Characterdata/styles";
 import OpenWithIcon from "@mui/icons-material/OpenWith";
 
 export default function Skills() {
+  const Skills = [
+    { title: "Acrobacia", simbolo: "+" },
+    { title: "Adestramento" },
+    { title: "Atletismo" },
+    { title: "Atuação" },
+    { title: "" },
+    { title: "" },
+    { title: "" },
+    { title: "" },
+    { title: "" },
+    { title: "" },
+    { title: "" },
+    { title: "" },
+    { title: "" },
+    { title: "" },
+    { title: "" },
+    { title: "" },
+    { title: "" },
+    { title: "" },
+    { title: "" },
+    { title: "" },
+    { title: "" },
+    { title: "" },
+    { title: "" },
+    { title: "" },
+    { title: "" },
+    { title: "" },
+    { title: "" },
+    { title: "" },
+    { title: "" },
+    { title: "" },
+  ];
+
   return (
     <Content>
       <SkillsTitleandValue>
         <AttributeTitle>PERÍCIAS</AttributeTitle>
         <TextDiv>Total</TextDiv>
-        <SkillsText fontSize={"10px"}>1/2 do Nível</SkillsText>
-        <SkillsText fontSize={"10px"}>Mod. de Atributo</SkillsText>
-        <SkillsText fontSize={"10px"}>Treino</SkillsText>
-        <SkillsText fontSize={"10px"}>Outros</SkillsText>
+        <SkillsText fontSize={"10px"} paddingTop={"7px"} marginLeft={"-22px"} width={"40px"}>1/2 do Nível</SkillsText>
+        <SkillsText fontSize={"10px"} paddingTop={"7px"} marginLeft={"-22px"} width={"40px"}>Mod. de Atributo</SkillsText>
+        <SkillsText fontSize={"10px"} paddingTop={"7px"} marginLeft={"-22px"} width={"30px"}>Treino</SkillsText>
+        <SkillsText fontSize={"10px"} paddingTop={"7px"} marginLeft={"-22px"} width={"30px"}>Outros</SkillsText>
       </SkillsTitleandValue>
-      <SkillsRow>
-        <NameCheckGroup>
-          <CheckSkills type="checkbox"></CheckSkills>
-          <NameSkills fontSize={"12px"}>
-            Acrobacia<OpenWithIcon sx={{ fontSize: 10 }}></OpenWithIcon>
-          </NameSkills>
-        </NameCheckGroup>
-        <InputSkillsGroup>
-          <InputSkillsTotal right={"5px"}></InputSkillsTotal>
-          <label style={{ position: "relative", right: "7px" }}>=</label>
-          <InputSkills right={"13px"}></InputSkills>
-          <label style={{ position: "relative", right: "12px" }}>+</label>
-          <InputSkills right={"12px"}></InputSkills>
-          <label style={{ position: "relative", right: "12px" }}>+</label>
-          <InputSkills right={"12px"}></InputSkills>
-          <label style={{ position: "relative", right: "12px" }}>+</label>
-          <InputSkills right={"13px"}></InputSkills>
-        </InputSkillsGroup>
-      </SkillsRow>
+      {Skills.map((res) => {
+        return (
+          <SkillsRow>
+            <NameCheckGroup>
+              <CheckSkills type="checkbox"></CheckSkills>
+              <NameSkills fontSize={"12px"}>
+                {res.title}
+                {res.simbolo?<OpenWithIcon sx={{ fontSize: 10 }}></OpenWithIcon>:null}
+              </NameSkills>
+            </NameCheckGroup>
+            <InputSkillsGroup>
+              <InputSkillsTotal right={"5px"}></InputSkillsTotal>
+              <label style={{ position: "relative", right: "7px" }}>=</label>
+              <InputSkills width={"25px"} height={"15px"} right={"13px"}></InputSkills>
+              <label style={{ position: "relative", right: "12px" }}>+</label>
+              <InputSkills width={"25px"} height={"15px"} right={"12px"}></InputSkills>
+              <label style={{ position: "relative", right: "12px" }}>+</label>
+              <InputSkills width={"25px"} height={"15px"} right={"12px"}></InputSkills>
+              <label style={{ position: "relative", right: "12px" }}>+</label>
+              <InputSkills width={"25px"} height={"15px"} right={"13px"}></InputSkills>
+            </InputSkillsGroup>
+          </SkillsRow>
+        );
+      })}
       {/* Space */}
-      <SkillsRow>
+      {/* <SkillsRow>
         <NameCheckGroup>
           <CheckSkills type="checkbox"></CheckSkills>
           <NameSkills fontSize={"12px"}>Adestramento*</NameSkills>
@@ -61,9 +99,9 @@ export default function Skills() {
           <label style={{ position: "relative", right: "12px" }}>+</label>
           <InputSkills right={"13px"}></InputSkills>
         </InputSkillsGroup>
-      </SkillsRow>
+      </SkillsRow> */}
       {/* Space */}
-      <SkillsRow>
+      {/* <SkillsRow>
         <NameCheckGroup>
           <CheckSkills type="checkbox"></CheckSkills>
           <NameSkills fontSize={"12px"}>Atlestismo</NameSkills>
@@ -79,9 +117,9 @@ export default function Skills() {
           <label style={{ position: "relative", right: "12px" }}>+</label>
           <InputSkills right={"13px"}></InputSkills>
         </InputSkillsGroup>
-      </SkillsRow>
+      </SkillsRow> */}
       {/* Space */}
-      <SkillsRow>
+      {/* <SkillsRow>
         <NameCheckGroup>
           <CheckSkills type="checkbox"></CheckSkills>
           <NameSkills fontSize={"12px"}>Atuação</NameSkills>
@@ -99,7 +137,7 @@ export default function Skills() {
         </InputSkillsGroup>
       </SkillsRow>
       {/* Space */}
-      <SkillsRow>
+      {/* <SkillsRow>
         <NameCheckGroup>
           <CheckSkills type="checkbox"></CheckSkills>
           <NameSkills fontSize={"12px"}>Cavalgar</NameSkills>
@@ -115,9 +153,9 @@ export default function Skills() {
           <label style={{ position: "relative", right: "12px" }}>+</label>
           <InputSkills right={"13px"}></InputSkills>
         </InputSkillsGroup>
-      </SkillsRow>
+      </SkillsRow> */}
       {/* Space */}
-      <SkillsRow>
+      {/* <SkillsRow>
         <NameCheckGroup>
           <CheckSkills type="checkbox"></CheckSkills>
           <NameSkills fontSize={"12px"}>Conhecimento</NameSkills>
@@ -133,9 +171,9 @@ export default function Skills() {
           <label style={{ position: "relative", right: "12px" }}>+</label>
           <InputSkills right={"13px"}></InputSkills>
         </InputSkillsGroup>
-      </SkillsRow>
+      </SkillsRow> */}
       {/* Space */}
-      <SkillsRow>
+      {/* <SkillsRow>
         <NameCheckGroup>
           <CheckSkills type="checkbox"></CheckSkills>
           <NameSkills fontSize={"12px"}>Cura</NameSkills>
@@ -151,9 +189,9 @@ export default function Skills() {
           <label style={{ position: "relative", right: "12px" }}>+</label>
           <InputSkills right={"13px"}></InputSkills>
         </InputSkillsGroup>
-      </SkillsRow>
+      </SkillsRow> */}
       {/* Space */}
-      <SkillsRow>
+      {/* <SkillsRow>
         <NameCheckGroup>
           <CheckSkills type="checkbox"></CheckSkills>
           <NameSkills fontSize={"12px"}>Diplomacia</NameSkills>
@@ -169,9 +207,9 @@ export default function Skills() {
           <label style={{ position: "relative", right: "12px" }}>+</label>
           <InputSkills right={"13px"}></InputSkills>
         </InputSkillsGroup>
-      </SkillsRow>
+      </SkillsRow> */}
       {/* Space */}
-      <SkillsRow>
+      {/* <SkillsRow>
         <NameCheckGroup>
           <CheckSkills type="checkbox"></CheckSkills>
           <NameSkills fontSize={"12px"}>Enganação</NameSkills>
@@ -187,9 +225,9 @@ export default function Skills() {
           <label style={{ position: "relative", right: "12px" }}>+</label>
           <InputSkills right={"13px"}></InputSkills>
         </InputSkillsGroup>
-      </SkillsRow>
+      </SkillsRow> */}
       {/* Space */}
-      <SkillsRow>
+      {/* <SkillsRow>
         <NameCheckGroup>
           <CheckSkills type="checkbox"></CheckSkills>
           <NameSkills fontSize={"12px"}>Fortitude</NameSkills>
@@ -205,9 +243,9 @@ export default function Skills() {
           <label style={{ position: "relative", right: "12px" }}>+</label>
           <InputSkills right={"13px"}></InputSkills>
         </InputSkillsGroup>
-      </SkillsRow>
+      </SkillsRow> */}
       {/* Space */}
-      <SkillsRow>
+      {/* <SkillsRow>
         <NameCheckGroup>
           <CheckSkills type="checkbox"></CheckSkills>
           <NameSkills fontSize={"12px"}>
@@ -225,9 +263,9 @@ export default function Skills() {
           <label style={{ position: "relative", right: "12px" }}>+</label>
           <InputSkills right={"13px"}></InputSkills>
         </InputSkillsGroup>
-      </SkillsRow>
+      </SkillsRow> */}
       {/* Space */}
-      <SkillsRow>
+      {/* <SkillsRow>
         <NameCheckGroup>
           <CheckSkills type="checkbox"></CheckSkills>
           <NameSkills fontSize={"12px"}>Guerra</NameSkills>
@@ -243,9 +281,9 @@ export default function Skills() {
           <label style={{ position: "relative", right: "12px" }}>+</label>
           <InputSkills right={"13px"}></InputSkills>
         </InputSkillsGroup>
-      </SkillsRow>
+      </SkillsRow> */}
       {/* Space */}
-      <SkillsRow>
+      {/* <SkillsRow>
         <NameCheckGroup>
           <CheckSkills type="checkbox"></CheckSkills>
           <NameSkills fontSize={"12px"}>Iniciativa</NameSkills>
@@ -261,9 +299,9 @@ export default function Skills() {
           <label style={{ position: "relative", right: "12px" }}>+</label>
           <InputSkills right={"13px"}></InputSkills>
         </InputSkillsGroup>
-      </SkillsRow>
+      </SkillsRow> */}
       {/* Space */}
-      <SkillsRow>
+      {/* <SkillsRow>
         <NameCheckGroup>
           <CheckSkills type="checkbox"></CheckSkills>
           <NameSkills fontSize={"12px"}>Intimidação</NameSkills>
@@ -279,9 +317,9 @@ export default function Skills() {
           <label style={{ position: "relative", right: "12px" }}>+</label>
           <InputSkills right={"13px"}></InputSkills>
         </InputSkillsGroup>
-      </SkillsRow>
+      </SkillsRow> */}
       {/* Space */}
-      <SkillsRow>
+      {/* <SkillsRow>
         <NameCheckGroup>
           <CheckSkills type="checkbox"></CheckSkills>
           <NameSkills fontSize={"12px"}>Intuição</NameSkills>
@@ -297,9 +335,9 @@ export default function Skills() {
           <label style={{ position: "relative", right: "12px" }}>+</label>
           <InputSkills right={"13px"}></InputSkills>
         </InputSkillsGroup>
-      </SkillsRow>
+      </SkillsRow> */}
       {/* Space */}
-      <SkillsRow>
+      {/* <SkillsRow>
         <NameCheckGroup>
           <CheckSkills type="checkbox"></CheckSkills>
           <NameSkills fontSize={"12px"}>Investigação</NameSkills>
@@ -315,9 +353,9 @@ export default function Skills() {
           <label style={{ position: "relative", right: "12px" }}>+</label>
           <InputSkills right={"13px"}></InputSkills>
         </InputSkillsGroup>
-      </SkillsRow>
+      </SkillsRow> */}
       {/* Space */}
-      <SkillsRow>
+      {/* <SkillsRow>
         <NameCheckGroup>
           <CheckSkills type="checkbox"></CheckSkills>
           <NameSkills fontSize={"12px"}>Jogatina*</NameSkills>
@@ -333,9 +371,9 @@ export default function Skills() {
           <label style={{ position: "relative", right: "12px" }}>+</label>
           <InputSkills right={"13px"}></InputSkills>
         </InputSkillsGroup>
-      </SkillsRow>
+      </SkillsRow> */}
       {/* Space */}
-      <SkillsRow>
+      {/* <SkillsRow>
         <NameCheckGroup>
           <CheckSkills type="checkbox"></CheckSkills>
           <NameSkills fontSize={"12px"}>
@@ -353,9 +391,9 @@ export default function Skills() {
           <label style={{ position: "relative", right: "12px" }}>+</label>
           <InputSkills right={"13px"}></InputSkills>
         </InputSkillsGroup>
-      </SkillsRow>
+      </SkillsRow> */}
       {/* Space */}
-      <SkillsRow>
+      {/* <SkillsRow>
         <NameCheckGroup>
           <CheckSkills type="checkbox"></CheckSkills>
           <NameSkills fontSize={"12px"}>Luta</NameSkills>
@@ -371,9 +409,9 @@ export default function Skills() {
           <label style={{ position: "relative", right: "12px" }}>+</label>
           <InputSkills right={"13px"}></InputSkills>
         </InputSkillsGroup>
-      </SkillsRow>
+      </SkillsRow> */}
       {/* Space */}
-      <SkillsRow>
+      {/* <SkillsRow>
         <NameCheckGroup>
           <CheckSkills type="checkbox"></CheckSkills>
           <NameSkills fontSize={"12px"}>Misticismo*</NameSkills>
@@ -389,9 +427,9 @@ export default function Skills() {
           <label style={{ position: "relative", right: "12px" }}>+</label>
           <InputSkills right={"13px"}></InputSkills>
         </InputSkillsGroup>
-      </SkillsRow>
+      </SkillsRow> */}
       {/* Space */}
-      <SkillsRow>
+      {/* <SkillsRow>
         <NameCheckGroup>
           <CheckSkills type="checkbox"></CheckSkills>
           <NameSkills fontSize={"12px"}>Nobreza*</NameSkills>
@@ -407,9 +445,9 @@ export default function Skills() {
           <label style={{ position: "relative", right: "12px" }}>+</label>
           <InputSkills right={"13px"}></InputSkills>
         </InputSkillsGroup>
-      </SkillsRow>
+      </SkillsRow> */}
       {/* Space */}
-      <SkillsRow>
+      {/* <SkillsRow>
         <NameCheckGroup>
           <CheckSkills type="checkbox"></CheckSkills>
           <NameSkills fontSize={"12px"}>Ofício(_____)*</NameSkills>
@@ -425,9 +463,9 @@ export default function Skills() {
           <label style={{ position: "relative", right: "12px" }}>+</label>
           <InputSkills right={"13px"}></InputSkills>
         </InputSkillsGroup>
-      </SkillsRow>
+      </SkillsRow> */}
       {/* Space */}
-      <SkillsRow>
+      {/* <SkillsRow>
         <NameCheckGroup>
           <CheckSkills type="checkbox"></CheckSkills>
           <NameSkills fontSize={"12px"}>Ofício(_____)*</NameSkills>
@@ -443,9 +481,9 @@ export default function Skills() {
           <label style={{ position: "relative", right: "12px" }}>+</label>
           <InputSkills right={"13px"}></InputSkills>
         </InputSkillsGroup>
-      </SkillsRow>
+      </SkillsRow> */}
       {/* Space */}
-      <SkillsRow>
+      {/* <SkillsRow>
         <NameCheckGroup>
           <CheckSkills type="checkbox"></CheckSkills>
           <NameSkills fontSize={"12px"}>Percepção</NameSkills>
@@ -461,9 +499,9 @@ export default function Skills() {
           <label style={{ position: "relative", right: "12px" }}>+</label>
           <InputSkills right={"13px"}></InputSkills>
         </InputSkillsGroup>
-      </SkillsRow>
+      </SkillsRow> */}
       {/* Space */}
-      <SkillsRow>
+      {/* <SkillsRow>
         <NameCheckGroup>
           <CheckSkills type="checkbox"></CheckSkills>
           <NameSkills fontSize={"12px"}>Pilotagem*</NameSkills>
@@ -479,9 +517,9 @@ export default function Skills() {
           <label style={{ position: "relative", right: "12px" }}>+</label>
           <InputSkills right={"13px"}></InputSkills>
         </InputSkillsGroup>
-      </SkillsRow>
+      </SkillsRow> */}
       {/* Space */}
-      <SkillsRow>
+      {/* <SkillsRow>
         <NameCheckGroup>
           <CheckSkills type="checkbox"></CheckSkills>
           <NameSkills fontSize={"12px"}>Pontaria</NameSkills>
@@ -497,9 +535,9 @@ export default function Skills() {
           <label style={{ position: "relative", right: "12px" }}>+</label>
           <InputSkills right={"13px"}></InputSkills>
         </InputSkillsGroup>
-      </SkillsRow>
+      </SkillsRow> */}
       {/* Space */}
-      <SkillsRow>
+      {/* <SkillsRow>
         <NameCheckGroup>
           <CheckSkills type="checkbox"></CheckSkills>
           <NameSkills fontSize={"12px"}>Reflexos</NameSkills>
@@ -515,9 +553,9 @@ export default function Skills() {
           <label style={{ position: "relative", right: "12px" }}>+</label>
           <InputSkills right={"13px"}></InputSkills>
         </InputSkillsGroup>
-      </SkillsRow>
+      </SkillsRow> */}
       {/* Space */}
-      <SkillsRow>
+      {/* <SkillsRow>
         <NameCheckGroup>
           <CheckSkills type="checkbox"></CheckSkills>
           <NameSkills fontSize={"12px"}>Religião*</NameSkills>
@@ -533,9 +571,9 @@ export default function Skills() {
           <label style={{ position: "relative", right: "12px" }}>+</label>
           <InputSkills right={"13px"}></InputSkills>
         </InputSkillsGroup>
-      </SkillsRow>
+      </SkillsRow> */}
       {/* Space */}
-      <SkillsRow>
+      {/* <SkillsRow>
         <NameCheckGroup>
           <CheckSkills type="checkbox"></CheckSkills>
           <NameSkills fontSize={"12px"}>Sobrevivência</NameSkills>
@@ -551,9 +589,9 @@ export default function Skills() {
           <label style={{ position: "relative", right: "12px" }}>+</label>
           <InputSkills right={"13px"}></InputSkills>
         </InputSkillsGroup>
-      </SkillsRow>
+      </SkillsRow> */}
       {/* Space */}
-      <SkillsRow>
+      {/* <SkillsRow>
         <NameCheckGroup>
           <CheckSkills type="checkbox"></CheckSkills>
           <NameSkills fontSize={"12px"}>Vontade</NameSkills>
@@ -569,8 +607,8 @@ export default function Skills() {
           <label style={{ position: "relative", right: "12px" }}>+</label>
           <InputSkills right={"13px"}></InputSkills>
         </InputSkillsGroup>
-      </SkillsRow>
-      {/* Space */}
+      </SkillsRow> */}
+      {/* Space  */}
     </Content>
   );
 }

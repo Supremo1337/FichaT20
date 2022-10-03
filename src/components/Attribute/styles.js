@@ -1,13 +1,12 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
-  width: 15%;
+  width: 20%;
   height: 190px;
-  //   background: yellow;
   border: 2px solid black;
   border-radius: 10px;
   margin-left: 10px;
-  padding: 0px 5px;
+  padding: 0px 10px;
 `;
 
 export const BoxRow = styled.div`
@@ -30,7 +29,7 @@ export const Box = styled.div`
 `;
 
 export const AttributeTitle = styled.label`
-  width: ${(props) => props.width};
+  font-size: ${(props) => props.fontSize};
   margin-left: ${(props) => props.marginLeft};
   border: ${(props) => props.border};
   text-align: center;

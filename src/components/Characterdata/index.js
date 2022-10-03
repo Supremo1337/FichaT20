@@ -45,7 +45,7 @@ export default function Characterdata() {
           sx={{
             display: "grid",
             gridTemplateColumns: { sm: "1fr 1fr" },
-            "& .MuiTextField-root": { m: 1, width: "40ch" }
+            "& .MuiTextField-root": { m: 1, width: "37ch" }
           }}
         >
           <BoxPerso>
@@ -80,7 +80,7 @@ export default function Characterdata() {
           sx={{
             display: "grid",
             gridTemplateColumns: { sm: "1fr 1fr" },
-            "& .MuiTextField-root": { m: 1, width: "40ch" }
+            "& .MuiTextField-root": { m: 1, width: "37ch" }
           }}
         >
           <BoxPerso>

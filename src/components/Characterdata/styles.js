@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
-  width: 45%;
+  width: 50%;
   height: 190px;
-  // background: red;
   display: flex;
   
 `;
@@ -12,7 +11,6 @@ export const GroupDates = styled.div`
   width: 100%;
   height: auto;
   display: flex;
-  // background: blue;
   border: 2px solid black;
   border-radius: 10px;
   padding-left: 30px;
@@ -30,7 +28,6 @@ export const Group = styled.div`
 export const BoxPerso = styled.div`
   width: 100%;
   height: auto;
-  // background: yellow;
   display: flex;
   flex-direction: column;
 `;
@@ -42,7 +39,6 @@ export const TextDiv = styled.label`
   position: relative;
   top: ${(props) => props.top};
   left: ${(props) => props.left};
-  //   background: gray;
 `;
 
 export const NamePerso = styled.input`

@@ -26,7 +26,7 @@ export default function Attribute() {
             <Box>
               <AttributeTitle
                 width={"40px"}
-                marginLeft={"10px"}
+                marginLeft={"0px"}
                 border={"2px solid black"}
               >
                 {res.title}
@@ -43,7 +43,7 @@ export default function Attribute() {
             <Box>
               <AttributeTitle
                 width={"40px"}
-                marginLeft={"10px"}
+                marginLeft={"0px"}
                 border={"2px solid black"}
               >
                 {res.title}
