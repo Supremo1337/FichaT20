@@ -6,7 +6,6 @@ import {
   InputDefense,
   ModBox,
   BoxRow,
-  TextAndInputs,
 } from "./styles";
 import { AttributeTitle } from "../Attribute/styles";
 import { CheckSkills, InputSkills, SkillsText } from "../Skills/styles";
@@ -34,24 +33,27 @@ export default function DefenseMultipliers() {
           ></InputDefense>
         </DefenseSubGroup>
         <ModBox>
-          <BoxRow>
+          <BoxRow width={"100%"}>
             <CheckSkills type={"checkbox"}></CheckSkills>
-            <TextAndInputs>
-              <SkillsText fontSize={"10px"}>Modificador de Des</SkillsText>
-              <InputSkills width={"50%"} height={"15px"}></InputSkills>
-            </TextAndInputs>
-            <TextAndInputs>
-              <SkillsText fontSize={"10px"}>Bônus de Armadura</SkillsText>
-              <InputSkills width={"50%"} height={"15px"}></InputSkills>
-            </TextAndInputs>
-            <TextAndInputs>
-              <SkillsText fontSize={"10px"}>Bônus de Escudo</SkillsText>
-              <InputSkills width={"50%"} height={"15px"}></InputSkills>
-            </TextAndInputs>
-            <TextAndInputs>
-              <SkillsText fontSize={"10px"}>Outros</SkillsText>
-              <InputSkills width={"50%"} height={"15px"}></InputSkills>
-            </TextAndInputs>
+            <SkillsText fontSize={"10px"} >
+              Modificador de Des
+            </SkillsText>
+            <SkillsText fontSize={"10px"} >
+              Bônus de Armadura
+            </SkillsText>
+            <SkillsText fontSize={"10px"} >
+              Bônus de Escudo
+            </SkillsText>
+            <SkillsText fontSize={"10px"} >
+              Outros
+            </SkillsText>
+          </BoxRow>
+          <BoxRow width={"92%"}>
+            <InputSkills width={"100px"} height={"15px"}></InputSkills>
+            <InputSkills width={"90px"} height={"15px"}></InputSkills>
+            <InputSkills width={"80px"} height={"15px"}></InputSkills>
+            <InputSkills width={"30px"} height={"15px"}></InputSkills>
+
           </BoxRow>
         </ModBox>
       </DefenseGroup>

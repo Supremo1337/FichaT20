@@ -68,19 +68,19 @@ export const ModBox = styled.div`
 `;
 
 export const BoxRow = styled.div`
-  width: 100%;
-  height: 90%;
+  width: ${(props) => props.width};
+  height: 20%;
   display: flex;
   justify-content: space-between;
   background: #fff;
 `;
 
-export const TextAndInputs = styled.div`
-  width: auto;
-  height: 90%;
+export const RowLines = styled.div`
+  width: 80%;
+  height: 40%;
   display: flex;
+  justify-content: space-between;
   background: red;
-  flex-direction: column;
 `;
 
 {
