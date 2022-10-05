@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 34.3%;
   height: 100%;
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 10px;
   margin-left: 10px;
   padding: 10px;
@@ -11,23 +11,32 @@ export const Content = styled.div`
 
 export const DefenseGroup = styled.div`
   width: 100%;
-  height: 50%;
+  height: 80%;
   background: yellow;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
-export const DefenseSubGroup = styled.div`
+export const PartsRow = styled.div`
+  width: 100%;
+  height: 35%;
+  display: flex;
+  background: pink;
+`;
+
+export const Defense = styled.div`
   width: 30%;
-  height: 60%;
+  height: 100%;
   background: red;
   display: flex;
   align-items: center;
 `;
 
-export const Defense = styled.div`
+export const DefenseCard = styled.div`
   width: 60%;
   height: 100%;
-  background: white;
+  background: #fff;
   border: 1px solid black;
   border-radius: 10px;
   display: flex;
@@ -57,19 +66,32 @@ export const InputDefense = styled.input`
   }
 `;
 
+export const ModBoxGroup = styled.div`
+  width: 100%;
+  height: 50%;
+  display: flex;
+  background: cyan;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+`;
+
 export const ModBox = styled.div`
   width: 100%;
-  height: 60%;
+  height: 100%;
   background: purple;
+  border: 2px solid black;
+  border-radius: 10px;
   padding: 5px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  justify-content: space-between;
 `;
 
 export const BoxRow = styled.div`
   width: ${(props) => props.width};
-  height: 20%;
+  height: auto;
   display: flex;
   justify-content: space-between;
   background: #fff;
@@ -86,3 +108,68 @@ export const RowLines = styled.div`
 {
   /* <reaprovoitei a div "CheckSkills", "SkillsText" e a "InputSkills" */
 }
+
+export const GropuArmorAndPenalty = styled.div`
+  width: 100%;
+  height: 35%;
+  display: flex;
+  background: aqua;
+  border: 2px solid black;
+  border-radius: 10px;
+`;
+
+export const PenaltyAndArmor = styled.div`
+  width: ${(props) => props.width};
+  height: 95%;
+  background: pink;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const PenaltyAndArmorText = styled.div`
+  width: 90%;
+  height: 25%;
+  background: red;
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const Stats = styled.div`
+  width: 100%;
+  height: 20%;
+  background: gray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const EXP = styled.div`
+  width: 100%;
+  height: 20%;
+  border: 2px solid black;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+`;
+
+export const EXPInput = styled.input`
+  width: 50%;
+  height: 50%;
+  background: none;
+  border: 0;
+  box-shadow: 0 0 0 0;
+  outline: 0;
+  text-align: center;
+  ::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  ::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+`;

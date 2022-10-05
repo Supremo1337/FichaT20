@@ -20,7 +20,7 @@ const Global = styled.div`
 
 const GlobalRow = styled.div`
   width: 77%;
-  height: 1000px;
+  height: 960px;
   background: darkgray;
   display: flex;
   flex-direction: column;

@@ -1,14 +1,14 @@
 import { Content, TextArea } from "./styles";
-import { AttributeTitle } from "../Attribute/styles";
+import { Title } from "../../styles/global";
 
 export default function Notes() {
   return (
     <Content>
-      <AttributeTitle fontSize={"20px"}>DESCRIÇÃO</AttributeTitle>
+      <Title fontSize={"20px"}>DESCRIÇÃO</Title>
       <TextArea rows="10" cols="80"></TextArea>
-      <AttributeTitle fontSize={"20px"}>HABILIDADES DE RAÇA E ORIGEM</AttributeTitle>
+      <Title fontSize={"20px"}>HABILIDADES DE RAÇA E ORIGEM</Title>
       <TextArea rows="10" cols="80"></TextArea>
-      <AttributeTitle fontSize={"20px"}>HABILIDADES DE CLASSE E PODERES</AttributeTitle>
+      <Title fontSize={"20px"}>HABILIDADES DE CLASSE E PODERES</Title>
       <TextArea rows="10" cols="80"></TextArea>
     </Content>
   );

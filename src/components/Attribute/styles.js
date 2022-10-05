@@ -29,9 +29,12 @@ export const Box = styled.div`
 `;
 
 export const AttributeTitle = styled.label`
-  font-size: ${(props) => props.fontSize};
-  margin-left: ${(props) => props.marginLeft};
-  border: ${(props) => props.border};
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid black;
+  border-left: none;
+  border-top: none;
+  border-right: none;
   text-align: center;
 `;
 

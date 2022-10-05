@@ -10,9 +10,9 @@ import {
   InputSkillsGroup,
   InputSkillsTotal,
 } from "./styles";
-import { AttributeTitle } from "../Attribute/styles";
 import { TextDiv } from "../Characterdata/styles";
 import OpenWithIcon from "@mui/icons-material/OpenWith";
+import { Title } from "../../styles/global";
 
 export default function Skills() {
   const Skills = [
@@ -51,7 +51,7 @@ export default function Skills() {
   return (
     <Content>
       <SkillsTitleandValue>
-        <AttributeTitle>PERÍCIAS</AttributeTitle>
+        <Title>PERÍCIAS</Title>
         <TextDiv>Total</TextDiv>
         <SkillsText fontSize={"10px"} paddingTop={"7px"} marginLeft={"-22px"} width={"40px"}>1/2 do Nível</SkillsText>
         <SkillsText fontSize={"10px"} paddingTop={"7px"} marginLeft={"-22px"} width={"40px"}>Mod. de Atributo</SkillsText>

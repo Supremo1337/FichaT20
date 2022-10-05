@@ -1,6 +1,6 @@
 import { Content, RulesInputs, RulesInputsGroup, TextGroup } from "./styles";
 import { SkillsText } from "../Skills/styles";
-import { AttributeTitle } from "../Attribute/styles";
+import { Title } from "../../styles/global";
 
 export default function Attack() {
   const Rules = [
@@ -16,7 +16,7 @@ export default function Attack() {
   return (
     <Content>
       <TextGroup>
-        <AttributeTitle fontSize={"20px"}>ATAQUES</AttributeTitle>
+        <Title fontSize={"20px"}>ATAQUES</Title>
         {Rules.map((res) => {
           return <SkillsText left={res.left1}>{res.title}</SkillsText>;
         })}

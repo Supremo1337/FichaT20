@@ -16,7 +16,7 @@ export const SkillsTitleandValue = styled.div`
   justify-content: space-between;
 `;
 
-// Reaprovei a label "AttributeTitle" e "TextDiv"
+// Reaprovei a label e "TextDiv"
 
 export const SkillsText = styled.label`
   width: ${(props) => props.width};
@@ -75,11 +75,12 @@ export const InputSkillsTotal = styled.input`
 
 export const InputSkills = styled.input`
   width: ${(props) => props.width};
-  height:${(props) => props.height};
+  height: ${(props) => props.height};
   background: none;
   border: 0px;
   border-bottom: 2px solid black;
   position: relative;
   left: ${(props) => props.left};
   right: ${(props) => props.right};
+  text-align: center;
 `;

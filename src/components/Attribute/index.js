@@ -24,13 +24,7 @@ export default function Attribute() {
         {Boxinputs.map((res) => {
           return (
             <Box>
-              <AttributeTitle
-                width={"40px"}
-                marginLeft={"0px"}
-                border={"2px solid black"}
-              >
-                {res.title}
-              </AttributeTitle>
+              <AttributeTitle>{res.title}</AttributeTitle>
               <ModNumber>{res.number}</ModNumber>
               <AttributeInput placeholder="10" type="number"></AttributeInput>
             </Box>
@@ -41,13 +35,7 @@ export default function Attribute() {
         {Boxinputs2.map((res) => {
           return (
             <Box>
-              <AttributeTitle
-                width={"40px"}
-                marginLeft={"0px"}
-                border={"2px solid black"}
-              >
-                {res.title}
-              </AttributeTitle>
+              <AttributeTitle>{res.title}</AttributeTitle>
               <ModNumber>{res.number}</ModNumber>
               <AttributeInput placeholder="10" type="number"></AttributeInput>
             </Box>

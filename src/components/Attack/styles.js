@@ -39,5 +39,5 @@ export const RulesInputs = styled.input`
 `;
 
 {
-  /* < Reaproveitei o "AttributeTitle" e o "SkillsText"> */
+  /* < Reaproveitei o "SkillsText"> */
 }

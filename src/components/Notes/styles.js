@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Content = styled.div`
   width: 100%;
-  height: auto;
+  height: 39%;
   border: 2px solid black;
   border-radius: 10px;
   padding: 10px;
@@ -11,7 +11,7 @@ export const Content = styled.div`
 
 export const TextArea = styled.textarea`
   width: 100%;
-  height: 15%;
+  height: 20%;
   background: none;
   resize: vertical;
   overflow: hidden;
