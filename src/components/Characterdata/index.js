@@ -23,7 +23,7 @@ const CssTextField = styled(TextField)({
   },
 });
 
-export default function Characterdata() {
+export default function CharacterData() {
   const inputs = [
     { title: "Personagem" },
     { title: "Jogador" },

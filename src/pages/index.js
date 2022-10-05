@@ -1,4 +1,5 @@
-import Characterdata from "../components/Characterdata";
+import CharacterData from "../components/CharacterData";
+import Top from "../components/Top";
 import Attribute from "../components/Attribute";
 import styled from "styled-components";
 import Lifeandmane from "../components/LifeAndMane";
@@ -6,12 +7,12 @@ import Skills from "../components/Skills";
 import Attack from "../components/Attack";
 import DefenseMultipliers from "../components/DefenseMultipliers";
 import Notes from "../components/Notes";
-import Top from "../components/Top";
+import Invetory from "../components/Inventory";
 // import FontStyles from "../fonts/fontStyles";
 
 const Global = styled.div`
   width: 100%;
-  height: 2000px;
+  height: 1485px;
   background: gray;
   display: flex;
   flex-direction: row;
@@ -38,7 +39,7 @@ const GlobalColumn = styled.div`
   width: 23%;
   height: 960px;
   display: flex;
-  background:purple;
+  background: purple;
 `;
 
 // ReactDOM.render(
@@ -56,7 +57,7 @@ export default function Home() {
       <Global>
         <GlobalRow>
           <RowGroup>
-            <Characterdata />
+            <CharacterData />
             <Lifeandmane />
             <Attribute />
           </RowGroup>
@@ -69,6 +70,7 @@ export default function Home() {
         <GlobalColumn>
           <Skills></Skills>
         </GlobalColumn>
+        <Invetory />
       </Global>
     </>
   );

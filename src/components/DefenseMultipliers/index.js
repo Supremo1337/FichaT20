@@ -73,21 +73,6 @@ export default function DefenseMultipliers() {
                     ></InputSkills>
                   );
                 })}
-                {/* <InputSkills
-                  width={"90px"}
-                  height={"15px"}
-                  placeholder={"0"}
-                ></InputSkills>
-                <InputSkills
-                  width={"80px"}
-                  height={"15px"}
-                  placeholder={"0"}
-                ></InputSkills>
-                <InputSkills
-                  width={"30px"}
-                  height={"15px"}
-                  placeholder={"0"}
-                ></InputSkills> */}
               </BoxRow>
             </ModBoxGroup>
             <BoxRow width={"100%"}>
@@ -100,7 +85,6 @@ export default function DefenseMultipliers() {
             </BoxRow>
           </ModBox>
         </PartsRow>
-
         <GropuArmorAndPenalty>
           <PenaltyAndArmor width={"60%"}>
             <Title>ARMADURA & DEFESA</Title>
