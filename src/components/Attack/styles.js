@@ -21,14 +21,15 @@ export const TextGroup = styled.div`
 
 export const RulesInputsGroup = styled.div`
   width: 100%;
-  height: 45px;
+  height: 100%;
   background: red;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 5vh 5vh 5vh 5vh 5vh 5vh;
 `;
 
 export const RulesInputs = styled.input`
-  width: 15%;
+  width: 90%;
   height: 35px;
   border: 0px;
   background: none;

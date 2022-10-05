@@ -4,18 +4,19 @@ export const Content = styled.div`
   width: 50%;
   height: 190px;
   display: flex;
-  
 `;
 
 export const GroupDates = styled.div`
   width: 100%;
   height: auto;
-  display: flex;
   border: 2px solid black;
   border-radius: 10px;
   padding-left: 30px;
   box-sizing: border-box;
   padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 6vh 6vh 6vh;
 `;
 
 export const Group = styled.div`
@@ -27,7 +28,7 @@ export const Group = styled.div`
 
 export const BoxPerso = styled.div`
   width: 100%;
-  height: auto;
+  height: 35%;
   display: flex;
   flex-direction: column;
 `;

@@ -19,6 +19,19 @@ import { CheckSkills, InputSkills, SkillsText } from "../Skills/styles";
 import { Title } from "../../styles/global";
 
 export default function DefenseMultipliers() {
+  const inputs = [
+    { width: "100px" },
+    { width: "90px" },
+    { width: "80px" },
+    { width: "30px" },
+  ];
+
+  const inputs2 = [
+    { width: "70%" },
+    { width: "100%" },
+    { width: "70%" },
+    { width: "100%" },
+  ];
   return (
     <Content>
       <DefenseGroup>
@@ -51,12 +64,16 @@ export default function DefenseMultipliers() {
                 <SkillsText fontSize={"10px"}>Outros</SkillsText>
               </BoxRow>
               <BoxRow width={"92%"}>
-                <InputSkills
-                  width={"100px"}
-                  height={"15px"}
-                  placeholder={"0"}
-                ></InputSkills>
-                <InputSkills
+                {inputs.map((res) => {
+                  return (
+                    <InputSkills
+                      width={res.width}
+                      height={"15px"}
+                      placeholder={"0"}
+                    ></InputSkills>
+                  );
+                })}
+                {/* <InputSkills
                   width={"90px"}
                   height={"15px"}
                   placeholder={"0"}
@@ -70,7 +87,7 @@ export default function DefenseMultipliers() {
                   width={"30px"}
                   height={"15px"}
                   placeholder={"0"}
-                ></InputSkills>
+                ></InputSkills> */}
               </BoxRow>
             </ModBoxGroup>
             <BoxRow width={"100%"}>
@@ -98,7 +115,6 @@ export default function DefenseMultipliers() {
               placeholder={"0"}
             ></InputSkills>
           </PenaltyAndArmor>
-
           {/* Space */}
           <PenaltyAndArmor width={"40%"}>
             <PenaltyAndArmorText>
@@ -106,28 +122,15 @@ export default function DefenseMultipliers() {
               <SkillsText>Penalidade</SkillsText>
             </PenaltyAndArmorText>
             <Stats>
-              <InputSkills
-                width={"35%"}
-                height={"15px"}
-                placeholder={"0"}
-              ></InputSkills>
-              <InputSkills
-                width={"55%"}
-                height={"15px"}
-                placeholder={"0"}
-              ></InputSkills>
-            </Stats>
-            <Stats>
-              <InputSkills
-                width={"35%"}
-                height={"15px"}
-                placeholder={"0"}
-              ></InputSkills>
-              <InputSkills
-                width={"55%"}
-                height={"15px"}
-                placeholder={"0"}
-              ></InputSkills>
+              {inputs2.map((res) => {
+                return (
+                  <InputSkills
+                    width={res.width}
+                    height={"15px"}
+                    placeholder={"0"}
+                  ></InputSkills>
+                );
+              })}
             </Stats>
           </PenaltyAndArmor>
         </GropuArmorAndPenalty>

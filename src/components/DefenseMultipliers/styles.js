@@ -138,11 +138,12 @@ export const PenaltyAndArmorText = styled.div`
 
 export const Stats = styled.div`
   width: 100%;
-  height: 20%;
+  height: 75%;
   background: gray;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-row: 20vh 20vh;
+  align-items: end;
 `;
 
 export const EXP = styled.div`
