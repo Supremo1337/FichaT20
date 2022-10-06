@@ -24,8 +24,6 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import styled from "styled-components";
-
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -39,7 +37,7 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box sx={{ p: 0}}>
+        <Box sx={{ p: 0 }}>
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -59,15 +57,8 @@ function a11yProps(index) {
     "aria-controls": `simple-tabpanel-${index}`,
   };
 }
-
-const Test = styled.div`
-  width: 500px;
-  height: 500px;
-  background: orange;
-`;
-
 export default function DefenseMultipliers() {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(1);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -96,13 +87,11 @@ export default function DefenseMultipliers() {
             onChange={handleChange}
             aria-label="basic tabs example"
           >
-            <Tab label="Item One" {...a11yProps(0)} />
-            <Tab label="Item Two" {...a11yProps(1)} />
-            <Tab label="Item Three" {...a11yProps(2)} />
+            <Tab label="Defesas" {...a11yProps(1)} />
+            <Tab label="Outros" {...a11yProps(2)} />
           </Tabs>
         </Box>
         <TabPanel value={value} index={0}>
-          {/* <Test></Test> */}
           <DefenseGroup>
             <PartsRow>
               <Defense>
@@ -196,10 +185,11 @@ export default function DefenseMultipliers() {
           </DefenseGroup>
         </TabPanel>
         <TabPanel value={value} index={1}>
-          Item Two
-        </TabPanel>
-        <TabPanel value={value} index={2}>
-          Item Three
+          PROFICIÊNCIAS
+          <br />
+          TAMANHO
+          <br />
+          DESLOCAMENTO
         </TabPanel>
       </Box>
     </Content>

@@ -5,7 +5,7 @@ import styled from "styled-components";
 import Lifeandmane from "../components/LifeAndMane";
 import Skills from "../components/Skills";
 import Attack from "../components/Attack";
-import DefenseMultipliers from "../components/DefenseMultipliers";
+import DefenseAndProfiency from "../components/DefenseAndProficiency";
 import Notes from "../components/Notes";
 import Invetory from "../components/Inventory";
 // import FontStyles from "../fonts/fontStyles";
@@ -63,7 +63,7 @@ export default function Home() {
           </RowGroup>
           <RowGroup>
             <Attack />
-            <DefenseMultipliers />
+            <DefenseAndProfiency></DefenseAndProfiency>
           </RowGroup>
           <Notes />
         </GlobalRow>
