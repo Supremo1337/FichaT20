@@ -12,8 +12,6 @@ export default function Attribute() {
     { title: "FOR", number: "0" },
     { title: "DES", number: "0" },
     { title: "CON", number: "0" },
-  ];
-  const Boxinputs2 = [
     { title: "INT", number: "0" },
     { title: "SAB", number: "0" },
     { title: "CAR", number: "0" },
@@ -22,17 +20,6 @@ export default function Attribute() {
     <Content>
       <BoxRow>
         {Boxinputs.map((res) => {
-          return (
-            <Box>
-              <AttributeTitle>{res.title}</AttributeTitle>
-              <ModNumber>{res.number}</ModNumber>
-              <AttributeInput placeholder="10" type="number"></AttributeInput>
-            </Box>
-          );
-        })}
-      </BoxRow>
-      <BoxRow>
-        {Boxinputs2.map((res) => {
           return (
             <Box>
               <AttributeTitle>{res.title}</AttributeTitle>

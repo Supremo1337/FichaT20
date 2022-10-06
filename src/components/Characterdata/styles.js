@@ -32,7 +32,7 @@ export const BoxPerso = styled.div`
   display: flex;
   flex-direction: column;
 `;
-export const TextDiv = styled.label`
+export const Text = styled.label`
   width: ${(props) => props.width};
   font-size: ${(props) => props.fontSize};
   color: ${(props) => props.color};

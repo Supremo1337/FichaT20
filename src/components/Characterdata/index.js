@@ -47,14 +47,12 @@ export default function CharacterData() {
                 "& .MuiTextField-root": { m: 1, width: "37ch" },
               }}
             >
-              <BoxPerso>
                 <CssTextField
                   label={res.title}
                   id="custom-css-outlined-input"
                   defaultValue=""
                   size="small"
                 />
-              </BoxPerso>
             </Box>
           );
         })}

@@ -12,7 +12,7 @@ import Invetory from "../components/Inventory";
 
 const Global = styled.div`
   width: 100%;
-  height: 1485px;
+  height: auto;
   background: gray;
   display: flex;
   flex-direction: row;
@@ -21,8 +21,8 @@ const Global = styled.div`
 
 const GlobalRow = styled.div`
   width: 77%;
-  height: 960px;
-  background: darkgray;
+  height: auto;
+  background: orange;
   display: flex;
   flex-direction: column;
 `;

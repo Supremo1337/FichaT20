@@ -18,7 +18,7 @@ export const Group = styled.div`
   height: 100%;
   display: flex;
   justify-content: center;
-  background: blue;
+  // background: blue;
   justify-content: space-between;
 `;
 
@@ -27,7 +27,7 @@ export const Group = styled.div`
 export const ItensBox = styled.div`
   width: 100%;
   height: ${(props) => props.height};
-  background: red;
+  // background: red;
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr;
@@ -56,7 +56,7 @@ export const ItensTitle = styled.label`
 export const ThreeColumn = styled.div`
   width: 100%;
   height: 100%;
-  background: yellow;
+  // background: yellow;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -76,7 +76,7 @@ export const ThreeColumn = styled.div`
 export const MoreContent = styled.div`
   width: 100%;
   height: 30%;
-  background: pink;
+  // background: pink;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -86,7 +86,7 @@ export const MoreContent = styled.div`
 export const LoadAndStrenght = styled.div`
   width: 100%;
   height: 50%;
-  background: orange;
+  // background: orange;
   display: flex;
   justify-content: space-between;
 `;
@@ -94,7 +94,7 @@ export const LoadAndStrenght = styled.div`
 export const Info = styled.div`
   width: 32%;
   height: 100%;
-  background: green;
+  // background: green;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -103,7 +103,7 @@ export const Info = styled.div`
 export const InputsLoadGroup = styled.div`
   width: 100%;
   height: 50%;
-  background: cyan;
+  // background: cyan;
 `;
 
 // Reaproveite o "InputSkills"
@@ -119,7 +119,7 @@ export const InputsLoadGroup = styled.div`
 export const TSTO = styled.div`
   width: 32%;
   height: 100%;
-  background: magenta;
+  // background: magenta;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -129,7 +129,7 @@ export const TSTO = styled.div`
 export const Tibar = styled.div`
   width: 100%;
   height: 100%;
-  background: purple;
+  // background: purple;
   display: flex;
   justify-content: space-between;
 `;

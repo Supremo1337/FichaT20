@@ -8,7 +8,7 @@ import {
   GroupStates,
   ProgressBar,
 } from "./styles";
-import { TextDiv } from "../Characterdata/styles";
+import { Text } from "../CharacterData/styles";
 import { useState } from "react";
 
 
@@ -29,7 +29,7 @@ export default function Lifeandmane() {
   return (
     <Content>
       <StatusGroup>
-        <TextDiv color={"#ff0000"}>Vida</TextDiv>
+        <Text color={"#ff0000"}>Vida</Text>
         <GroupStates>
           <ButtonsAndInputs>
             <Buttons></Buttons>
@@ -59,7 +59,7 @@ export default function Lifeandmane() {
       </StatusGroup>
       {/* Space */}
       <StatusGroup>
-        <TextDiv color={"#0000ff"}>Mana</TextDiv>
+        <Text color={"#0000ff"}>Mana</Text>
         <GroupStates>
           <ButtonsAndInputs>
             <Buttons></Buttons>

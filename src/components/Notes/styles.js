@@ -2,20 +2,24 @@ import styled from "styled-components";
 
 export const Content = styled.div`
   width: 100%;
-  height: 40%;
+  min-height: 40%;
+  height: auto;
   display: flex;
   border: 2px solid black;
   border-radius: 10px;
   padding: 10px;
   display: inline-block;
+  outline: none;
+  justify-content: space-between;
 `;
 
 export const TextArea = styled.textarea`
   width: 100%;
-  height: 20%;
+  min-height: 10%;
   background: none;
   resize: vertical;
   overflow: hidden;
   outline: none;
   border: none;
+  background: pink;
 `;

@@ -16,7 +16,7 @@ export const SkillsTitleandValue = styled.div`
   justify-content: space-between;
 `;
 
-// Reaprovei a label e "TextDiv"
+// Reaprovei a label e "Text"
 
 export const SkillsText = styled.label`
   width: ${(props) => props.width};

@@ -10,7 +10,7 @@ import {
   InputSkillsGroup,
   InputSkillsTotal,
 } from "./styles";
-import { TextDiv } from "../Characterdata/styles";
+import { Text } from "../CharacterData/styles";
 import OpenWithIcon from "@mui/icons-material/OpenWith";
 import { Title } from "../../styles/global";
 
@@ -52,7 +52,7 @@ export default function Skills() {
     <Content>
       <SkillsTitleandValue>
         <Title>PERÍCIAS</Title>
-        <TextDiv>Total</TextDiv>
+        <Text>Total</Text>
         <SkillsText fontSize={"10px"} paddingTop={"7px"} marginLeft={"-22px"} width={"40px"}>1/2 do Nível</SkillsText>
         <SkillsText fontSize={"10px"} paddingTop={"7px"} marginLeft={"-22px"} width={"40px"}>Mod. de Atributo</SkillsText>
         <SkillsText fontSize={"10px"} paddingTop={"7px"} marginLeft={"-22px"} width={"30px"}>Treino</SkillsText>

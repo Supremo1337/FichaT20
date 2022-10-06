@@ -16,9 +16,9 @@ import {
 } from "./styles";
 
 export default function Invetory() {
-  const Inputs = [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}];
-  const Inputs5 = [{}, {}, {}, {}, {}];
   const InputsItensBox = [{}, {}];
+  const InputsRows = [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}];
+  const InputsRows5 = [{}, {}, {}, {}, {}];
 
   const Tibars = [{ title: "T$:" }, { title: "TO:" }];
 
@@ -31,7 +31,7 @@ export default function Invetory() {
             <ItensBox>
               <ColumnItens width={"100%"}>
                 <ItensTitle>Item</ItensTitle>
-                {Inputs.map((res) => {
+                {InputsRows.map((res) => {
                   return (
                     <InputSkills width={"90%"} height={"25px"}></InputSkills>
                   );
@@ -39,7 +39,7 @@ export default function Invetory() {
               </ColumnItens>
               <ColumnItens width={"30%"}>
                 <ItensTitle>Peso</ItensTitle>
-                {Inputs.map((res) => {
+                {InputsRows.map((res) => {
                   return (
                     <InputSkills
                       width={"100%"}
@@ -53,10 +53,10 @@ export default function Invetory() {
           );
         })}
         <ThreeColumn>
-          <ItensBox height={"65%"}>
+          <ItensBox height={"51%"}>
             <ColumnItens width={"100%"}>
               <ItensTitle>Item</ItensTitle>
-              {Inputs5.map((res) => {
+              {InputsRows5.map((res) => {
                 return (
                   <InputSkills width={"90%"} height={"25px"}></InputSkills>
                 );
@@ -64,7 +64,7 @@ export default function Invetory() {
             </ColumnItens>
             <ColumnItens width={"30%"}>
               <ItensTitle>Peso</ItensTitle>
-              {Inputs5.map((res) => {
+              {InputsRows5.map((res) => {
                 return (
                   <InputSkills
                     width={"100%"}

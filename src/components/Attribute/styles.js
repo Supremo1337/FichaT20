@@ -6,16 +6,17 @@ export const Content = styled.div`
   border: 2px solid black;
   border-radius: 10px;
   margin-left: 10px;
-  padding: 0px 10px;
+  padding: 10px;
 `;
 
 export const BoxRow = styled.div`
   width: 100%;
-  height: 93px;
-  //   background: red;
-  display: flex;
-  justify-content: space-between;
-  padding-top: 5px;
+  height: 100%;
+  background: red;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
 `;
 
 export const Box = styled.div`
