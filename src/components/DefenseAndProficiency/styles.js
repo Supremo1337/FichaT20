@@ -5,14 +5,15 @@ export const Content = styled.div`
   height: 100%;
   border: 2px solid black;
   border-radius: 10px;
-  margin-left: 10px;
   padding: 10px;
+  display: flex;
+  justify-content: space-between;
 `;
 
 export const DefenseGroup = styled.div`
   width: 100%;
-  height: 80%;
-  background: yellow;
+  height: 30vh;
+  // background: yellow;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -22,19 +23,19 @@ export const PartsRow = styled.div`
   width: 100%;
   height: 35%;
   display: flex;
-  background: pink;
+  // background: pink;
 `;
 
 export const Defense = styled.div`
   width: 30%;
   height: 100%;
-  background: red;
+  // background: red;
   display: flex;
   align-items: center;
 `;
 
 export const DefenseCard = styled.div`
-  width: 60%;
+  width: 7vh;
   height: 100%;
   background: #fff;
   border: 1px solid black;
@@ -70,7 +71,7 @@ export const ModBoxGroup = styled.div`
   width: 100%;
   height: 50%;
   display: flex;
-  background: cyan;
+  // background: cyan;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
@@ -79,7 +80,7 @@ export const ModBoxGroup = styled.div`
 export const ModBox = styled.div`
   width: 100%;
   height: 100%;
-  background: purple;
+  // background: purple;
   border: 2px solid black;
   border-radius: 10px;
   padding: 5px;
@@ -102,7 +103,7 @@ export const RowLines = styled.div`
   height: 40%;
   display: flex;
   justify-content: space-between;
-  background: red;
+  // background: red;
 `;
 
 {
@@ -113,7 +114,7 @@ export const GropuArmorAndPenalty = styled.div`
   width: 100%;
   height: 35%;
   display: flex;
-  background: aqua;
+  // background: aqua;
   border: 2px solid black;
   border-radius: 10px;
 `;
@@ -121,7 +122,7 @@ export const GropuArmorAndPenalty = styled.div`
 export const PenaltyAndArmor = styled.div`
   width: ${(props) => props.width};
   height: 95%;
-  background: pink;
+  // background: pink;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -131,7 +132,7 @@ export const PenaltyAndArmor = styled.div`
 export const PenaltyAndArmorText = styled.div`
   width: 90%;
   height: 25%;
-  background: red;
+  // background: red;
   display: flex;
   justify-content: space-between;
 `;
@@ -154,7 +155,6 @@ export const EXP = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 `;
 
 export const EXPInput = styled.input`

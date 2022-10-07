@@ -24,6 +24,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import Others from "../Others";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -38,7 +39,7 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box sx={{ p: 0 }}>
-          <Typography>{children}</Typography>
+          <div>{children}</div>
         </Box>
       )}
     </div>
@@ -86,9 +87,10 @@ export default function DefenseMultipliers() {
             value={value}
             onChange={handleChange}
             aria-label="basic tabs example"
+            centered
           >
-            <Tab label="Defesas" {...a11yProps(1)} />
-            <Tab label="Outros" {...a11yProps(2)} />
+            <Tab label="Defesas" {...a11yProps(0)} />
+            <Tab label="Outros" {...a11yProps(1)} />
           </Tabs>
         </Box>
         <TabPanel value={value} index={0}>
@@ -138,7 +140,7 @@ export default function DefenseMultipliers() {
                 <BoxRow width={"100%"}>
                   <SkillsText>Penalidade de Armadura</SkillsText>
                   <InputSkills
-                    width={"48%"}
+                    width={"45%"}
                     height={"15px"}
                     placeholder={"0"}
                   ></InputSkills>
@@ -159,7 +161,7 @@ export default function DefenseMultipliers() {
                   placeholder={"0"}
                 ></InputSkills>
               </PenaltyAndArmor>
-              Space
+              {/* Space */}
               <PenaltyAndArmor width={"40%"}>
                 <PenaltyAndArmorText>
                   <SkillsText>Defesa</SkillsText>
@@ -184,12 +186,8 @@ export default function DefenseMultipliers() {
             </EXP>
           </DefenseGroup>
         </TabPanel>
-        <TabPanel value={value} index={1}>
-          PROFICIÊNCIAS
-          <br />
-          TAMANHO
-          <br />
-          DESLOCAMENTO
+        <TabPanel  value={value} index={1}>
+          <Others></Others>
         </TabPanel>
       </Box>
     </Content>

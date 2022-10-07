@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
-  width: 65%;
+  width: 64%;
   height: 100%;
   border: 2px solid black;
   border-radius: 10px;
@@ -14,7 +14,7 @@ export const Content = styled.div`
 export const TextGroup = styled.div`
   width: 100%;
   height: auto;
-  background: cyan;
+  // background: cyan;
   display: flex;
   justify-content: space-between;
 `;
@@ -22,7 +22,7 @@ export const TextGroup = styled.div`
 export const RulesInputsGroup = styled.div`
   width: 100%;
   height: 45px;
-  background: red;
+  // background: red;
   display: flex;
   justify-content: space-between;
 `;

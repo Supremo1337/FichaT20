@@ -1,5 +1,5 @@
 import CharacterData from "../components/CharacterData";
-import Top from "../components/Top";
+import ThemeSwitcher from "../components/ThemeSwitcher";
 import Attribute from "../components/Attribute";
 import styled from "styled-components";
 import Lifeandmane from "../components/LifeAndMane";
@@ -13,7 +13,7 @@ import Invetory from "../components/Inventory";
 const Global = styled.div`
   width: 100%;
   height: auto;
-  background: gray;
+  // background: gray;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -22,7 +22,7 @@ const Global = styled.div`
 const GlobalRow = styled.div`
   width: 77%;
   height: auto;
-  background: orange;
+  // background: orange;
   display: flex;
   flex-direction: column;
 `;
@@ -32,6 +32,7 @@ const RowGroup = styled.div`
   height: auto;
   display: flex;
   margin-bottom: 10px;
+  justify-content: space-between;
   // background: purple;
 `;
 
@@ -39,7 +40,7 @@ const GlobalColumn = styled.div`
   width: 23%;
   height: 960px;
   display: flex;
-  background: purple;
+  // background: purple;
 `;
 
 // ReactDOM.render(
@@ -53,7 +54,7 @@ const GlobalColumn = styled.div`
 export default function Home() {
   return (
     <>
-      {/* <Top /> */}
+      {/* <ThemeSwitcher /> */}
       <Global>
         <GlobalRow>
           <RowGroup>

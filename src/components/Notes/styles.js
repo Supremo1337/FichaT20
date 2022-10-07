@@ -16,10 +16,9 @@ export const Content = styled.div`
 export const TextArea = styled.textarea`
   width: 100%;
   min-height: 10%;
-  background: none;
+  background: pink;
   resize: vertical;
   overflow: hidden;
   outline: none;
   border: none;
-  background: pink;
 `;

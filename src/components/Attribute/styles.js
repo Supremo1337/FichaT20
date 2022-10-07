@@ -5,14 +5,13 @@ export const Content = styled.div`
   height: 190px;
   border: 2px solid black;
   border-radius: 10px;
-  margin-left: 10px;
   padding: 10px;
 `;
 
 export const BoxRow = styled.div`
   width: 100%;
   height: 100%;
-  background: red;
+  // background: red;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -22,7 +21,7 @@ export const BoxRow = styled.div`
 export const Box = styled.div`
   width: 60px;
   height: 70px;
-  //   background: #fff;
+  // background: #fff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

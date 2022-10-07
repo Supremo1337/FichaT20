@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
-  width: 50%;
+  width: 49%;
   height: 190px;
   display: flex;
 `;
@@ -22,7 +22,7 @@ export const GroupDates = styled.div`
 export const Group = styled.div`
   width: 100%;
   height: auto;
-  background: green;
+  // background: green;
   flex-direction: row;
 `;
 

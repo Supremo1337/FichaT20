@@ -1,11 +1,10 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
-  width: 30%;
+  width: 29%;
   height: 190px;
-  background: pink;
+  // background: pink;
   border: 2px solid black;
-  margin-left: 10px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -54,7 +53,7 @@ export const PointsLM = styled.input`
 export const GroupStates = styled.div`
   width: 100%;
   height: 52.5%;
-  background: yellow;
+  // background: yellow;
 `;
 
 export const ProgressBar = styled.div`
