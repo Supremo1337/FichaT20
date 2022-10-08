@@ -4,7 +4,7 @@ export const Content = styled.div`
   width: 29%;
   height: 190px;
   // background: pink;
-  border: 2px solid black;
+  border: 2px solid;
   border-radius: 10px;
   display: flex;
   flex-direction: column;

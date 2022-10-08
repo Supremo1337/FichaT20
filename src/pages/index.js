@@ -1,13 +1,16 @@
 import CharacterData from "../components/CharacterData";
-import ThemeSwitcher from "../components/ThemeSwitcher";
 import Attribute from "../components/Attribute";
-import styled from "styled-components";
 import Lifeandmane from "../components/LifeAndMane";
 import Skills from "../components/Skills";
 import Attack from "../components/Attack";
 import DefenseAndProfiency from "../components/DefenseAndProficiency";
 import Notes from "../components/Notes";
 import Invetory from "../components/Inventory";
+import styled, { ThemeProvider } from "styled-components";
+import { GlobalStyles } from "../styles/globalStyles";
+import { lightTheme, darkTheme } from "../styles/Themes";
+import React, { useState } from "react";
+import Switch from "react-Switch";
 // import FontStyles from "../fonts/fontStyles";
 
 const Global = styled.div`
@@ -17,6 +20,7 @@ const Global = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  border: 0;
 `;
 
 const GlobalRow = styled.div`
@@ -25,6 +29,8 @@ const GlobalRow = styled.div`
   // background: orange;
   display: flex;
   flex-direction: column;
+  border: 0;
+
 `;
 
 const RowGroup = styled.div`
@@ -34,6 +40,8 @@ const RowGroup = styled.div`
   margin-bottom: 10px;
   justify-content: space-between;
   // background: purple;
+  border: 0;
+
 `;
 
 const GlobalColumn = styled.div`
@@ -41,6 +49,14 @@ const GlobalColumn = styled.div`
   height: 960px;
   display: flex;
   // background: purple;
+  border: 0;
+
+`;
+
+const DivSwitcher = styled.div`
+  background: blue;
+  border: 0;
+
 `;
 
 // ReactDOM.render(
@@ -52,27 +68,47 @@ const GlobalColumn = styled.div`
 // );
 
 export default function Home() {
+  const [theme, setTheme] = useState("light");
+
+  const toggleTheme = () => {
+    if (theme === "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  };
   return (
-    <>
-      {/* <ThemeSwitcher /> */}
-      <Global>
-        <GlobalRow>
-          <RowGroup>
-            <CharacterData />
-            <Lifeandmane />
-            <Attribute />
-          </RowGroup>
-          <RowGroup>
-            <Attack />
-            <DefenseAndProfiency></DefenseAndProfiency>
-          </RowGroup>
-          <Notes />
-        </GlobalRow>
-        <GlobalColumn>
-          <Skills></Skills>
-        </GlobalColumn>
-        <Invetory />
-      </Global>
-    </>
+      <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+        <DivSwitcher>
+          <GlobalStyles />
+          <Switch
+            onChange={toggleTheme}
+            checked={theme === "dark"}
+            checkedIcon={false}
+            uncheckedIcon={false}
+            height={10}
+            width={40}
+            handleDiameter={20}
+          />
+        </DivSwitcher>
+        <Global>
+          <GlobalRow>
+            <RowGroup>
+              <CharacterData />
+              <Lifeandmane />
+              <Attribute />
+            </RowGroup>
+            <RowGroup>
+              <Attack />
+              <DefenseAndProfiency></DefenseAndProfiency>
+            </RowGroup>
+            <Notes />
+          </GlobalRow>
+          <GlobalColumn>
+            <Skills></Skills>
+          </GlobalColumn>
+          <Invetory />
+        </Global>
+      </ThemeProvider>
   );
 }

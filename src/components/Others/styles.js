@@ -14,7 +14,7 @@ export const Proficiency = styled.div`
   // background: red;
   display: flex;
   flex-direction: column;
-  border: 2px solid black;
+  border: 2px solid;
   border-radius: 10px;
   align-items: center;
 `;
@@ -33,7 +33,7 @@ export const Size = styled.div`
   height: 5vh;
   background: green;
   display: flex;
-  border: 2px solid black;
+  border: 2px solid;
   border-radius: 10px;
   padding: 10px;
 `;
@@ -47,7 +47,7 @@ export const Options = styled.select`
 export const NumbersOptions = styled.input`
   width: ${(props) => props.width};
   background: none;
-  border: 2px solid black;
+  border: 2px solid;
   border-radius: 10px;
   text-align: center;
   margin-left: 10px;
@@ -59,7 +59,7 @@ export const Displacement = styled.div`
   background: blue;
   display: flex;
   justify-content: space-between;
-  border: 2px solid black;
+  border: 2px solid;
   border-radius: 10px;
   padding: 10px;
 `;

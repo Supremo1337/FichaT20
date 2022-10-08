@@ -9,7 +9,7 @@ export const Content = styled.div`
 export const GroupDates = styled.div`
   width: 100%;
   height: auto;
-  border: 2px solid black;
+  border: 2px solid;
   border-radius: 10px;
   padding-left: 30px;
   box-sizing: border-box;

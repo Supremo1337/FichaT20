@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 35%;
   height: 100%;
-  border: 2px solid black;
+  border: 2px solid;
   border-radius: 10px;
   padding: 10px;
   display: flex;
@@ -38,7 +38,7 @@ export const DefenseCard = styled.div`
   width: 7vh;
   height: 100%;
   background: #fff;
-  border: 1px solid black;
+  border: 1px solid;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -49,7 +49,7 @@ export const InputDefense = styled.input`
   width: 35px;
   height: 35px;
   background: white;
-  border: 1px solid black;
+  border: 1px solid;
   border-radius: 10px;
   position: relative;
   top: ${(props) => props.top};
@@ -81,7 +81,7 @@ export const ModBox = styled.div`
   width: 100%;
   height: 100%;
   // background: purple;
-  border: 2px solid black;
+  border: 2px solid;
   border-radius: 10px;
   padding: 5px;
   display: flex;
@@ -115,7 +115,7 @@ export const GropuArmorAndPenalty = styled.div`
   height: 35%;
   display: flex;
   // background: aqua;
-  border: 2px solid black;
+  border: 2px solid;
   border-radius: 10px;
 `;
 
@@ -150,7 +150,7 @@ export const Stats = styled.div`
 export const EXP = styled.div`
   width: 100%;
   height: 20%;
-  border: 2px solid black;
+  border: 2px solid;
   border-radius: 10px;
   display: flex;
   justify-content: space-between;

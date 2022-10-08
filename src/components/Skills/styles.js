@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 100%;
   height: 955px;
-  border: 2px solid black;
+  border: 2px solid;
   border-radius: 10px;
   margin-left: 10px;
   padding: 10px;
@@ -66,8 +66,7 @@ export const InputSkillsGroup = styled.div`
 export const InputSkillsTotal = styled.input`
   width: 25px;
   height: 15px;
-  background: #fff;
-  border: 2px solid black;
+  border: 2px solid;
   position: relative;
   // left: ${(props) => props.left};
   // right: ${(props) => props.right};
@@ -78,7 +77,7 @@ export const InputSkills = styled.input`
   height: ${(props) => props.height};
   background: none;
   border: 0px;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid;
   position: relative;
   left: ${(props) => props.left};
   right: ${(props) => props.right};

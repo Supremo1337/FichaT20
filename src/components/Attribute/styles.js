@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 20%;
   height: 190px;
-  border: 2px solid black;
+  border: 2px solid;
   border-radius: 10px;
   padding: 10px;
 `;
@@ -25,13 +25,13 @@ export const Box = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 2px solid black;
+  border: 2px solid;
 `;
 
 export const AttributeTitle = styled.label`
   font-size: 16px;
   font-weight: bold;
-  border: 1px solid black;
+  border: 1px solid;
   border-left: none;
   border-top: none;
   border-right: none;
@@ -45,7 +45,7 @@ export const AttributeInput = styled.input`
   background: #fff;
   border-radius: 50%;
   text-align: center;
-  border: 2px solid black;
+  border: 2px solid;
   position: relative;
   top: 12px;
   ::-webkit-inner-spin-button {

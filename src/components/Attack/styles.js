@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 64%;
   height: 100%;
-  border: 2px solid black;
+  border: 2px solid;
   border-radius: 10px;
   padding: 10px;
   display: flex;
@@ -32,7 +32,7 @@ export const RulesInputs = styled.input`
   height: 35px;
   border: 0px;
   background: none;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid;
   box-shadow: 0 0 0 0;
   outline: 0;
   text-align: center;

@@ -5,7 +5,7 @@ export const Content = styled.div`
   min-height: 40%;
   height: auto;
   display: flex;
-  border: 2px solid black;
+  border: 2px solid;
   border-radius: 10px;
   padding: 10px;
   display: inline-block;
