@@ -31,6 +31,7 @@ function TabPanel(props) {
 
   return (
     <div
+      color="red"
       role="tabpanel"
       hidden={value !== index}
       id={`simple-tabpanel-${index}`}
@@ -82,15 +83,15 @@ export default function DefenseMultipliers() {
   return (
     <Content>
       <Box sx={{ width: "100%" }}>
-        <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+        <Box sx={{ borderBottom: 1 }}>
           <Tabs
             value={value}
             onChange={handleChange}
             aria-label="basic tabs example"
             centered
           >
-            <Tab label="Defesas" {...a11yProps(0)} />
-            <Tab label="Outros" {...a11yProps(1)} />
+            <Tab label="Defesas" {...a11yProps(0)} style={{ color: "black" }} />
+            <Tab label="Outros" {...a11yProps(1)} style={{ color: "black" }} />
           </Tabs>
         </Box>
         <TabPanel value={value} index={0}>
@@ -186,7 +187,7 @@ export default function DefenseMultipliers() {
             </EXP>
           </DefenseGroup>
         </TabPanel>
-        <TabPanel  value={value} index={1}>
+        <TabPanel value={value} index={1}>
           <Others></Others>
         </TabPanel>
       </Box>

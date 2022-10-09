@@ -27,7 +27,7 @@ export const SkillsText = styled.label`
   margin-left: ${(props) => props.marginLeft};
   position: relative;
   left: ${(props) => props.left};
-  background: green;
+  // background: yellow;
 `;
 
 export const SkillsRow = styled.div`

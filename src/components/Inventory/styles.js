@@ -18,7 +18,7 @@ export const Group = styled.div`
   height: 100%;
   display: flex;
   justify-content: center;
-  // background: blue;
+  background: blue;
   justify-content: space-between;
 `;
 

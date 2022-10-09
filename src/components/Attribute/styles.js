@@ -26,9 +26,11 @@ export const Box = styled.div`
   flex-direction: column;
   justify-content: space-between;
   border: 2px solid;
+  align-items: center;
 `;
 
 export const AttributeTitle = styled.label`
+  width: 100%;
   font-size: 16px;
   font-weight: bold;
   border: 1px solid;
@@ -41,8 +43,6 @@ export const AttributeTitle = styled.label`
 export const AttributeInput = styled.input`
   width: 35px;
   height: 30px;
-  margin-left: 11px;
-  background: #fff;
   border-radius: 50%;
   text-align: center;
   border: 2px solid;
@@ -58,7 +58,4 @@ export const AttributeInput = styled.input`
   }
 `;
 
-export const ModNumber = styled.label`
-  width: 35px;
-  margin-left: 25px;
-`;
+export const ModNumber = styled.label``;

@@ -10,6 +10,9 @@ export const GlobalStyles = createGlobalStyle`
   * {
     background: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
-    border-color:${({ theme}) => theme.borderColor}; 
+    box-sizing: border-box;
+  }
+  .css-8je8zh-MuiTouchRipple-root {
+    position: relative;
   }
   `;

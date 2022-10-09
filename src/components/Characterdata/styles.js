@@ -49,8 +49,4 @@ export const NamePerso = styled.input`
   border: 2px solid black;
 `;
 
-export const Logo = styled.div`
-  width: 38%;
-  height: 60px;
-  //   background: red;
-`;
+

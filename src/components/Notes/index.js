@@ -6,6 +6,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import Magics2 from "../Magics2";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -20,7 +21,7 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box sx={{ p: 0 }}>
-          <Typography>{children}</Typography>
+          <div>{children}</div>
         </Box>
       )}
     </div>
@@ -56,8 +57,12 @@ export default function Notes() {
             onChange={handleChange}
             aria-label="basic tabs example"
           >
-            <Tab label="Anotações" {...a11yProps(1)} />
-            <Tab label="Magias" {...a11yProps(2)} />
+            <Tab
+              label="Anotações"
+              {...a11yProps(1)}
+              style={{ color: "black" }}
+            />
+            <Tab label="Magias" {...a11yProps(2)} style={{ color: "black" }} />
           </Tabs>
         </Box>
         <TabPanel value={value} index={0}>
@@ -71,7 +76,7 @@ export default function Notes() {
           <TextArea rows="3" cols="20"></TextArea>
         </TabPanel>
         <TabPanel value={value} index={1}>
-          Magias
+          <Magics2></Magics2>
         </TabPanel>
       </Box>
     </Content>

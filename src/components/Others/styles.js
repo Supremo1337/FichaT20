@@ -39,7 +39,6 @@ export const Size = styled.div`
 `;
 
 export const Options = styled.select`
-  width: 20%;
   background: none;
   margin-left: 10px;
 `;

@@ -19,12 +19,12 @@ export default function Others() {
       <Size>
         <Title>TAMANHO</Title>
         <Options>
-          <option value="volvo">Mínusculo</option>
-          <option value="saab">Pequeno</option>
-          <option value="mercedes">Médio</option>
-          <option value="audi">Grande</option>
-          <option value="audi">Enorme</option>
-          <option value="audi">Colossal</option>
+          <option value="Mínusculo">Mínusculo</option>
+          <option value="Pequeno">Pequeno</option>
+          <option value="Médio">Médio</option>
+          <option value="Grande">Grande</option>
+          <option value="Enorme">Enorme</option>
+          <option value="Colossal">Colossal</option>
         </Options>
         <NumbersOptions width={"15%"} placeholder="0/0"></NumbersOptions>
       </Size>

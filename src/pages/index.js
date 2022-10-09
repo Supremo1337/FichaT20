@@ -11,6 +11,7 @@ import { GlobalStyles } from "../styles/globalStyles";
 import { lightTheme, darkTheme } from "../styles/Themes";
 import React, { useState } from "react";
 import Switch from "react-Switch";
+import { shade } from "polished";
 // import FontStyles from "../fonts/fontStyles";
 
 const Global = styled.div`
@@ -30,7 +31,6 @@ const GlobalRow = styled.div`
   display: flex;
   flex-direction: column;
   border: 0;
-
 `;
 
 const RowGroup = styled.div`
@@ -41,7 +41,6 @@ const RowGroup = styled.div`
   justify-content: space-between;
   // background: purple;
   border: 0;
-
 `;
 
 const GlobalColumn = styled.div`
@@ -50,13 +49,30 @@ const GlobalColumn = styled.div`
   display: flex;
   // background: purple;
   border: 0;
-
 `;
 
-const DivSwitcher = styled.div`
+const TopBar = styled.div`
+  height: 50px;
   background: blue;
-  border: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid;
+  border-radius: 10px;
+  margin-bottom: 10px;
+`;
 
+const Logo = styled.div`
+  width: 10%;
+  height: 50px;
+  background: red;
+`;
+
+const LogOut = styled.button`
+  width: 10%;
+  border: none;
+  border-radius: 10px;
+  color: #ff0000;
 `;
 
 // ReactDOM.render(
@@ -78,37 +94,42 @@ export default function Home() {
     }
   };
   return (
-      <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
-        <DivSwitcher>
-          <GlobalStyles />
-          <Switch
-            onChange={toggleTheme}
-            checked={theme === "dark"}
-            checkedIcon={false}
-            uncheckedIcon={false}
-            height={10}
-            width={40}
-            handleDiameter={20}
-          />
-        </DivSwitcher>
-        <Global>
-          <GlobalRow>
-            <RowGroup>
-              <CharacterData />
-              <Lifeandmane />
-              <Attribute />
-            </RowGroup>
-            <RowGroup>
-              <Attack />
-              <DefenseAndProfiency></DefenseAndProfiency>
-            </RowGroup>
-            <Notes />
-          </GlobalRow>
-          <GlobalColumn>
-            <Skills></Skills>
-          </GlobalColumn>
-          <Invetory />
-        </Global>
-      </ThemeProvider>
+    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+      <TopBar>
+        <GlobalStyles />
+        <Switch
+          onChange={toggleTheme}
+          checked={theme === "dark"}
+          checkedIcon={false}
+          uncheckedIcon={false}
+          height={10}
+          width={40}
+          handleDiameter={20}
+          onHandleColor="#67070e"
+          offHandleColor={shade(0.2, "#67070e")}
+          onColor="#888888"
+        />
+        <Logo></Logo>
+        <LogOut>Encerrar Sessão</LogOut>
+      </TopBar>
+      <Global>
+        <GlobalRow>
+          <RowGroup>
+            <CharacterData />
+            <Lifeandmane />
+            <Attribute />
+          </RowGroup>
+          <RowGroup>
+            <Attack />
+            <DefenseAndProfiency></DefenseAndProfiency>
+          </RowGroup>
+          <Notes />
+        </GlobalRow>
+        <GlobalColumn>
+          <Skills></Skills>
+        </GlobalColumn>
+        <Invetory />
+      </Global>
+    </ThemeProvider>
   );
 }
