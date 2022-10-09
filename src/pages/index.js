@@ -12,12 +12,12 @@ import { lightTheme, darkTheme } from "../styles/Themes";
 import React, { useState } from "react";
 import Switch from "react-Switch";
 import { shade } from "polished";
+import Magics2 from "../components/Magics2";
 // import FontStyles from "../fonts/fontStyles";
 
 const Global = styled.div`
   width: 100%;
   height: auto;
-  // background: gray;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -129,6 +129,7 @@ export default function Home() {
           <Skills></Skills>
         </GlobalColumn>
         <Invetory />
+        <Magics2 />
       </Global>
     </ThemeProvider>
   );

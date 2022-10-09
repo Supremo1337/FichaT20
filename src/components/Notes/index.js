@@ -51,7 +51,7 @@ export default function Notes() {
   return (
     <Content>
       <Box sx={{ width: "100%" }}>
-        <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+        {/* <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
           <Tabs
             value={value}
             onChange={handleChange}
@@ -64,8 +64,8 @@ export default function Notes() {
             />
             <Tab label="Magias" {...a11yProps(2)} style={{ color: "black" }} />
           </Tabs>
-        </Box>
-        <TabPanel value={value} index={0}>
+        </Box> */}
+        {/* <TabPanel value={value} index={0}> */}
           <Title fontSize={"20px"}>DESCRIÇÃO</Title>
           <TextArea rows="3" cols="10"></TextArea>
           <Title fontSize={"20px"}>HABILIDADES DE RAÇA E ORIGEM</Title>
@@ -74,10 +74,7 @@ export default function Notes() {
           <TextArea rows="3" cols="20"></TextArea>
           <Title fontSize={"20px"}>Anotações</Title>
           <TextArea rows="3" cols="20"></TextArea>
-        </TabPanel>
-        <TabPanel value={value} index={1}>
-          <Magics2></Magics2>
-        </TabPanel>
+        {/* </TabPanel> */}
       </Box>
     </Content>
   );
