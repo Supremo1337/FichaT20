@@ -60,7 +60,7 @@ function a11yProps(index) {
   };
 }
 export default function DefenseMultipliers() {
-  const [value, setValue] = React.useState(1);
+  const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -90,8 +90,8 @@ export default function DefenseMultipliers() {
             aria-label="basic tabs example"
             centered
           >
-            <Tab label="Defesas" {...a11yProps(0)} style={{ color: "black" }} />
-            <Tab label="Outros" {...a11yProps(1)} style={{ color: "black" }} />
+            <Tab label="Defesas" {...a11yProps(0)} style={{ text: "" }} />
+            <Tab label="Outros" {...a11yProps(1)} style={{ text: "" }} />
           </Tabs>
         </Box>
         <TabPanel value={value} index={0}>

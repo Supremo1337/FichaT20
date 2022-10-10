@@ -14,7 +14,7 @@ export default function Others() {
     <Content>
       <Proficiency>
         <Title>Proficiency</Title>
-        <InputProfieciency></InputProfieciency>
+        <InputProfieciency height={"100%"} border={"none"}></InputProfieciency>
       </Proficiency>
       <Size>
         <Title>TAMANHO</Title>

@@ -25,12 +25,12 @@ const CssTextField = styled(TextField)({
 
 export default function CharacterData() {
   const inputs = [
-    { title: "Personagem" },
-    { title: "Jogador" },
-    { title: "Raça" },
-    { title: "Origem" },
-    { title: "Classe & Nível" },
-    { title: "Divindade" },
+    { title: "Personagem", gridColumn: "1/2", gridRow: "1/2" },
+    { title: "Jogador", gridColumn: "1/2", gridRow: "2/3" },
+    { title: "Raça", gridColumn: "1/2", gridRow: "3/4" },
+    { title: "Origem", gridColumn: "2/3", gridRow: "1/2" },
+    { title: "Classe & Nível", gridColumn: "2/3", gridRow: "2/3" },
+    { title: "Divindade", gridColumn: "2/3", gridRow: "3/4" },
   ];
 
   return (
@@ -41,18 +41,19 @@ export default function CharacterData() {
             <Box
               component="form"
               noValidate
+              gridColumn={res.gridColumn}
+              gridRow={res.gridRow}
               sx={{
                 display: "grid",
-                gridTemplateColumns: { sm: "1fr 1fr" },
                 "& .MuiTextField-root": { m: 1, width: "37ch" },
               }}
             >
-                <CssTextField
-                  label={res.title}
-                  id="custom-css-outlined-input"
-                  defaultValue=""
-                  size="small"
-                />
+              <CssTextField
+                label={res.title}
+                id="custom-css-outlined-input"
+                defaultValue=""
+                size="small"
+              />
             </Box>
           );
         })}

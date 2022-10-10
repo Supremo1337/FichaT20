@@ -19,7 +19,6 @@ export default function Invetory() {
   const InputsItensBox = [{}, {}];
   const InputsRows = [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}];
   const InputsRows5 = [{}, {}, {}, {}, {}];
-
   const Tibars = [{ title: "T$:" }, { title: "TO:" }];
 
   return (

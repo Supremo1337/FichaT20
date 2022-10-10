@@ -1,5 +1,5 @@
 import { ItensTitle } from "../Inventory/styles";
-import { Options } from "../Others/styles";
+import { InputProfieciency, Options } from "../Others/styles";
 import { InputSkills, SkillsText } from "../Skills/styles";
 import {
   Content,
@@ -10,6 +10,9 @@ import {
   InputsDiv,
   ConditionAndInputsDiv,
   InputMagics,
+  Description,
+  ModalDiv,
+  InputModal,
 } from "./styles";
 import * as React from "react";
 import Box from "@mui/material/Box";
@@ -72,7 +75,7 @@ export default function Magics2() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  const [value, setValue] = React.useState(1);
+  const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -102,7 +105,7 @@ export default function Magics2() {
           }}
           onClick={handleOpen}
         >
-          <AddBoxOutlinedIcon></AddBoxOutlinedIcon>
+          <AddBoxOutlinedIcon />
         </Button>
         <Modal
           open={open}
@@ -112,11 +115,21 @@ export default function Magics2() {
         >
           <Box sx={style}>
             <Typography id="modal-modal-title" variant="h6" component="h2">
-              <div></div>
+              <Title>Adicionar Nova Mágia</Title>
             </Typography>
-            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-              Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-            </Typography>
+            <ModalDiv id="modal-modal-description" sx={{ mt: 2 }}>
+              {MagicInputs.map((res) => {
+                return (
+                  <InputModal height={"5%"} value={res.value}></InputModal>
+                );
+              })}
+              <InputProfieciency
+                border={"1px solid"}
+                borderRadius={"5px"}
+                height={"50%"}
+                placeholder="Descrição:"
+              ></InputProfieciency>
+            </ModalDiv>
           </Box>
         </Modal>
       </div>
@@ -130,12 +143,12 @@ export default function Magics2() {
             <Tab
               label="Nome da Magia"
               {...a11yProps(1)}
-              style={{ color: "black" }}
+              style={{ color: "" }}
             />
             <Tab
               label="Nome da Magia"
               {...a11yProps(2)}
-              style={{ color: "black" }}
+              style={{ color: "" }}
             />
           </Tabs>
         </Box>
@@ -180,6 +193,13 @@ export default function Magics2() {
                 })}
               </InputsDiv>
             </ConditionAndInputsDiv>
+            <Description>
+              <InputProfieciency
+                placeholder="Descrição:"
+                height={"98%"}
+                border={"none"}
+              ></InputProfieciency>
+            </Description>
           </Group>
         </TabPanel>
         <TabPanel value={value} index={1}></TabPanel>

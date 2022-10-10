@@ -2,22 +2,23 @@ import styled from "styled-components";
 
 export const Content = styled.div`
   width: 100%;
-  height: 70vh;
+  height: auto;
   background: red;
   display: flex;
   border: 2px solid;
   border-radius: 10px;
   flex-direction: column;
   align-items: center;
-  margin-top: 5px;
+  margin-top: 10px;
 `;
 
 export const Group = styled.div`
   width: 100%;
-  height: 58vh;
+  height: 48vh;
   background: green;
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
 `;
 
 export const ConditionAndInputsDiv = styled.div`
@@ -36,6 +37,8 @@ export const Conditions = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border: 2px solid;
+  border-radius: 10px;
 `;
 
 export const TextAndInput = styled.div`
@@ -65,6 +68,29 @@ export const InputMagics = styled.input`
   border: 1px solid;
   border-radius: 5px;
   outline: 0;
-  grid-column:${(props) => props.gridColumn};
-  grid-row:${(props) => props.gridRow};
+  grid-column: ${(props) => props.gridColumn};
+  grid-row: ${(props) => props.gridRow};
+`;
+
+export const Description = styled.div`
+  height: 49%;
+  border: 1px solid;
+  border-radius: 5px;
+`;
+
+export const ModalDiv = styled.div`
+  width: 100%;
+  height: 90%;
+  // background: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
+export const InputModal = styled.input`
+  width: 100%;
+  height: 5%;
+  border: 1px solid;
+  border-radius: 5px;
+  outline: 0;
 `;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Content = styled.div`
   width: 20%;
-  height: 190px;
+  height: 100%;
   border: 2px solid;
   border-radius: 10px;
   padding: 10px;
@@ -27,6 +27,8 @@ export const Box = styled.div`
   justify-content: space-between;
   border: 2px solid;
   align-items: center;
+  grid-column: ${(props) => props.gridColumn};
+  grid-row: ${(props) => props.gridRow};
 `;
 
 export const AttributeTitle = styled.label`

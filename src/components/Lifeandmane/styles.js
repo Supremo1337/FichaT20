@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Content = styled.div`
   width: 29%;
-  height: 190px;
+  height: 100%;
   // background: pink;
   border: 2px solid;
   border-radius: 10px;

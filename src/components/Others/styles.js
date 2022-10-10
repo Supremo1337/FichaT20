@@ -21,10 +21,11 @@ export const Proficiency = styled.div`
 
 export const InputProfieciency = styled.textarea`
   width: 100%;
-  height: 100%;
-  background: none;
+  height: ${(props) => props.height};
+  background: ${(props) => props.background};
   resize: none;
-  border: none;
+  border: ${(props) => props.border};
+  border-radius: ${(props) => props.borderRadius};
   outline: none;
 `;
 
