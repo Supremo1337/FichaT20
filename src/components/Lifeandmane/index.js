@@ -10,7 +10,11 @@ import {
 } from "./styles";
 import { Text } from "../CharacterData/styles";
 import { useState } from "react";
-
+import KeyboardDoubleArrowLeftIcon from "@mui/icons-material/KeyboardDoubleArrowLeft";
+import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
+import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import Button from "@mui/material/Button";
 
 export default function Lifeandmane() {
   const [maxNum, setMaxNum] = useState("");
@@ -26,14 +30,30 @@ export default function Lifeandmane() {
     const limit = 3;
     setActualNum(event.target.value.slice(0, limit));
   };
+
+  function down5Progress() {
+    (100 * vidaAtual) / vidaMaxima;
+  }
+
   return (
     <Content>
       <StatusGroup>
         <Text color={"#ff0000"}>Vida</Text>
         <GroupStates>
           <ButtonsAndInputs>
-            <Buttons></Buttons>
-            <Buttons></Buttons>
+            <Button
+              style={{
+                color: "black",
+                border: "1px solid",
+                height: "30px",
+                minWidth: "42px",
+              }}
+              onClick={down5Progress}
+            >
+              <KeyboardDoubleArrowLeftIcon />
+            </Button>
+            -5
+            <KeyboardArrowLeftIcon /> -1
             <LMInput
               type="number"
               min={maxNum}
@@ -51,19 +71,24 @@ export default function Lifeandmane() {
               className="slider"
               onChange={actual}
             ></PointsLM>
-            <Buttons></Buttons>
-            <Buttons></Buttons>
+            +1
+            <KeyboardArrowRightIcon />
+            +5
+            <KeyboardDoubleArrowRightIcon />
           </ButtonsAndInputs>
-          <ProgressBar background={"red"}></ProgressBar>
+          <ProgressBar
+            background={"red"}
+            style={{ width: "30%" }}
+          ></ProgressBar>
         </GroupStates>
       </StatusGroup>
       {/* Space */}
-      <StatusGroup>
+      {/* <StatusGroup>
         <Text color={"#0000ff"}>Mana</Text>
         <GroupStates>
           <ButtonsAndInputs>
-            <Buttons></Buttons>
-            <Buttons></Buttons>
+            <KeyboardDoubleArrowLeftIcon /> -5
+            <KeyboardArrowLeftIcon /> -1
             <LMInput
               type="number"
               min={maxNum}
@@ -81,12 +106,14 @@ export default function Lifeandmane() {
               className="slider"
               onChange={actual}
             ></PointsLM>
-            <Buttons></Buttons>
-            <Buttons></Buttons>
+            +1
+            <KeyboardArrowRightIcon />
+            +5
+            <KeyboardDoubleArrowRightIcon />
           </ButtonsAndInputs>
           <ProgressBar background={"blue"}></ProgressBar>
         </GroupStates>
-      </StatusGroup>
+      </StatusGroup> */}
     </Content>
   );
 }

@@ -115,21 +115,21 @@ export default function Home() {
       <Global>
         <GlobalRow>
           <RowGroup>
-            <CharacterData />
+            {/* <CharacterData /> */}
             <Lifeandmane />
-            <Attribute />
+            {/* <Attribute /> */}
           </RowGroup>
-          <RowGroup>
+          {/* <RowGroup>
             <Attack />
-            <DefenseAndProfiency></DefenseAndProfiency>
+            <DefenseAndProfiency />
           </RowGroup>
-          <Notes />
+          <Notes /> */}
         </GlobalRow>
-        <GlobalColumn>
+        {/* <GlobalColumn>
           <Skills></Skills>
         </GlobalColumn>
         <Invetory />
-        <Magics2 />
+        <Magics2 /> */}
       </Global>
     </ThemeProvider>
   );
