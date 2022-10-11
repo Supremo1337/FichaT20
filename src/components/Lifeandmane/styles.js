@@ -41,6 +41,11 @@ export const LMInput = styled.input`
   background: #fff;
   border: 0.1px solid black;
   text-align: right;
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 `;
 
 export const PointsLM = styled.input`
@@ -56,9 +61,10 @@ export const GroupStates = styled.div`
   // background: yellow;
 `;
 
-export const ProgressBar = styled.div`
+export const ProgressBar = styled.progress`
   width: 100%;
+  max-width: 100%;
   height: 30%;
-  background: ${(props) =>props.background};
+  background: ${(props) => props.background};
   border-radius: 5px;
 `;
