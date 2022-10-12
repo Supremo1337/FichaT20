@@ -10,7 +10,6 @@ export const GlobalStyles = createGlobalStyle`
   * {
     background: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
-    box-sizing: border-box;
   }
   .css-8je8zh-MuiTouchRipple-root {
     position: relative;

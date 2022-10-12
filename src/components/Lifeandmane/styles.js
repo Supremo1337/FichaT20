@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Content = styled.div`
   width: 29%;
-  height: 18vh;
+  height: 100%;
   // background: pink;
   border: 2px solid;
   border-radius: 10px;
@@ -35,7 +35,7 @@ export const Buttons = styled.div`
   background: #000;
 `;
 
-export const LMInput = styled.input`
+export const ActualPoints = styled.input`
   width: 30%;
   height: 70%;
   background: #fff;
@@ -48,7 +48,7 @@ export const LMInput = styled.input`
   }
 `;
 
-export const PointsLM = styled.input`
+export const MaxPoints = styled.input`
   width: 30%;
   height: 70%;
   background: #fff;

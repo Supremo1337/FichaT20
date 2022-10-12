@@ -13,7 +13,7 @@ import React, { useState } from "react";
 import Switch from "react-Switch";
 import { shade } from "polished";
 import Magics2 from "../components/Magics2";
-// import FontStyles from "../fonts/fontStyles";
+
 
 const Global = styled.div`
   width: 100%;
@@ -74,14 +74,6 @@ const LogOut = styled.button`
   border-radius: 10px;
   color: #ff0000;
 `;
-
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <FontStyles />
-//     <App />
-//   </React.StrictMode>,
-//   document.getElementById("root")
-// );
 
 export default function Home() {
   const [theme, setTheme] = useState("light");

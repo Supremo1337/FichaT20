@@ -3,8 +3,8 @@ import {
   StatusGroup,
   ButtonsAndInputs,
   Buttons,
-  LMInput,
-  PointsLM,
+  ActualPoints,
+  MaxPoints,
   GroupStates,
 } from "./styles";
 import { Text } from "../CharacterData/styles";
@@ -21,7 +21,7 @@ export default function Lifeandmane() {
   const [actualNum, setActualNum] = useState("");
   const [maxNum, setMaxNum] = useState("");
   const [vidaAtual, setVidaAtual] = useState(0);
-  const [vidaMaxima, setVidaMaxima] = useState();
+  const [vidaMaxima, setVidaMaxima] = useState(100);
 
   const Max = (event) => {
     const limit = 3;
@@ -48,9 +48,11 @@ export default function Lifeandmane() {
     barraDeVida = vidaAtual;
   });
 
-  const calculateWidthLife = (vidaAtual, vidaMaxima) => {
-    setVidaMaxima((100 * vidaAtual) / vidaMaxima);
+  const calculateWidthLife = (vidaAtual) => {
+    // setVidaMaxima((100 * vidaAtual) / vidaMaxima);
   };
+  console.log("vidaAtual", vidaAtual);
+  console.log("vidaMaxima", vidaMaxima);
 
   return (
     <Content>
@@ -67,8 +69,8 @@ export default function Lifeandmane() {
               onClick={() => decreaseLife(5)}
             >
               <KeyboardDoubleArrowLeftIcon />
+              -5
             </Button>
-            -5
             <Button
               style={{
                 color: "black",
@@ -78,23 +80,23 @@ export default function Lifeandmane() {
               onClick={() => decreaseLife(1)}
             >
               <KeyboardArrowLeftIcon />
+              -1
             </Button>
-            -1
-            <LMInput
+            <ActualPoints
               type="number"
               min={maxNum}
               max={maxNum}
               value={vidaAtual}
-              className="slider"
-              onChange={Max}
-            ></LMInput>
+              onChange={({ target }) => calculateWidthLife(target.value)}
+            ></ActualPoints>
             /
-            <PointsLM
+            <MaxPoints
               type="number"
+              min={actualNum}
+              max={actualNum}
               value={vidaMaxima}
-              className="slider"
-            ></PointsLM>
-            +1
+              onChange={({ target }) => setVidaMaxima(target.value)}
+            ></MaxPoints>
             <Button
               style={{
                 color: "black",
@@ -103,9 +105,9 @@ export default function Lifeandmane() {
               }}
               onClick={() => increaseLife(1)}
             >
+              +1
               <KeyboardArrowRightIcon />
             </Button>
-            +5
             <Button
               style={{
                 color: "black",
@@ -114,10 +116,13 @@ export default function Lifeandmane() {
               }}
               onClick={() => increaseLife(5)}
             >
+              +5
               <KeyboardDoubleArrowRightIcon />
             </Button>
           </ButtonsAndInputs>
           <ProgressBar
+            maxCompleted={10}
+            bgColor="red"
             completed={vidaAtual}
             barContainerClassName="container"
           />
@@ -137,8 +142,8 @@ export default function Lifeandmane() {
               onClick={() => decreaseLife(5)}
             >
               <KeyboardDoubleArrowLeftIcon />
+              -5
             </Button>
-            -5
             <Button
               style={{
                 color: "black",
@@ -148,28 +153,23 @@ export default function Lifeandmane() {
               onClick={() => decreaseLife(1)}
             >
               <KeyboardArrowLeftIcon />
+              -1
             </Button>
-            -1
-            <LMInput
-              id="vidaAtual"
+            <ActualPoints
               type="number"
               min={maxNum}
               max={maxNum}
               value={vidaAtual}
-              className="slider"
-              onChange={Max}
-            ></LMInput>
+              onChange={({ target }) => calculateWidthLife(target.value)}
+            ></ActualPoints>
             /
-            <PointsLM
-              id="vidaMaxima"
+            <MaxPoints
               type="number"
               min={actualNum}
               max={actualNum}
               value={vidaMaxima}
-              className="slider"
-              onChange={actual}
-            ></PointsLM>
-            +1
+              onChange={({ target }) => setVidaMaxima(target.value)}
+            ></MaxPoints>
             <Button
               style={{
                 color: "black",
@@ -178,9 +178,9 @@ export default function Lifeandmane() {
               }}
               onClick={() => increaseLife(1)}
             >
+              +1
               <KeyboardArrowRightIcon />
             </Button>
-            +5
             <Button
               style={{
                 color: "black",
@@ -189,12 +189,15 @@ export default function Lifeandmane() {
               }}
               onClick={() => increaseLife(5)}
             >
+              +5
               <KeyboardDoubleArrowRightIcon />
             </Button>
           </ButtonsAndInputs>
           <ProgressBar
+            maxCompleted={10}
             completed={vidaAtual}
             barContainerClassName="container"
+            bgColor="blue"
           />
         </GroupStates>
       </StatusGroup>

@@ -81,7 +81,6 @@ export const Description = styled.div`
 export const ModalDiv = styled.div`
   width: 100%;
   height: 90%;
-  // background: red;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

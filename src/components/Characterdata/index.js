@@ -45,7 +45,7 @@ export default function CharacterData() {
               gridRow={res.gridRow}
               sx={{
                 display: "grid",
-                "& .MuiTextField-root": { m: 1, width: "37ch" },
+                "& .MuiTextField-root": { m: 1, width: "30h" },
               }}
             >
               <CssTextField
@@ -53,6 +53,8 @@ export default function CharacterData() {
                 id="custom-css-outlined-input"
                 defaultValue=""
                 size="small"
+                InputProps={{ style: { fontFamily:"Tormenta" } }}
+                InputLabelProps={{ style: { fontFamily:"Tormenta" } }}
               />
             </Box>
           );
