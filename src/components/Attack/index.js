@@ -25,13 +25,13 @@ export default function Attack() {
     <Content>
       <TextGroup>
         <Title fontSize={"20px"}>ATAQUES</Title>
-        {Rules.map((res) => {
-          return <SkillsText left={res.left1}>{res.title}</SkillsText>;
+        {Rules.map((res,index) => {
+          return <SkillsText key={index} left={res.left1}>{res.title}</SkillsText>;
         })}
       </TextGroup>
-      {Inputs.map(() => {
+      {Inputs.map((_,index) => {
         return (
-          <RulesInputsGroup>
+          <RulesInputsGroup key={index}>
             <RulesInputs></RulesInputs>
             <RulesInputs></RulesInputs>
             <RulesInputs></RulesInputs>

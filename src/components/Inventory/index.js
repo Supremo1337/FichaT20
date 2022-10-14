@@ -25,22 +25,27 @@ export default function Invetory() {
     <Content>
       <Title>EQUIPAMENTO</Title>
       <Group>
-        {InputsItensBox.map((res) => {
+        {InputsItensBox.map((_, index) => {
           return (
-            <ItensBox>
+            <ItensBox key={index}>
               <ColumnItens width={"100%"}>
                 <ItensTitle>Item</ItensTitle>
-                {InputsRows.map((res) => {
+                {InputsRows.map((_, index) => {
                   return (
-                    <InputSkills width={"90%"} height={"25px"}></InputSkills>
+                    <InputSkills
+                      key={index}
+                      width={"90%"}
+                      height={"25px"}
+                    ></InputSkills>
                   );
                 })}
               </ColumnItens>
               <ColumnItens width={"30%"}>
                 <ItensTitle>Peso</ItensTitle>
-                {InputsRows.map((res) => {
+                {InputsRows.map((_, index) => {
                   return (
                     <InputSkills
+                      key={index}
                       width={"100%"}
                       height={"25px"}
                       placeholder={"0.00"}
@@ -55,17 +60,22 @@ export default function Invetory() {
           <ItensBox height={"51%"}>
             <ColumnItens width={"100%"}>
               <ItensTitle>Item</ItensTitle>
-              {InputsRows5.map((res) => {
+              {InputsRows5.map((_, index) => {
                 return (
-                  <InputSkills width={"90%"} height={"25px"}></InputSkills>
+                  <InputSkills
+                    key={index}
+                    width={"90%"}
+                    height={"25px"}
+                  ></InputSkills>
                 );
               })}
             </ColumnItens>
             <ColumnItens width={"30%"}>
               <ItensTitle>Peso</ItensTitle>
-              {InputsRows5.map((res) => {
+              {InputsRows5.map((_, index) => {
                 return (
                   <InputSkills
+                    key={index}
                     width={"100%"}
                     height={"25px"}
                     placeholder={"0.00"}
@@ -114,9 +124,9 @@ export default function Invetory() {
                 </ItensTitle>
               </Info>
               <TSTO>
-                {Tibars.map((res) => {
+                {Tibars.map((res,index) => {
                   return (
-                    <Tibar>
+                    <Tibar key={index}>
                       <Title>{res.title}</Title>
                       <InputSkills
                         width={"70%"}

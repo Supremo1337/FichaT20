@@ -18,22 +18,8 @@ import React from "react";
 import ProgressBar from "@ramonak/react-progress-bar";
 
 export default function Lifeandmane() {
-  const [actualNum, setActualNum] = useState("");
-  const [maxNum, setMaxNum] = useState("");
   const [vidaAtual, setVidaAtual] = useState(0);
-  const [vidaMaxima, setVidaMaxima] = useState(100);
-
-  const Max = (event) => {
-    const limit = 3;
-    setMaxNum(event.target.value.slice(0, limit));
-  };
-
-  const actual = (event) => {
-    const limit = 3;
-    setActualNum(event.target.value.slice(0, limit));
-  };
-
-  var barraDeVida = 0;
+  const [vidaMaxima, setVidaMaxima] = useState(0);
 
   const decreaseLife = (life) => {
     setVidaAtual(vidaAtual - life);
@@ -41,23 +27,13 @@ export default function Lifeandmane() {
 
   const increaseLife = (life) => {
     setVidaAtual(vidaAtual + life);
-    barraDeVida = vidaAtual;
+    console.log("vidaAtual", vidaAtual);
   };
-
-  useEffect(() => {
-    barraDeVida = vidaAtual;
-  });
-
-  const calculateWidthLife = (vidaAtual) => {
-    // setVidaMaxima((100 * vidaAtual) / vidaMaxima);
-  };
-  console.log("vidaAtual", vidaAtual);
-  console.log("vidaMaxima", vidaMaxima);
 
   return (
     <Content>
       <StatusGroup>
-        <Text color={"#ff0000"}>Vida</Text>
+        <Text>Vida</Text>
         <GroupStates>
           <ButtonsAndInputs>
             <Button
@@ -84,18 +60,14 @@ export default function Lifeandmane() {
             </Button>
             <ActualPoints
               type="number"
-              min={maxNum}
-              max={maxNum}
               value={vidaAtual}
-              onChange={({ target }) => calculateWidthLife(target.value)}
+              onChange={({ target }) => setVidaAtual(Number(target.value))}
             ></ActualPoints>
             /
             <MaxPoints
               type="number"
-              min={actualNum}
-              max={actualNum}
               value={vidaMaxima}
-              onChange={({ target }) => setVidaMaxima(target.value)}
+              onChange={({ target }) => setVidaMaxima(Number(target.value))}
             ></MaxPoints>
             <Button
               style={{
@@ -121,16 +93,17 @@ export default function Lifeandmane() {
             </Button>
           </ButtonsAndInputs>
           <ProgressBar
-            maxCompleted={10}
+            maxCompleted={Number(vidaMaxima)}
             bgColor="red"
-            completed={vidaAtual}
+            completed={Number(vidaAtual)}
             barContainerClassName="container"
+            transitionDuration="0.5s"
           />
         </GroupStates>
       </StatusGroup>
       {/* Space */}
-      <StatusGroup>
-        <Text color={"#0000ff"}>Mana</Text>
+      {/* <StatusGroup>
+        <Text>Mana</Text>
         <GroupStates>
           <ButtonsAndInputs>
             <Button
@@ -195,12 +168,13 @@ export default function Lifeandmane() {
           </ButtonsAndInputs>
           <ProgressBar
             maxCompleted={10}
+            transitionDuration="0.5s"
             completed={vidaAtual}
             barContainerClassName="container"
             bgColor="blue"
           />
         </GroupStates>
-      </StatusGroup>
+      </StatusGroup> */}
     </Content>
   );
 }

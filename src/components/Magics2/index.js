@@ -118,9 +118,13 @@ export default function Magics2() {
               <Title>Adicionar Nova Mágia</Title>
             </Typography>
             <ModalDiv id="modal-modal-description" sx={{ mt: 2 }}>
-              {MagicInputs.map((res) => {
+              {MagicInputs.map((res, index) => {
                 return (
-                  <InputModal height={"5%"} value={res.value}></InputModal>
+                  <InputModal
+                    key={index}
+                    height={"5%"}
+                    value={res.value}
+                  ></InputModal>
                 );
               })}
               <InputProfieciency
@@ -158,7 +162,7 @@ export default function Magics2() {
               <Conditions>
                 <TextAndInput width={"55%"}>
                   <SkillsText>Atributo-chave</SkillsText>
-                  <Options>
+                  <Options defaultValue={"INT"}>
                     <option value="FOR">FOR</option>
                     <option value="DES">DES</option>
                     <option value="CON">CON</option>
@@ -171,7 +175,7 @@ export default function Magics2() {
                   <SkillsText>MOD</SkillsText>
                   <InputSkills width={"65%"} placeholder={"0"}></InputSkills>
                 </TextAndInput>
-                <TestResistance>
+                {/* <TestResistance>
                   <TextAndInput>
                     <SkillsText>TESTE DE RESISTÊNCIA</SkillsText>
                     <InputSkills width={"40%"} placeholder={"0"}></InputSkills>
@@ -179,13 +183,14 @@ export default function Magics2() {
                   <ItensTitle>
                     (10 + 1/2 nível + mod. atributo-chave)
                   </ItensTitle>
-                </TestResistance>
+                </TestResistance> */}
               </Conditions>
               <InputsDiv>
-                {MagicInputs.map((res) => {
+                {MagicInputs.map((res, index) => {
                   return (
                     <InputMagics
-                      value={res.value}
+                      key={index}
+                      defaultValue={res.value}
                       gridColumn={res.gridColumn}
                       gridRow={res.gridRow}
                     ></InputMagics>

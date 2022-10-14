@@ -36,9 +36,9 @@ export default function CharacterData() {
   return (
     <Content>
       <GroupDates>
-        {inputs.map((res) => {
+        {inputs.map((res, index) => {
           return (
-            <Box
+            <Box key={index}
               component="form"
               noValidate
               gridColumn={res.gridColumn}

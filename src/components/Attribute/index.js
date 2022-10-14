@@ -19,9 +19,9 @@ export default function Attribute() {
   return (
     <Content>
       <BoxRow>
-        {Boxinputs.map((res) => {
+        {Boxinputs.map((res,index) => {
           return (
-            <Box gridColumn={res.gridColumn} gridRow={res.gridRow}>
+            <Box key={index} gridColumn={res.gridColumn} gridRow={res.gridRow}>
               <AttributeTitle>{res.title}</AttributeTitle>
               <ModNumber>{res.number}</ModNumber>
               <AttributeInput placeholder="10" type="number"></AttributeInput>

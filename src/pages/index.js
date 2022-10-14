@@ -9,11 +9,12 @@ import Invetory from "../components/Inventory";
 import styled, { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "../styles/globalStyles";
 import { lightTheme, darkTheme } from "../styles/Themes";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Switch from "react-Switch";
 import { shade } from "polished";
 import Magics2 from "../components/Magics2";
-
+import { TormentaLogo } from "../../public/img/TormentaLogo";
+import { DarkLightContext } from "../components/Context/DarkLightProvider";
 
 const Global = styled.div`
   width: 100%;
@@ -76,22 +77,13 @@ const LogOut = styled.button`
 `;
 
 export default function Home() {
-  const [theme, setTheme] = useState("light");
-
-  const toggleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
-  };
+  const {toggleTheme, isLightTheme} = useContext(DarkLightContext)
   return (
-    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+    <>
       <TopBar>
-        <GlobalStyles />
         <Switch
-          onChange={toggleTheme}
-          checked={theme === "dark"}
+          onChange={() => toggleTheme()}
+          checked={!isLightTheme}
           checkedIcon={false}
           uncheckedIcon={false}
           height={10}
@@ -101,7 +93,7 @@ export default function Home() {
           offHandleColor={shade(0.2, "#67070e")}
           onColor="#888888"
         />
-        <Logo></Logo>
+        <TormentaLogo width={"200px"} />
         <LogOut>Encerrar Sessão</LogOut>
       </TopBar>
       <Global>
@@ -123,6 +115,6 @@ export default function Home() {
         <Invetory />
         <Magics2 />
       </Global>
-    </ThemeProvider>
+    </>
   );
 }

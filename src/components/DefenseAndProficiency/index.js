@@ -127,9 +127,10 @@ export default function DefenseMultipliers() {
                     <SkillsText fontSize={"10px"}>Outros</SkillsText>
                   </BoxRow>
                   <BoxRow width={"92%"}>
-                    {inputs.map((res) => {
+                    {inputs.map((res, index) => {
                       return (
                         <InputSkills
+                          key={index}
                           width={res.width}
                           height={"15px"}
                           placeholder={"0"}
@@ -169,9 +170,10 @@ export default function DefenseMultipliers() {
                   <SkillsText>Penalidade</SkillsText>
                 </PenaltyAndArmorText>
                 <Stats>
-                  {inputs2.map((res) => {
+                  {inputs2.map((res, index) => {
                     return (
                       <InputSkills
+                        key={index}
                         width={res.width}
                         height={"15px"}
                         placeholder={"0"}

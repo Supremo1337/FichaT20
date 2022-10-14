@@ -58,9 +58,9 @@ export default function Skills() {
         <SkillsText fontSize={"10px"} paddingTop={"7px"} marginLeft={"-22px"} width={"30px"}>Treino</SkillsText>
         <SkillsText fontSize={"10px"} paddingTop={"7px"} marginLeft={"-22px"} width={"30px"}>Outros</SkillsText>
       </SkillsTitleandValue>
-      {Skills.map((res) => {
+      {Skills.map((res, index) => {
         return (
-          <SkillsRow>
+          <SkillsRow key={index}>
             <NameCheckGroup>
               <CheckSkills type="checkbox"></CheckSkills>
               <NameSkills fontSize={"12px"}>
