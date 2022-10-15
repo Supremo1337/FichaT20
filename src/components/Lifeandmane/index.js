@@ -2,13 +2,12 @@ import {
   Content,
   StatusGroup,
   ButtonsAndInputs,
-  Buttons,
   ActualPoints,
   MaxPoints,
   GroupStates,
 } from "./styles";
 import { Text } from "../CharacterData/styles";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import KeyboardDoubleArrowLeftIcon from "@mui/icons-material/KeyboardDoubleArrowLeft";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
@@ -18,8 +17,10 @@ import React from "react";
 import ProgressBar from "@ramonak/react-progress-bar";
 
 export default function Lifeandmane() {
-  const [vidaAtual, setVidaAtual] = useState(0);
-  const [vidaMaxima, setVidaMaxima] = useState(0);
+  const [vidaAtual, setVidaAtual] = useState();
+  const [vidaMaxima, setVidaMaxima] = useState();
+  const [manaAtual, setManaAtual] = useState();
+  const [manaMaxima, setManaMaxima] = useState();
 
   const decreaseLife = (life) => {
     setVidaAtual(vidaAtual - life);
@@ -27,7 +28,14 @@ export default function Lifeandmane() {
 
   const increaseLife = (life) => {
     setVidaAtual(vidaAtual + life);
-    console.log("vidaAtual", vidaAtual);
+  };
+
+  const decreaseMane = (mane) => {
+    setManaAtual(manaAtual - mane);
+  };
+
+  const increaseMane = (mane) => {
+    setManaAtual(manaAtual + mane);
   };
 
   return (
@@ -102,7 +110,7 @@ export default function Lifeandmane() {
         </GroupStates>
       </StatusGroup>
       {/* Space */}
-      {/* <StatusGroup>
+      <StatusGroup>
         <Text>Mana</Text>
         <GroupStates>
           <ButtonsAndInputs>
@@ -112,7 +120,7 @@ export default function Lifeandmane() {
                 height: "30px",
                 minWidth: "42px",
               }}
-              onClick={() => decreaseLife(5)}
+              onClick={() => decreaseMane(5)}
             >
               <KeyboardDoubleArrowLeftIcon />
               -5
@@ -123,25 +131,21 @@ export default function Lifeandmane() {
                 height: "30px",
                 minWidth: "42px",
               }}
-              onClick={() => decreaseLife(1)}
+              onClick={() => decreaseMane(1)}
             >
               <KeyboardArrowLeftIcon />
               -1
             </Button>
             <ActualPoints
               type="number"
-              min={maxNum}
-              max={maxNum}
-              value={vidaAtual}
-              onChange={({ target }) => calculateWidthLife(target.value)}
+              value={manaAtual}
+              onChange={({ target }) => setManaAtual(Number(target.value))}
             ></ActualPoints>
             /
             <MaxPoints
               type="number"
-              min={actualNum}
-              max={actualNum}
-              value={vidaMaxima}
-              onChange={({ target }) => setVidaMaxima(target.value)}
+              value={manaMaxima}
+              onChange={({ target }) => setManaMaxima(Number(target.value))}
             ></MaxPoints>
             <Button
               style={{
@@ -149,7 +153,7 @@ export default function Lifeandmane() {
                 height: "30px",
                 minWidth: "42px",
               }}
-              onClick={() => increaseLife(1)}
+              onClick={() => increaseMane(1)}
             >
               +1
               <KeyboardArrowRightIcon />
@@ -160,21 +164,21 @@ export default function Lifeandmane() {
                 height: "30px",
                 minWidth: "42px",
               }}
-              onClick={() => increaseLife(5)}
+              onClick={() => increaseMane(5)}
             >
               +5
               <KeyboardDoubleArrowRightIcon />
             </Button>
           </ButtonsAndInputs>
           <ProgressBar
-            maxCompleted={10}
-            transitionDuration="0.5s"
-            completed={vidaAtual}
-            barContainerClassName="container"
+            maxCompleted={Number(manaMaxima)}
             bgColor="blue"
+            completed={Number(manaAtual)}
+            barContainerClassName="container"
+            transitionDuration="0.5s"
           />
         </GroupStates>
-      </StatusGroup> */}
+      </StatusGroup>
     </Content>
   );
 }

@@ -77,7 +77,7 @@ const LogOut = styled.button`
 `;
 
 export default function Home() {
-  const {toggleTheme, isLightTheme} = useContext(DarkLightContext)
+  const { toggleTheme, isLightTheme } = useContext(DarkLightContext);
   return (
     <>
       <TopBar>
@@ -110,7 +110,7 @@ export default function Home() {
           <Notes />
         </GlobalRow>
         <GlobalColumn>
-          <Skills></Skills>
+          <Skills />
         </GlobalColumn>
         <Invetory />
         <Magics2 />

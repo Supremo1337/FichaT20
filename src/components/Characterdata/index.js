@@ -38,23 +38,25 @@ export default function CharacterData() {
       <GroupDates>
         {inputs.map((res, index) => {
           return (
-            <Box key={index}
+            <Box
+              key={index}
               component="form"
               noValidate
               gridColumn={res.gridColumn}
               gridRow={res.gridRow}
               sx={{
                 display: "grid",
-                "& .MuiTextField-root": { m: 1, width: "30h" },
+                "& .MuiTextField-root": { m: 0.5, width: "95%" },
               }}
             >
               <CssTextField
                 label={res.title}
                 id="custom-css-outlined-input"
                 defaultValue=""
+                variant="outlined"
                 size="small"
-                InputProps={{ style: { fontFamily:"Tormenta" } }}
-                InputLabelProps={{ style: { fontFamily:"Tormenta" } }}
+                InputProps={{ style: { fontFamily: "Tormenta" } }}
+                InputLabelProps={{ style: { fontFamily: "Tormenta" } }}
               />
             </Box>
           );

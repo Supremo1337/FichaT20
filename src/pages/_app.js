@@ -11,14 +11,15 @@ import {
 
 function MyApp({ Component, pageProps }) {
   const [isLightTheme, setLightTheme] = useState(true);
-  
-  useEffect(()=>{
-    console.log("AQUI É O TEMA DO APP" + isLightTheme);
-  }, [isLightTheme])
+
+  useEffect(() => {}, [isLightTheme]);
 
   return (
     <>
-      <DarkLightProvider isLightTheme={isLightTheme} setLightTheme={setLightTheme}>
+      <DarkLightProvider
+        isLightTheme={isLightTheme}
+        setLightTheme={setLightTheme}
+      >
         <ThemeProvider theme={isLightTheme ? lightTheme : darkTheme}>
           <GlobalStyles />
           <Component {...pageProps} />

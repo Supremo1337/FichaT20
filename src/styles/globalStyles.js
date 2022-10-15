@@ -15,3 +15,5 @@ export const GlobalStyles = createGlobalStyle`
     position: relative;
   }
   `;
+
+  
