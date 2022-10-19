@@ -11,7 +11,6 @@ import {
 
 function MyApp({ Component, pageProps }) {
   const [isLightTheme, setLightTheme] = useState(true);
-
   useEffect(() => {}, [isLightTheme]);
 
   return (

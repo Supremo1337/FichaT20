@@ -53,7 +53,7 @@ export default function Lifeandmane() {
               onClick={() => decreaseLife(5)}
             >
               <KeyboardDoubleArrowLeftIcon />
-              -5
+              <p>-5</p>
             </Button>
             <Button
               style={{
@@ -64,7 +64,7 @@ export default function Lifeandmane() {
               onClick={() => decreaseLife(1)}
             >
               <KeyboardArrowLeftIcon />
-              -1
+              <p>-1</p>
             </Button>
             <ActualPoints
               type="number"
@@ -85,7 +85,7 @@ export default function Lifeandmane() {
               }}
               onClick={() => increaseLife(1)}
             >
-              +1
+              <p>+1</p>
               <KeyboardArrowRightIcon />
             </Button>
             <Button
@@ -96,7 +96,7 @@ export default function Lifeandmane() {
               }}
               onClick={() => increaseLife(5)}
             >
-              +5
+              <p>+5</p>
               <KeyboardDoubleArrowRightIcon />
             </Button>
           </ButtonsAndInputs>
@@ -123,7 +123,7 @@ export default function Lifeandmane() {
               onClick={() => decreaseMane(5)}
             >
               <KeyboardDoubleArrowLeftIcon />
-              -5
+              <p>-5</p>
             </Button>
             <Button
               style={{
@@ -134,7 +134,7 @@ export default function Lifeandmane() {
               onClick={() => decreaseMane(1)}
             >
               <KeyboardArrowLeftIcon />
-              -1
+              <p>-1</p>
             </Button>
             <ActualPoints
               type="number"
@@ -155,7 +155,7 @@ export default function Lifeandmane() {
               }}
               onClick={() => increaseMane(1)}
             >
-              +1
+              <p>+1</p>
               <KeyboardArrowRightIcon />
             </Button>
             <Button
@@ -166,7 +166,7 @@ export default function Lifeandmane() {
               }}
               onClick={() => increaseMane(5)}
             >
-              +5
+              <p>+5</p>
               <KeyboardDoubleArrowRightIcon />
             </Button>
           </ButtonsAndInputs>

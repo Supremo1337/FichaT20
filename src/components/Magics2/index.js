@@ -175,7 +175,7 @@ export default function Magics2() {
                   <SkillsText>MOD</SkillsText>
                   <InputSkills width={"65%"} placeholder={"0"}></InputSkills>
                 </TextAndInput>
-                {/* <TestResistance>
+                <TestResistance>
                   <TextAndInput>
                     <SkillsText>TESTE DE RESISTÊNCIA</SkillsText>
                     <InputSkills width={"40%"} placeholder={"0"}></InputSkills>
@@ -183,7 +183,7 @@ export default function Magics2() {
                   <ItensTitle>
                     (10 + 1/2 nível + mod. atributo-chave)
                   </ItensTitle>
-                </TestResistance> */}
+                </TestResistance>
               </Conditions>
               <InputsDiv>
                 {MagicInputs.map((res, index) => {

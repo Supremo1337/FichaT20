@@ -1,7 +1,7 @@
-import { Content, GroupDates, BoxPerso } from "./styles";
-import { alpha, styled } from "@mui/material/styles";
+import { Content, GroupDates } from "./styles";
+import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
-import TextField, { TextFieldProps } from "@mui/material/TextField";
+import TextField from "@mui/material/TextField";
 
 const CssTextField = styled(TextField)({
   "& label.Mui-focused": {

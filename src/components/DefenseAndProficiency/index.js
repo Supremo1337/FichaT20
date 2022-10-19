@@ -67,7 +67,7 @@ export default function DefenseAndProficiency() {
   };
 
   const inputs = [
-    { width: "100px" },
+    { width: "44px" },
     { width: "90px" },
     { width: "80px" },
     { width: "30px" },

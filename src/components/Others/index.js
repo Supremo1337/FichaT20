@@ -10,6 +10,10 @@ import {
 } from "./styles";
 
 export default function Others() {
+  const size = (e) => {
+    e.target.value == "Mínusculo";
+  };
+
   return (
     <Content>
       <Proficiency>
@@ -18,7 +22,7 @@ export default function Others() {
       </Proficiency>
       <Size>
         <Title>TAMANHO</Title>
-        <Options>
+        <Options defaultValue={"Médio"}>
           <option value="Mínusculo">Mínusculo</option>
           <option value="Pequeno">Pequeno</option>
           <option value="Médio">Médio</option>
@@ -26,7 +30,7 @@ export default function Others() {
           <option value="Enorme">Enorme</option>
           <option value="Colossal">Colossal</option>
         </Options>
-        <NumbersOptions width={"15%"} placeholder="0/0"></NumbersOptions>
+        <NumbersOptions width={"15%"} placeholder={"0/0"} value="" />
       </Size>
       <Displacement>
         <Title>Deslocamento</Title>

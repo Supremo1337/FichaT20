@@ -38,11 +38,13 @@ export const Buttons = styled.div`
 export const ActualPoints = styled.input`
   width: 30%;
   height: 70%;
-  background: #fff;
-  border: 0.1px solid black;
+  border: 0.1px solid;
   text-align: right;
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
+  ::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  ::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }
@@ -51,8 +53,15 @@ export const ActualPoints = styled.input`
 export const MaxPoints = styled.input`
   width: 30%;
   height: 70%;
-  background: #fff;
-  border: 0.1px solid black;
+  border: 0.1px solid;
+  ::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  ::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 `;
 
 export const GroupStates = styled.div`

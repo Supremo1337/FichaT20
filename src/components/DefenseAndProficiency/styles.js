@@ -37,7 +37,6 @@ export const Defense = styled.div`
 export const DefenseCard = styled.div`
   width: 7vh;
   height: 100%;
-  background: #fff;
   border: 1px solid;
   border-radius: 10px;
   display: flex;
@@ -48,7 +47,6 @@ export const DefenseCard = styled.div`
 export const InputDefense = styled.input`
   width: 35px;
   height: 35px;
-  background: white;
   border: 1px solid;
   border-radius: 10px;
   position: relative;
@@ -95,7 +93,6 @@ export const BoxRow = styled.div`
   height: auto;
   display: flex;
   justify-content: space-between;
-  background: #fff;
 `;
 
 export const RowLines = styled.div`
@@ -140,7 +137,6 @@ export const PenaltyAndArmorText = styled.div`
 export const Stats = styled.div`
   width: 100%;
   height: 75%;
-  background: gray;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-row: 20vh 20vh;
@@ -160,7 +156,6 @@ export const EXP = styled.div`
 export const EXPInput = styled.input`
   width: 50%;
   height: 50%;
-  background: none;
   border: 0;
   box-shadow: 0 0 0 0;
   outline: 0;
