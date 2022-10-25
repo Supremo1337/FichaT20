@@ -2,20 +2,16 @@ import styled from "styled-components";
 
 export const Content = styled.div`
   width: 20%;
-  height: 100%;
+  height: 200px;
   border: 2px solid;
   border-radius: 10px;
   padding: 10px;
-`;
-
-export const BoxRow = styled.div`
-  width: 100%;
-  height: 100%;
-  // background: red;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  align-items: center;
   justify-items: center;
+  gap: 10px 0;
 `;
 
 export const Box = styled.div`

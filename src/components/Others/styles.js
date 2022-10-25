@@ -39,12 +39,12 @@ export const Size = styled.div`
   padding: 10px;
 `;
 
-export const Options = styled.select`
+export const Select = styled.select`
   background: none;
   margin-left: 10px;
 `;
 
-export const NumbersOptions = styled.input`
+export const Numbers = styled.label`
   width: ${(props) => props.width};
   background: none;
   border: 2px solid;
@@ -63,3 +63,14 @@ export const Displacement = styled.div`
   border-radius: 10px;
   padding: 10px;
 `;
+
+export const Move = styled.input`
+  width: ${(props) => props.width};
+  background: none;
+  border: 2px solid;
+  border-radius: 10px;
+  text-align: center;
+  margin-left: 10px;
+  outline: none;
+`;
+

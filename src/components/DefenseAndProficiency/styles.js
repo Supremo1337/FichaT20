@@ -124,6 +124,7 @@ export const PenaltyAndArmor = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  background: none;
 `;
 
 export const PenaltyAndArmorText = styled.div`
@@ -139,7 +140,7 @@ export const Stats = styled.div`
   height: 75%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-row: 20vh 20vh;
+  grid-template-rows: 1fr 1fr;
   align-items: end;
 `;
 

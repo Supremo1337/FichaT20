@@ -2,18 +2,19 @@ import styled from "styled-components";
 
 export const Content = styled.div`
   width: 29%;
-  height: 100%;
+  height: 200px;
   // background: pink;
   border: 2px solid;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   padding: 10px;
+  justify-content: space-around;
 `;
 
 export const StatusGroup = styled.div`
   width: 100%;
-  height: 50%;
+  height: 70px;
   // background: purple;
   display: flex;
   align-items: center;

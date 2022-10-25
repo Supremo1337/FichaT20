@@ -1,5 +1,5 @@
 import { ItensTitle } from "../Inventory/styles";
-import { Options } from "../Others/styles";
+import { Select } from "../Others/styles";
 import { InputSkills, SkillsText } from "../Skills/styles";
 import { Content, Conditions, TextAndInput, TestResistance } from "./styles";
 import * as React from "react";
@@ -82,14 +82,14 @@ export default function Magics() {
       <Conditions>
         <TextAndInput width={"65%"}>
           <SkillsText>Atributo-chave</SkillsText>
-          <Options>
+          <Select>
             <option value="FOR">FOR</option>
             <option value="DES">DES</option>
             <option value="CON">CON</option>
             <option value="INT">INT</option>
             <option value="SAB">SAB</option>
             <option value="CAR">CAR</option>
-          </Options>
+          </Select>
         </TextAndInput>
         <TextAndInput width={"65%"}>
           <SkillsText>MOD</SkillsText>

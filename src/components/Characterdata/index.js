@@ -1,4 +1,4 @@
-import { Content, GroupDates } from "./styles";
+import { Content } from "./styles";
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
@@ -25,17 +25,16 @@ const CssTextField = styled(TextField)({
 
 export default function CharacterData() {
   const inputs = [
-    { title: "Personagem", gridColumn: "1/2", gridRow: "1/2" },
-    { title: "Jogador", gridColumn: "1/2", gridRow: "2/3" },
-    { title: "Raça", gridColumn: "1/2", gridRow: "3/4" },
-    { title: "Origem", gridColumn: "2/3", gridRow: "1/2" },
-    { title: "Classe & Nível", gridColumn: "2/3", gridRow: "2/3" },
-    { title: "Divindade", gridColumn: "2/3", gridRow: "3/4" },
+    { title: "Personagem", gridColumn: "1/2", gridRow: "1/2", width: "95%" },
+    { title: "Jogador", gridColumn: "1/2", gridRow: "2/3", width: "95%" },
+    { title: "Raça", gridColumn: "1/2", gridRow: "3/4", width: "95%" },,
+    { title: "Origem", gridColumn: "2/4", gridRow: "1/2", width: "95%" },
+    { title: "Classe", gridColumn: "2/3", gridRow: "2/3", width: "95%" },
+    { title: "Nível", gridColumn: "3/4", gridRow: "2/3", width: "84%" },
+    { title: "Divindade", gridColumn: "2/4", gridRow: "3/4", width: "95%" },
   ];
-
   return (
     <Content>
-      <GroupDates>
         {inputs.map((res, index) => {
           return (
             <Box
@@ -46,7 +45,7 @@ export default function CharacterData() {
               gridRow={res.gridRow}
               sx={{
                 display: "grid",
-                "& .MuiTextField-root": { m: 0.5, width: "95%" },
+                "& .MuiTextField-root": { m: 0.5, width: res.width },
               }}
             >
               <CssTextField
@@ -57,11 +56,11 @@ export default function CharacterData() {
                 size="small"
                 InputProps={{ style: { fontFamily: "Tormenta" } }}
                 InputLabelProps={{ style: { fontFamily: "Tormenta" } }}
+                autoComplete='off'
               />
             </Box>
           );
         })}
-      </GroupDates>
     </Content>
   );
 }

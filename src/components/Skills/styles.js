@@ -82,4 +82,6 @@ export const InputSkills = styled.input`
   left: ${(props) => props.left};
   right: ${(props) => props.right};
   text-align: center;
+  grid-column: ${(props) => props.gridColumn};
+  grid-row: ${(props) => props.gridRow};
 `;

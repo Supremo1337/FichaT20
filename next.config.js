@@ -6,6 +6,7 @@ const nextConfig = {
     styledComponents: true,
     emotion: true
   }
+  
 }
 
 module.exports = nextConfig

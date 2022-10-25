@@ -74,10 +74,10 @@ export default function DefenseAndProficiency() {
   ];
 
   const inputs2 = [
-    { width: "70%" },
-    { width: "100%" },
-    { width: "70%" },
-    { width: "100%" },
+    { width: "70%", gridColumn: "1/2", gridRow: "1/2" },
+    { width: "100%", gridColumn: "2/3", gridRow: "1/2" },
+    { width: "70%", gridColumn: "1/2", gridRow: "2/3" },
+    { width: "100%", gridColumn: "2/3", gridRow: "2/3" },
   ];
 
   return (
@@ -90,8 +90,8 @@ export default function DefenseAndProficiency() {
             aria-label="basic tabs example"
             centered
           >
-            <Tab label="Defesas" {...a11yProps(0)} style={{ text: "" }} />
-            <Tab label="Outros" {...a11yProps(1)} style={{ text: "" }} />
+            <Tab label="Defesas" {...a11yProps(0)} />
+            <Tab label="Outros" {...a11yProps(1)} />
           </Tabs>
         </Box>
         <TabPanel value={value} index={0}>
@@ -177,6 +177,8 @@ export default function DefenseAndProficiency() {
                         width={res.width}
                         height={"15px"}
                         placeholder={"0"}
+                        gridColumn={res.gridColumn}
+                        gridRow={res.gridRow}
                       ></InputSkills>
                     );
                   })}

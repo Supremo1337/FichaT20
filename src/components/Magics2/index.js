@@ -1,5 +1,5 @@
 import { ItensTitle } from "../Inventory/styles";
-import { InputProfieciency, Options } from "../Others/styles";
+import { InputProfieciency, Select } from "../Others/styles";
 import { InputSkills, SkillsText } from "../Skills/styles";
 import {
   Content,
@@ -147,12 +147,12 @@ export default function Magics2() {
             <Tab
               label="Nome da Magia"
               {...a11yProps(1)}
-              style={{ color: "" }}
+              style={{  }}
             />
             <Tab
               label="Nome da Magia"
               {...a11yProps(2)}
-              style={{ color: "" }}
+              style={{  }}
             />
           </Tabs>
         </Box>
@@ -162,14 +162,14 @@ export default function Magics2() {
               <Conditions>
                 <TextAndInput width={"55%"}>
                   <SkillsText>Atributo-chave</SkillsText>
-                  <Options defaultValue={"INT"}>
+                  <Select defaultValue={"INT"}>
                     <option value="FOR">FOR</option>
                     <option value="DES">DES</option>
                     <option value="CON">CON</option>
                     <option value="INT">INT</option>
                     <option value="SAB">SAB</option>
                     <option value="CAR">CAR</option>
-                  </Options>
+                  </Select>
                 </TextAndInput>
                 <TextAndInput width={"65%"}>
                   <SkillsText>MOD</SkillsText>

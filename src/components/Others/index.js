@@ -1,18 +1,40 @@
-import { Title } from "../../styles/global";
+import { useState } from "react";
+import { Title, Option } from "../../styles/global";
 import {
   Content,
-  Displacement,
-  InputProfieciency,
-  NumbersOptions,
-  Options,
   Proficiency,
+  InputProfieciency,
   Size,
+  Select,
+  Numbers,
+  Displacement,
+  Move,
 } from "./styles";
 
 export default function Others() {
-  const size = (e) => {
-    e.target.value == "Mínusculo";
-  };
+  const [size, setSize] = useState("Médio");
+
+  let sizeNumber;
+  switch (size) {
+    case "Mínusculo":
+      sizeNumber = "5/-5";
+      break;
+    case "Pequeno":
+      sizeNumber = "2/-2";
+      break;
+    case "Médio":
+      sizeNumber = "0/0";
+      break;
+    case "Grande":
+      sizeNumber = "-2/2";
+      break;
+    case "Enorme":
+      sizeNumber = "-5/5";
+      break;
+    case "Colossal":
+      sizeNumber = "-10/10";
+      break;
+  }
 
   return (
     <Content>
@@ -22,19 +44,24 @@ export default function Others() {
       </Proficiency>
       <Size>
         <Title>TAMANHO</Title>
-        <Options defaultValue={"Médio"}>
-          <option value="Mínusculo">Mínusculo</option>
-          <option value="Pequeno">Pequeno</option>
-          <option value="Médio">Médio</option>
-          <option value="Grande">Grande</option>
-          <option value="Enorme">Enorme</option>
-          <option value="Colossal">Colossal</option>
-        </Options>
-        <NumbersOptions width={"15%"} placeholder={"0/0"} value="" />
+        <Select
+          onChange={(e) => {
+            setSize(e.target.value);
+          }}
+          value={size}
+        >
+          <Option value="Mínusculo">Mínusculo</Option>
+          <Option value="Pequeno">Pequeno</Option>
+          <Option value="Médio">Médio</Option>
+          <Option value="Grande">Grande</Option>
+          <Option value="Enorme">Enorme</Option>
+          <Option value="Colossal">Colossal</Option>
+        </Select>
+        <Numbers width={"15%"}>{sizeNumber}</Numbers>
       </Size>
       <Displacement>
         <Title>Deslocamento</Title>
-        <NumbersOptions width={"75%"}></NumbersOptions>
+        <Move width={"75%"}></Move>
       </Displacement>
     </Content>
   );

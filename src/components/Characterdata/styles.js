@@ -2,29 +2,18 @@ import styled from "styled-components";
 
 export const Content = styled.div`
   width: 49%;
-  height: 100%;
-  display: flex;
-`;
-
-export const GroupDates = styled.div`
-  width: 100%;
-  height: auto;
+  height: 200px;
   border: 2px solid;
   border-radius: 10px;
-  padding-left: 30px;
-  box-sizing: border-box;
-  padding: 10px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.3fr 1fr 0.4fr;
   grid-template-rows: 6vh 6vh 6vh;
+  align-content: center;
+  padding-left: 10px;
+  padding-top: 10px;
+  box-sizing: border-box;
 `;
 
-export const Group = styled.div`
-  width: 100%;
-  height: auto;
-  // background: green;
-  flex-direction: row;
-`;
 export const Text = styled.label`
   width: ${(props) => props.width};
   font-size: ${(props) => props.fontSize};
@@ -33,7 +22,3 @@ export const Text = styled.label`
   top: ${(props) => props.top};
   left: ${(props) => props.left};
 `;
-
-
-
-
