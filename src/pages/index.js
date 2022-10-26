@@ -54,7 +54,6 @@ const GlobalColumn = styled.div`
 
 const TopBar = styled.div`
   height: 50px;
-  background: blue;
   display: flex;
   justify-content: space-between;
   align-items: center;

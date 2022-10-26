@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 100%;
   height: 30vh;
-  // background: purple;
+  /* background: purple; */
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -11,7 +11,7 @@ export const Content = styled.div`
 export const Proficiency = styled.div`
   width: 100%;
   height: 15vh;
-  // background: red;
+  /* background: red; */
   display: flex;
   flex-direction: column;
   border: 2px solid;
@@ -32,7 +32,7 @@ export const InputProfieciency = styled.textarea`
 export const Size = styled.div`
   width: 100%;
   height: 5vh;
-  background: green;
+  /* background: green; */
   display: flex;
   border: 2px solid;
   border-radius: 10px;
@@ -40,13 +40,13 @@ export const Size = styled.div`
 `;
 
 export const Select = styled.select`
-  background: none;
+  /* background: none; */
   margin-left: 10px;
 `;
 
 export const Numbers = styled.label`
   width: ${(props) => props.width};
-  background: none;
+  /* background: none; */
   border: 2px solid;
   border-radius: 10px;
   text-align: center;
@@ -56,7 +56,7 @@ export const Numbers = styled.label`
 export const Displacement = styled.div`
   width: 100%;
   height: 5vh;
-  background: blue;
+  /* background: blue; */
   display: flex;
   justify-content: space-between;
   border: 2px solid;
@@ -66,11 +66,10 @@ export const Displacement = styled.div`
 
 export const Move = styled.input`
   width: ${(props) => props.width};
-  background: none;
+  /* background: none; */
   border: 2px solid;
   border-radius: 10px;
   text-align: center;
   margin-left: 10px;
   outline: none;
 `;
-

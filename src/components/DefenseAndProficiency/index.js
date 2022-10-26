@@ -6,12 +6,7 @@ import {
   DefenseCard,
   InputDefense,
   ModBox,
-  BoxRow,
   GropuArmorAndPenalty,
-  PenaltyAndArmorText,
-  Stats,
-  PenaltyAndArmor,
-  ModBoxGroup,
   EXP,
   EXPInput,
 } from "./styles";
@@ -65,19 +60,51 @@ export default function DefenseAndProficiency() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+  const [defenseNumber, setDefenseNumber] = useState();
 
-  const inputs = [
-    { width: "44px" },
-    { width: "90px" },
-    { width: "80px" },
-    { width: "30px" },
+  const text = [
+    {
+      fontSize: "10px",
+      name: "Modificador de Des",
+      gridColumn: "2/3",
+      gridRow: "1/2",
+    },
+    {
+      fontSize: "10px",
+      name: "Bônus de Armadura",
+      gridColumn: "3/4",
+      gridRow: "1/2",
+    },
+    {
+      fontSize: "10px",
+      name: "Bônus de Escudo",
+      gridColumn: "4/5",
+      gridRow: "1/2",
+    },
+    { fontSize: "10px", name: "Outros", gridColumn: "5/6", gridRow: "1/2" },
+    {
+      fontSize: "12px",
+      name: "Penalidade de Armadura",
+      gridColumn: "1/4",
+      gridRow: "3/4",
+    },
   ];
 
-  const inputs2 = [
-    { width: "70%", gridColumn: "1/2", gridRow: "1/2" },
-    { width: "100%", gridColumn: "2/3", gridRow: "1/2" },
-    { width: "70%", gridColumn: "1/2", gridRow: "2/3" },
+  const inputs = [
     { width: "100%", gridColumn: "2/3", gridRow: "2/3" },
+    { width: "100%", gridColumn: "3/4", gridRow: "2/3" },
+    { width: "100%", gridColumn: "4/5", gridRow: "2/3" },
+    { width: "100%", gridColumn: "5/6", gridRow: "2/3" },
+    { width: "100%", gridColumn: "4/6", gridRow: "3/4" },
+  ];
+
+  const inputsArmorAndDefense = [
+    { width: "100%", gridColumn: "1/2", gridRow: "2/3" },
+    { width: "100%", gridColumn: "1/2", gridRow: "3/4" },
+    { width: "100%", gridColumn: "2/3", gridRow: "2/3" },
+    { width: "100%", gridColumn: "2/3", gridRow: "3/4" },
+    { width: "100%", gridColumn: "3/4", gridRow: "2/3" },
+    { width: "100%", gridColumn: "3/4", gridRow: "3/4" },
   ];
 
   return (
@@ -116,74 +143,64 @@ export default function DefenseAndProficiency() {
                 ></InputDefense>
               </Defense>
               <ModBox>
-                <ModBoxGroup>
-                  <BoxRow width={"100%"}>
-                    <CheckSkills type={"checkbox"}></CheckSkills>
-                    <SkillsText fontSize={"10px"}>
-                      Modificador de Des
+                <CheckSkills type={"checkbox"} gridColumn={"1/2"}></CheckSkills>
+                {text.map((res, index) => {
+                  return (
+                    <SkillsText
+                      key={index}
+                      fontSize={res.fontSize}
+                      gridColumn={res.gridColumn}
+                      gridRow={res.gridRow}
+                    >
+                      {res.name}
                     </SkillsText>
-                    <SkillsText fontSize={"10px"}>Bônus de Armadura</SkillsText>
-                    <SkillsText fontSize={"10px"}>Bônus de Escudo</SkillsText>
-                    <SkillsText fontSize={"10px"}>Outros</SkillsText>
-                  </BoxRow>
-                  <BoxRow width={"92%"}>
-                    {inputs.map((res, index) => {
-                      return (
-                        <InputSkills
-                          key={index}
-                          width={res.width}
-                          height={"15px"}
-                          placeholder={"0"}
-                        ></InputSkills>
-                      );
-                    })}
-                  </BoxRow>
-                </ModBoxGroup>
-                <BoxRow width={"100%"}>
-                  <SkillsText>Penalidade de Armadura</SkillsText>
-                  <InputSkills
-                    width={"45%"}
-                    height={"15px"}
-                    placeholder={"0"}
-                  ></InputSkills>
-                </BoxRow>
+                  );
+                })}
+                {inputs.map((res, index) => {
+                  return (
+                    <InputSkills
+                      key={index}
+                      width={res.width}
+                      height={"15px"}
+                      placeholder={"0"}
+                      gridColumn={res.gridColumn}
+                      gridRow={res.gridRow}
+                    ></InputSkills>
+                  );
+                })}
               </ModBox>
             </PartsRow>
             <GropuArmorAndPenalty>
-              <PenaltyAndArmor width={"60%"}>
-                <Title>ARMADURA & DEFESA</Title>
-                <InputSkills
-                  width={"90%"}
-                  height={"15px"}
-                  placeholder={"0"}
-                ></InputSkills>
-                <InputSkills
-                  width={"90%"}
-                  height={"15px"}
-                  placeholder={"0"}
-                ></InputSkills>
-              </PenaltyAndArmor>
-              {/* Space */}
-              <PenaltyAndArmor width={"40%"}>
-                <PenaltyAndArmorText>
-                  <SkillsText>Defesa</SkillsText>
-                  <SkillsText>Penalidade</SkillsText>
-                </PenaltyAndArmorText>
-                <Stats>
-                  {inputs2.map((res, index) => {
-                    return (
-                      <InputSkills
-                        key={index}
-                        width={res.width}
-                        height={"15px"}
-                        placeholder={"0"}
-                        gridColumn={res.gridColumn}
-                        gridRow={res.gridRow}
-                      ></InputSkills>
-                    );
-                  })}
-                </Stats>
-              </PenaltyAndArmor>
+              <Title gridColumn={"1/2"} gridRow={"1/2"}>
+                ARMADURA & DEFESA
+              </Title>
+              <SkillsText
+                gridColumn={"2/3"}
+                gridRow={"1/2"}
+                textAling={"center"}
+              >
+                Defesa
+              </SkillsText>
+              {/*<-------------------------------- AQUI*/}
+              <SkillsText
+                gridColumn={"3/4"}
+                gridRow={"1/2"}
+                textAling={"center"}
+              >
+                Penalidade
+              </SkillsText>
+              {inputsArmorAndDefense.map((res, index) => {
+                return (
+                  <InputSkills
+                    key={index}
+                    width={res.width}
+                    height={"15px"}
+                    placeholder={"0"}
+                    gridColumn={res.gridColumn}
+                    gridRow={res.gridRow}
+                  ></InputSkills>
+                );
+              })}
             </GropuArmorAndPenalty>
             <EXP>
               <Title>PONTOS DE EXPERIÊNCIA</Title>

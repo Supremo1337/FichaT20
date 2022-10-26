@@ -23,20 +23,18 @@ export const PartsRow = styled.div`
   width: 100%;
   height: 35%;
   display: flex;
-  // background: pink;
 `;
 
 export const Defense = styled.div`
-  width: 30%;
-  height: 100%;
-  // background: red;
+  width: 25%;
+  height: 100px;
   display: flex;
   align-items: center;
 `;
 
 export const DefenseCard = styled.div`
-  width: 7vh;
-  height: 100%;
+  width: 60%;
+  height: 100px;
   border: 1px solid;
   border-radius: 10px;
   display: flex;
@@ -65,34 +63,19 @@ export const InputDefense = styled.input`
   }
 `;
 
-export const ModBoxGroup = styled.div`
-  width: 100%;
-  height: 50%;
-  display: flex;
-  // background: cyan;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-end;
-`;
-
 export const ModBox = styled.div`
-  width: 100%;
+  width: 75%;
   height: 100%;
-  // background: purple;
   border: 2px solid;
   border-radius: 10px;
   padding: 5px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1vw 5.7vw 3vw 3vw 3vw;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px;
+  /* flex-direction: column;
   align-items: flex-end;
-  justify-content: space-between;
-`;
-
-export const BoxRow = styled.div`
-  width: ${(props) => props.width};
-  height: auto;
-  display: flex;
-  justify-content: space-between;
+  justify-content: space-between; */
 `;
 
 export const RowLines = styled.div`
@@ -109,39 +92,14 @@ export const RowLines = styled.div`
 
 export const GropuArmorAndPenalty = styled.div`
   width: 100%;
-  height: 35%;
-  display: flex;
-  // background: aqua;
+  height: 100px;
   border: 2px solid;
   border-radius: 10px;
-`;
-
-export const PenaltyAndArmor = styled.div`
-  width: ${(props) => props.width};
-  height: 95%;
-  // background: pink;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  background: none;
-`;
-
-export const PenaltyAndArmorText = styled.div`
-  width: 90%;
-  height: 25%;
-  // background: red;
-  display: flex;
-  justify-content: space-between;
-`;
-
-export const Stats = styled.div`
-  width: 100%;
-  height: 75%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  align-items: end;
+  grid-template-columns: 11vw 5vw 6.5vw;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px;
+  padding: 10px;
 `;
 
 export const EXP = styled.div`

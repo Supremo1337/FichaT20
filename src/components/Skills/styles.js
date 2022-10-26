@@ -23,10 +23,12 @@ export const SkillsText = styled.label`
   height: 100%;
   font-size: ${(props) => props.fontSize};
   padding-top: ${(props) => props.paddingTop};
-  display: flex;
   margin-left: ${(props) => props.marginLeft};
   position: relative;
   left: ${(props) => props.left};
+  grid-column: ${(props) => props.gridColumn};
+  grid-row: ${(props) => props.gridRow};
+  text-align: ${(props) => props.textAling};
   // background: yellow;
 `;
 
@@ -46,6 +48,8 @@ export const NameCheckGroup = styled.div`
 export const CheckSkills = styled.input`
   width: 15px;
   height: 15px;
+  grid-column: ${(props) => props.gridColumn};
+  grid-row: ${(props) => props.gridRow};
 `;
 
 export const NameSkills = styled.label`

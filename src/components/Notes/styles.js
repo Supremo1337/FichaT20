@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Content = styled.div`
   width: 100%;
-  min-height: 40%;
+  min-height: 376px;
   height: auto;
   display: flex;
   border: 2px solid;

@@ -147,12 +147,10 @@ export default function Magics2() {
             <Tab
               label="Nome da Magia"
               {...a11yProps(1)}
-              style={{  }}
             />
             <Tab
               label="Nome da Magia"
               {...a11yProps(2)}
-              style={{  }}
             />
           </Tabs>
         </Box>
