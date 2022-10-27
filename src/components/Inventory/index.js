@@ -86,7 +86,7 @@ export default function Invetory() {
           </ItensBox>
           <MoreContent>
             <ItensTitle>
-              Se a sua carga Total"(1º valor)" estiver maior que a carga Máxima
+              Se a sua carga Total (1º valor) estiver maior que a carga Máxima
               (2º Valor) considere uma Penalidade de Armadura de -2 nas perícias
               devidas e seu Descolcamente deve ser reduzido em 3m [pág. 154]
               (Esses modificadores NÃO estão automatizados na ficha(mas quero
@@ -124,7 +124,7 @@ export default function Invetory() {
                 </ItensTitle>
               </Info>
               <TSTO>
-                {Tibars.map((res,index) => {
+                {Tibars.map((res, index) => {
                   return (
                     <Tibar key={index}>
                       <Title>{res.title}</Title>

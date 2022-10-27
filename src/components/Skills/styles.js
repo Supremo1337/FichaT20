@@ -88,4 +88,5 @@ export const InputSkills = styled.input`
   text-align: center;
   grid-column: ${(props) => props.gridColumn};
   grid-row: ${(props) => props.gridRow};
+  outline: none;
 `;
