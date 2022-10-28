@@ -56,22 +56,17 @@ function a11yProps(index) {
 }
 export default function DefenseAndProficiency() {
   const [value, setValue] = React.useState(0);
+  const [armorNumber, setArmorNumber] = useState(0);
+  const [shieldNumber, setShieldNumber] = useState(0);
+  const [penaltyArmor, setPenaltyArmor] = useState(0);
+  const [penaltyShield, setPenaltyShield] = useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
-  const [armorNumber, setArmorNumber] = useState(0);
-  const [shieldNumber, setShieldNumber] = useState(0);
-  const [penaltyArmor, setPenaltyArmor] = useState(0);
-  const [penaltyShield, setPenaltyShield] = useState(0);
-  const [somarPenalidade, setSomarPenalidade] = useState(0);
+  const somarPenalidade = penaltyArmor + penaltyShield;
 
-  const somaPenalidade = () => {
-    (penaltyArmor + penaltyShield);
-  };
-
-  
   const text = [
     {
       fontSize: "10px",
@@ -101,45 +96,20 @@ export default function DefenseAndProficiency() {
   ];
 
   const inputs = [
-    { width: "100%", gridColumn: "2/3", gridRow: "2/3", nameValue: "" },
-    {
-      width: "100%",
-      gridColumn: "3/4",
-      gridRow: "2/3",
-      nameValue: "armorNumber",
-    },
-    {
-      width: "100%",
-      gridColumn: "4/5",
-      gridRow: "2/3",
-      nameValue: "shieldNumber",
-    },
-    {
-      width: "100%",
-      gridColumn: "5/6",
-      gridRow: "2/3",
-      nameValue: "penaltyArmor",
-    },
-    {
-      width: "100%",
-      gridColumn: "4/6",
-      gridRow: "3/4",
-      nameValue: "penaltyShield",
-    },
+    { gridColumn: "2/3", gridRow: "2/3", nameValue: "" },
+    { gridColumn: "3/4", gridRow: "2/3", nameValue: "armorNumber" },
+    { gridColumn: "4/5", gridRow: "2/3", nameValue: "shieldNumber" },
+    { gridColumn: "5/6", gridRow: "2/3", nameValue: "" },
+    { gridColumn: "4/6", gridRow: "3/4", nameValue: "Penalidade de Armadura" },
   ];
 
   const inputsArmorAndDefense = [
-    { width: "100%", gridColumn: "1/2", gridRow: "2/3", onChange: "" },
-    { width: "100%", gridColumn: "1/2", gridRow: "3/4", onChange: "" },
-    {
-      width: "100%",
-      gridColumn: "2/3",
-      gridRow: "2/3",
-      onChange: "",
-    } /*<-------------------------------- AQUI*/,
-    { width: "100%", gridColumn: "2/3", gridRow: "3/4", onChange: "" },
-    { width: "100%", gridColumn: "3/4", gridRow: "2/3", onChange: "" },
-    { width: "100%", gridColumn: "3/4", gridRow: "3/4", onChange: "" },
+    { gridColumn: "1/2", gridRow: "2/3" },
+    { gridColumn: "1/2", gridRow: "3/4" },
+    { gridColumn: "2/3", gridRow: "2/3" },
+    { gridColumn: "2/3", gridRow: "3/4" },
+    { gridColumn: "3/4", gridRow: "2/3" },
+    { gridColumn: "3/4", gridRow: "3/4" },
   ];
 
   return (
@@ -195,21 +165,21 @@ export default function DefenseAndProficiency() {
                   return (
                     <InputSkills
                       key={index}
-                      width={res.width}
+                      width="100%"
                       height={"15px"}
                       placeholder={"0"}
                       gridColumn={res.gridColumn}
                       gridRow={res.gridRow}
                       readOnly
                       value={
-                        res.nameValue == "shieldNumber"
-                          ? shieldNumber
-                          : res.nameValue == "armorNumber"
+                        res.nameValue == "armorNumber"
                           ? armorNumber
+                          : res.nameValue == "shieldNumber"
+                          ? shieldNumber
                           : res.nameValue == "penaltyArmor"
-                          ? penaltyShield
-                          : res.nameValue == "penaltyShield"
                           ? penaltyArmor
+                          : res.nameValue == "Penalidade de Armadura"
+                          ? somarPenalidade
                           : ""
                       }
                     ></InputSkills>
@@ -226,7 +196,7 @@ export default function DefenseAndProficiency() {
                 gridRow={"1/2"}
                 textAling={"center"}
               >
-                Defesa {/*<-------------------------------- AQUI*/}
+                Defesa
               </SkillsText>
               <SkillsText
                 gridColumn={"3/4"}
@@ -239,7 +209,7 @@ export default function DefenseAndProficiency() {
                 return (
                   <InputSkills
                     key={index}
-                    width={res.width}
+                    width="100%"
                     height={"15px"}
                     placeholder={"0"}
                     gridColumn={res.gridColumn}
@@ -250,9 +220,9 @@ export default function DefenseAndProficiency() {
                         : index === 3
                         ? setShieldNumber(e.target.value)
                         : index === 4
-                        ? setPenaltyArmor(e.target.value)
+                        ? setPenaltyArmor(Number(e.target.value))
                         : index === 5
-                        ? setPenaltyShield(e.target.value)
+                        ? setPenaltyShield(Number(e.target.value))
                         : "";
                     }}
                   ></InputSkills>

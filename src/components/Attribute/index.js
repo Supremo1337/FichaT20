@@ -19,8 +19,6 @@ export default function Attribute() {
   const [attributeSab, setAttributeSab] = useState(0);
   const [attributeCar, setAttributeCar] = useState(0);
 
-  console.log("Renderizou");
-
   const onChange = (e) => {
     e.target.name == "FOR"
       ? setAttributeFor(calcu(e.target.value))
@@ -35,19 +33,45 @@ export default function Attribute() {
       : setAttributeCar(calcu(e.target.value));
   };
 
+  const boxs = [
+    { title: "FOR", modNumber: "attributeFor", name: "FOR" },
+    { title: "DES", modNumber: "attributeDes", name: "DES" },
+    { title: "CON", modNumber: "attributeCon", name: "CON" },
+    { title: "INT", modNumber: "attributeInt", name: "INT" },
+    { title: "SAB", modNumber: "attributeSab", name: "SAB" },
+    { title: "CAR", modNumber: "attributeCar", name: "CAR" },
+  ];
+
   return (
     <Content>
-      <Box>
-        <AttributeTitle>FOR</AttributeTitle>
-        <ModNumber>{attributeFor}</ModNumber>
-        <AttributeInput
-          onChange={onChange}
-          placeholder="10"
-          type="number"
-          name="FOR"
-        />
-      </Box>
-      <Box>
+      {boxs.map((res) => {
+        return (
+          <Box>
+            <AttributeTitle>{res.title}</AttributeTitle>
+            <ModNumber>
+              {res.modNumber == "attributeFor"
+                ? attributeFor
+                : res.modNumber == "attributeDes"
+                ? attributeDes
+                : res.modNumber == "attributeCon"
+                ? attributeCon
+                : res.modNumber == "attributeInt"
+                ? attributeInt
+                : res.modNumber == "attributeSab"
+                ? attributeSab
+                : attributeCar}
+            </ModNumber>
+            <AttributeInput
+              onChange={onChange}
+              placeholder="10"
+              type="number"
+              name={res.name}
+            />
+          </Box>
+        );
+      })}
+
+      {/* <Box>
         <AttributeTitle>DES</AttributeTitle>
         <ModNumber>{attributeDes}</ModNumber>
         <AttributeInput
@@ -96,7 +120,7 @@ export default function Attribute() {
           type="number"
           name="CAR"
         />
-      </Box>
+      </Box> */}
     </Content>
   );
 }
