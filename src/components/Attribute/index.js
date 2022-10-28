@@ -44,9 +44,9 @@ export default function Attribute() {
 
   return (
     <Content>
-      {boxs.map((res) => {
+      {boxs.map((res, index) => {
         return (
-          <Box>
+          <Box key={index}>
             <AttributeTitle>{res.title}</AttributeTitle>
             <ModNumber>
               {res.modNumber == "attributeFor"

@@ -70,12 +70,10 @@ export const ModBox = styled.div`
   border-radius: 10px;
   padding: 5px;
   display: grid;
-  grid-template-columns: 1vw 5.7vw 3vw 3vw 3vw;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 10px;
-  /* flex-direction: column;
-  align-items: flex-end;
-  justify-content: space-between; */
+  grid-template-columns: 1vw 4vw 1vw 3vw 1vw 3vw 1vw 2vw;
+  grid-template-rows: 3vh 4vh 2vh;
+  align-items: center;
+  column-gap: 5px;
 `;
 
 export const RowLines = styled.div`
@@ -127,4 +125,11 @@ export const EXPInput = styled.input`
     -webkit-appearance: none;
     margin: 0;
   }
+`;
+
+export const P = styled.p`
+  grid-column: ${(props) => props.gridColumn};
+  grid-row: ${(props) => props.gridRow};
+  margin: 0px;
+  margin-left: 5px;
 `;

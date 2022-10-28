@@ -9,6 +9,7 @@ import {
   GropuArmorAndPenalty,
   EXP,
   EXPInput,
+  P,
 } from "./styles";
 import { CheckSkills, InputSkills, SkillsText } from "../Skills/styles";
 import { Title } from "../../styles/global";
@@ -65,7 +66,7 @@ export default function DefenseAndProficiency() {
     setValue(newValue);
   };
 
-  const somarPenalidade = penaltyArmor + penaltyShield;
+  const sumPenalty = penaltyArmor + penaltyShield;
 
   const text = [
     {
@@ -77,30 +78,30 @@ export default function DefenseAndProficiency() {
     {
       fontSize: "10px",
       name: "Bônus de Armadura",
-      gridColumn: "3/4",
+      gridColumn: "4/5",
       gridRow: "1/2",
     },
     {
       fontSize: "10px",
       name: "Bônus de Escudo",
-      gridColumn: "4/5",
+      gridColumn: "6/7",
       gridRow: "1/2",
     },
-    { fontSize: "10px", name: "Outros", gridColumn: "5/6", gridRow: "1/2" },
+    { fontSize: "10px", name: "Outros", gridColumn: "8/9", gridRow: "1/2" },
     {
-      fontSize: "12px",
+      fontSize: "14px",
       name: "Penalidade de Armadura",
-      gridColumn: "1/4",
+      gridColumn: "1/5",
       gridRow: "3/4",
     },
   ];
 
   const inputs = [
     { gridColumn: "2/3", gridRow: "2/3", nameValue: "" },
-    { gridColumn: "3/4", gridRow: "2/3", nameValue: "armorNumber" },
-    { gridColumn: "4/5", gridRow: "2/3", nameValue: "shieldNumber" },
-    { gridColumn: "5/6", gridRow: "2/3", nameValue: "" },
-    { gridColumn: "4/6", gridRow: "3/4", nameValue: "Penalidade de Armadura" },
+    { gridColumn: "4/5", gridRow: "2/3", nameValue: "armorNumber" },
+    { gridColumn: "6/7", gridRow: "2/3", nameValue: "shieldNumber" },
+    { gridColumn: "8/9", gridRow: "2/3", nameValue: "" },
+    { gridColumn: "5/9", gridRow: "3/4", nameValue: "Penalty of Armor" },
   ];
 
   const inputsArmorAndDefense = [
@@ -148,7 +149,7 @@ export default function DefenseAndProficiency() {
                 ></InputDefense>
               </Defense>
               <ModBox>
-                <CheckSkills type={"checkbox"} gridColumn={"1/2"}></CheckSkills>
+                <CheckSkills type={"checkbox"} gridColumn={"1/2"} gridRow={1/2}></CheckSkills>
                 {text.map((res, index) => {
                   return (
                     <SkillsText
@@ -178,13 +179,17 @@ export default function DefenseAndProficiency() {
                           ? shieldNumber
                           : res.nameValue == "penaltyArmor"
                           ? penaltyArmor
-                          : res.nameValue == "Penalidade de Armadura"
-                          ? somarPenalidade
+                          : res.nameValue == "Penalty of Armor"
+                          ? sumPenalty
                           : ""
                       }
                     ></InputSkills>
                   );
                 })}
+                <P gridColumn={"1/2"} gridRow={"2/3"}>+</P>
+                <P gridColumn={"3/4"} gridRow={"2/3"}>+</P>
+                <P gridColumn={"5/6"} gridRow={"2/3"}>+</P>
+                <P gridColumn={"7/8"} gridRow={"2/3"}>+</P>
               </ModBox>
             </PartsRow>
             <GropuArmorAndPenalty>
