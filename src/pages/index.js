@@ -1,6 +1,6 @@
 import CharacterData from "../components/CharacterData";
 import Attribute from "../components/Attribute";
-import Lifeandmane from "../components/LifeandMane";
+import Lifeandmane from "../components/Lifeandmane";
 import Skills from "../components/Skills";
 import Attack from "../components/Attack";
 import DefenseAndProfiency from "../components/DefenseAndProficiency";
@@ -10,7 +10,7 @@ import styled, { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "../styles/globalStyles";
 import { lightTheme, darkTheme } from "../styles/Themes";
 import React, { useState, useContext } from "react";
-import Switch from "react-Switch";
+import Switch from "react-switch";
 import { shade } from "polished";
 import Magics2 from "../components/Magics2";
 import { TormentaLogo } from "../../public/img/TormentaLogo";
