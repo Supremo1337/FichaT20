@@ -6,7 +6,7 @@ import {
   MaxPoints,
   GroupStates,
 } from "./styles";
-import { TextTitle } from "../CharacterData/styles";
+import { TextTitle } from "../../styles/global";
 import { useState } from "react";
 import KeyboardDoubleArrowLeftIcon from "@mui/icons-material/KeyboardDoubleArrowLeft";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";

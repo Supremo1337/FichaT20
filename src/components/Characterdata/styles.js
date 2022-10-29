@@ -14,11 +14,3 @@ export const Content = styled.div`
   box-sizing: border-box;
 `;
 
-export const TextTitle = styled.label`
-  width: ${(props) => props.width};
-  font-size: ${(props) => props.fontSize};
-  color: ${(props) => props.color};
-  position: relative;
-  top: ${(props) => props.top};
-  left: ${(props) => props.left};
-`;

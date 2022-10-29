@@ -12,7 +12,7 @@ import {
   Column,
   GroupInputAndOperator,
 } from "./styles";
-import { TextTitle } from "../CharacterData/styles.js";
+import { TextTitle } from "../../styles/global";
 import OpenWithIcon from "@mui/icons-material/OpenWith";
 import AcUnitIcon from "@mui/icons-material/AcUnit";
 import { Title } from "../../styles/global";
