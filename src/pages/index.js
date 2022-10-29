@@ -1,4 +1,4 @@
-import CharacterData from "../components/CharacterData";
+import CharacterData from "../components/CharacterData/index";
 import Attribute from "../components/Attribute";
 import Lifeandmane from "../components/Lifeandmane/index";
 import Skills from "../components/Skills";
