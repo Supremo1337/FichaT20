@@ -14,7 +14,7 @@ export const Content = styled.div`
   box-sizing: border-box;
 `;
 
-export const Text = styled.label`
+export const TextTitle = styled.label`
   width: ${(props) => props.width};
   font-size: ${(props) => props.fontSize};
   color: ${(props) => props.color};

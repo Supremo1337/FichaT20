@@ -12,7 +12,7 @@ import {
   Column,
   GroupInputAndOperator,
 } from "./styles";
-import { Text } from "../CharacterData/styles.js";
+import { TextTitle } from "../CharacterData/styles.js";
 import OpenWithIcon from "@mui/icons-material/OpenWith";
 import AcUnitIcon from "@mui/icons-material/AcUnit";
 import { Title } from "../../styles/global";
@@ -74,7 +74,7 @@ export default function Skills() {
         })}
       </Column>
       <Column gap={"10px"} height={"935px"} gridColumn={"2/3"}>
-        <Text fontSize={"12px"}>Total</Text>
+        <TextTitle fontSize={"12px"}>Total</TextTitle>
         {Skills.map((res, index) => {
           return (
             <GroupInputAndOperator key={index}>

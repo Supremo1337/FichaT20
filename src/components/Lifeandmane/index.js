@@ -6,7 +6,7 @@ import {
   MaxPoints,
   GroupStates,
 } from "./styles";
-import { Text } from "../CharacterData/styles";
+import { TextTitle } from "../CharacterData/styles";
 import { useState } from "react";
 import KeyboardDoubleArrowLeftIcon from "@mui/icons-material/KeyboardDoubleArrowLeft";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
@@ -41,7 +41,7 @@ export default function Lifeandmane() {
   return (
     <Content>
       <StatusGroup>
-        <Text>Vida</Text>
+        <TextTitle>Vida</TextTitle>
         <GroupStates>
           <ButtonsAndInputs>
             <Button
@@ -111,7 +111,7 @@ export default function Lifeandmane() {
       </StatusGroup>
       {/* Space */}
       <StatusGroup>
-        <Text>Mana</Text>
+        <TextTitle>Mana</TextTitle>
         <GroupStates>
           <ButtonsAndInputs>
             <Button
