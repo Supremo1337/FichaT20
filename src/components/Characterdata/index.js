@@ -35,25 +35,43 @@ export default function CharacterData() {
   const [name2, setName2] = useState("");
   const [player, setPlayer] = useState("");
   const [data, setData] = useState([]);
+  const [dataCharacter, setDataCharacter] = useState("");
+  const [dataName, setDataName] = useState("");
   const [userId, setUserId] = useState();
-  const [value, setValue] = useState({});
+  const [value, setValue] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    setUserId(urlParams.get("userId"));
+    const urlParams = window.location.search;
+    setUserId(urlParams.replace("?userId=", ''));
+    console.log("userID: ", userId)
+  }, []);
+
+  useEffect(() => {
     ApiFodaDoGabrielCards.get("/users")
-      .then((response) => {
+    .then((response) => {
         setData(response.data);
-        return response.data;
+        setDataName(response.data[userId]?.name);
+        console.log('dados recebidos', response.data);
+        setLoading(false);
       })
       .catch((err) => {
         console.error("ops! ocorreu um erro" + err);
+        console.log('dados recebidos error', err)
+        setLoading(false);
       });
+      // setDataCharacter(urlParams);
+      // setDataCharacter(data?.character);
+      // setDataName(data?.name);
   }, []);
 
   const handleChange = (event) => {
-    setName2(event.target.value);
-    setValue({ ...value, [event.target.name]: event.target.value });
+    // setName2(event.target.value);
+    // setDataCharacter(event.target.value);
+    event.target.name === "name"?
+    setDataName(event.target.value): setDataCharacter(event.target.value);
+    // event.target.name === "Personagem"?
+    // setValue(event.target.value): null;
   };
 
   const inputs = [
@@ -109,6 +127,9 @@ export default function CharacterData() {
   ];
 
   return (
+    <>
+    {loading?
+    <div>Loading...</div> :
     <Content>
       {/* {inputs.map((res, index, item) => {
         return ( */}
@@ -128,16 +149,13 @@ export default function CharacterData() {
           },
         }}
       >
-        {console.log(
-          "dataUSER ID AQQQUI ",
-          data[userId] ? Object.values(data[userId])?.map((res) => res) : ""
-        )}
-
+        {console.log("dados", dataCharacter)}
         <CssTextField
           label={"Personagem"}
           id="custom-css-outlined-input"
-          value={name2 || name || ""}
+          value={dataCharacter || ""}
           variant="outlined"
+          name="character"
           size="small"
           InputProps={{ style: { fontFamily: "Tormenta" } }}
           InputLabelProps={{ style: { fontFamily: "Tormenta" } }}
@@ -148,9 +166,10 @@ export default function CharacterData() {
         <CssTextField
           label={"Jogador"}
           id="custom-css-outlined-input"
-          value={name2 || name || ""}
+          value={dataName || ""}
           variant="outlined"
           size="small"
+          name="name"
           InputProps={{ style: { fontFamily: "Tormenta" } }}
           InputLabelProps={{ style: { fontFamily: "Tormenta" } }}
           autoComplete="off"
@@ -163,7 +182,7 @@ export default function CharacterData() {
         <CssTextField
           label={"Raça"}
           id="custom-css-outlined-input"
-          value={name2 || name || ""}
+          value={name2 || ""}
           variant="outlined"
           size="small"
           InputProps={{ style: { fontFamily: "Tormenta" } }}
@@ -178,7 +197,7 @@ export default function CharacterData() {
         <CssTextField
           label={"Origem"}
           id="custom-css-outlined-input"
-          value={name2 || name || ""}
+          value={name2 || ""}
           variant="outlined"
           size="small"
           InputProps={{ style: { fontFamily: "Tormenta" } }}
@@ -193,7 +212,7 @@ export default function CharacterData() {
         <CssTextField
           label={"Classe"}
           id="custom-css-outlined-input"
-          value={name2 || name || ""}
+          value={name2 || ""}
           variant="outlined"
           size="small"
           InputProps={{ style: { fontFamily: "Tormenta" } }}
@@ -208,7 +227,7 @@ export default function CharacterData() {
         <CssTextField
           label={"Nível"}
           id="custom-css-outlined-input"
-          value={name2 || name || ""}
+          value={name2 || ""}
           variant="outlined"
           size="small"
           InputProps={{ style: { fontFamily: "Tormenta" } }}
@@ -223,7 +242,7 @@ export default function CharacterData() {
         <CssTextField
           label={"Divindade"}
           id="custom-css-outlined-input"
-          value={name2 || name || ""}
+          value={name2 || ""}
           variant="outlined"
           size="small"
           InputProps={{ style: { fontFamily: "Tormenta" } }}
@@ -237,10 +256,8 @@ export default function CharacterData() {
         />
       </Box>
 
-      {console.log(
-        "dadosAPI",
-        data?.map((res) => res)
-      )}
     </Content>
+  }
+    </>
   );
 }
