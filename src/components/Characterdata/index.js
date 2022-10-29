@@ -43,33 +43,34 @@ export default function CharacterData() {
 
   useEffect(() => {
     const urlParams = window.location.search;
-    setUserId(urlParams.replace("?userId=", ''));
-    console.log("userID: ", userId)
+    setUserId(urlParams.replace("?userId=", ""));
+    console.log("userID: ", userId);
   }, []);
 
   useEffect(() => {
     ApiFodaDoGabrielCards.get("/users")
-    .then((response) => {
+      .then((response) => {
         setData(response.data);
         setDataName(response.data[userId]?.name);
-        console.log('dados recebidos', response.data);
+        console.log("dados recebidos", response.data);
         setLoading(false);
       })
       .catch((err) => {
         console.error("ops! ocorreu um erro" + err);
-        console.log('dados recebidos error', err)
+        console.log("dados recebidos error", err);
         setLoading(false);
       });
-      // setDataCharacter(urlParams);
-      // setDataCharacter(data?.character);
-      // setDataName(data?.name);
+    // setDataCharacter(urlParams);
+    // setDataCharacter(data?.character);
+    // setDataName(data?.name);
   }, []);
 
   const handleChange = (event) => {
     // setName2(event.target.value);
     // setDataCharacter(event.target.value);
-    event.target.name === "name"?
-    setDataName(event.target.value): setDataCharacter(event.target.value);
+    event.target.name === "name"
+      ? setDataName(event.target.value)
+      : setDataCharacter(event.target.value);
     // event.target.name === "Personagem"?
     // setValue(event.target.value): null;
   };
@@ -128,136 +129,136 @@ export default function CharacterData() {
 
   return (
     <>
-    {loading?
-    <div>Loading...</div> :
-    <Content>
-      {/* {inputs.map((res, index, item) => {
+      {loading ? (
+        <div>Loading...</div>
+      ) : (
+        <Content>
+          {/* {inputs.map((res, index, item) => {
         return ( */}
-      <Box
-        component="form"
-        noValidate
-        // gridColumn={res.gridColumn}
-        // gridRow={res.gridRow}
-        sx={{
-          display: "grid",
-          gridTemplateColumns: "1.3fr 1fr 0.4fr",
-          gridTemplateRows: "6vh 6vh 6vh",
-          width: "100%",
-          background: "red",
-          "& .MuiTextField-root": {
-            m: 0.5,
-          },
-        }}
-      >
-        {console.log("dados", dataCharacter)}
-        <CssTextField
-          label={"Personagem"}
-          id="custom-css-outlined-input"
-          value={dataCharacter || ""}
-          variant="outlined"
-          name="character"
-          size="small"
-          InputProps={{ style: { fontFamily: "Tormenta" } }}
-          InputLabelProps={{ style: { fontFamily: "Tormenta" } }}
-          autoComplete="off"
-          onChange={handleChange}
-          sx={{ gridColumn: "1/2", gridRow: "1/2" }}
-        />
-        <CssTextField
-          label={"Jogador"}
-          id="custom-css-outlined-input"
-          value={dataName || ""}
-          variant="outlined"
-          size="small"
-          name="name"
-          InputProps={{ style: { fontFamily: "Tormenta" } }}
-          InputLabelProps={{ style: { fontFamily: "Tormenta" } }}
-          autoComplete="off"
-          onChange={handleChange}
-          sx={{
-            gridColumn: "1/2",
-            gridRow: "2/3",
-          }}
-        />
-        <CssTextField
-          label={"Raça"}
-          id="custom-css-outlined-input"
-          value={name2 || ""}
-          variant="outlined"
-          size="small"
-          InputProps={{ style: { fontFamily: "Tormenta" } }}
-          InputLabelProps={{ style: { fontFamily: "Tormenta" } }}
-          autoComplete="off"
-          onChange={handleChange}
-          sx={{
-            gridColumn: "1/2",
-            gridRow: "3/4",
-          }}
-        />
-        <CssTextField
-          label={"Origem"}
-          id="custom-css-outlined-input"
-          value={name2 || ""}
-          variant="outlined"
-          size="small"
-          InputProps={{ style: { fontFamily: "Tormenta" } }}
-          InputLabelProps={{ style: { fontFamily: "Tormenta" } }}
-          autoComplete="off"
-          onChange={handleChange}
-          sx={{
-            gridColumn: "2/4",
-            gridRow: "1/2",
-          }}
-        />
-        <CssTextField
-          label={"Classe"}
-          id="custom-css-outlined-input"
-          value={name2 || ""}
-          variant="outlined"
-          size="small"
-          InputProps={{ style: { fontFamily: "Tormenta" } }}
-          InputLabelProps={{ style: { fontFamily: "Tormenta" } }}
-          autoComplete="off"
-          onChange={handleChange}
-          sx={{
-            gridColumn: "2/3",
-            gridRow: "2/3",
-          }}
-        />
-        <CssTextField
-          label={"Nível"}
-          id="custom-css-outlined-input"
-          value={name2 || ""}
-          variant="outlined"
-          size="small"
-          InputProps={{ style: { fontFamily: "Tormenta" } }}
-          InputLabelProps={{ style: { fontFamily: "Tormenta" } }}
-          autoComplete="off"
-          onChange={handleChange}
-          sx={{
-            gridColumn: "3/4",
-            gridRow: "2/3",
-          }}
-        />
-        <CssTextField
-          label={"Divindade"}
-          id="custom-css-outlined-input"
-          value={name2 || ""}
-          variant="outlined"
-          size="small"
-          InputProps={{ style: { fontFamily: "Tormenta" } }}
-          InputLabelProps={{ style: { fontFamily: "Tormenta" } }}
-          autoComplete="off"
-          onChange={handleChange}
-          sx={{
-            gridColumn: "2/4",
-            gridRow: "3/4",
-          }}
-        />
-      </Box>
-
-    </Content>
-  }
+          <Box
+            component="form"
+            noValidate
+            // gridColumn={res.gridColumn}
+            // gridRow={res.gridRow}
+            sx={{
+              display: "grid",
+              gridTemplateColumns: "1.3fr 1fr 0.4fr",
+              gridTemplateRows: "6vh 6vh 6vh",
+              width: "100%",
+              background: "red",
+              "& .MuiTextField-root": {
+                m: 0.5,
+              },
+            }}
+          >
+            {console.log("dados", dataCharacter)}
+            <CssTextField
+              label={"Personagem"}
+              id="custom-css-outlined-input"
+              value={dataCharacter || ""}
+              variant="outlined"
+              name="character"
+              size="small"
+              InputProps={{ style: { fontFamily: "Tormenta" } }}
+              InputLabelProps={{ style: { fontFamily: "Tormenta" } }}
+              autoComplete="off"
+              onChange={handleChange}
+              sx={{ gridColumn: "1/2", gridRow: "1/2" }}
+            />
+            <CssTextField
+              label={"Jogador"}
+              id="custom-css-outlined-input"
+              value={dataName || ""}
+              variant="outlined"
+              size="small"
+              name="name"
+              InputProps={{ style: { fontFamily: "Tormenta" } }}
+              InputLabelProps={{ style: { fontFamily: "Tormenta" } }}
+              autoComplete="off"
+              onChange={handleChange}
+              sx={{
+                gridColumn: "1/2",
+                gridRow: "2/3",
+              }}
+            />
+            <CssTextField
+              label={"Raça"}
+              id="custom-css-outlined-input"
+              value={name2 || ""}
+              variant="outlined"
+              size="small"
+              InputProps={{ style: { fontFamily: "Tormenta" } }}
+              InputLabelProps={{ style: { fontFamily: "Tormenta" } }}
+              autoComplete="off"
+              onChange={handleChange}
+              sx={{
+                gridColumn: "1/2",
+                gridRow: "3/4",
+              }}
+            />
+            <CssTextField
+              label={"Origem"}
+              id="custom-css-outlined-input"
+              value={name2 || ""}
+              variant="outlined"
+              size="small"
+              InputProps={{ style: { fontFamily: "Tormenta" } }}
+              InputLabelProps={{ style: { fontFamily: "Tormenta" } }}
+              autoComplete="off"
+              onChange={handleChange}
+              sx={{
+                gridColumn: "2/4",
+                gridRow: "1/2",
+              }}
+            />
+            <CssTextField
+              label={"Classe"}
+              id="custom-css-outlined-input"
+              value={name2 || ""}
+              variant="outlined"
+              size="small"
+              InputProps={{ style: { fontFamily: "Tormenta" } }}
+              InputLabelProps={{ style: { fontFamily: "Tormenta" } }}
+              autoComplete="off"
+              onChange={handleChange}
+              sx={{
+                gridColumn: "2/3",
+                gridRow: "2/3",
+              }}
+            />
+            <CssTextField
+              label={"Nível"}
+              id="custom-css-outlined-input"
+              value={name2 || ""}
+              variant="outlined"
+              size="small"
+              InputProps={{ style: { fontFamily: "Tormenta" } }}
+              InputLabelProps={{ style: { fontFamily: "Tormenta" } }}
+              autoComplete="off"
+              onChange={handleChange}
+              sx={{
+                gridColumn: "3/4",
+                gridRow: "2/3",
+              }}
+            />
+            <CssTextField
+              label={"Divindade"}
+              id="custom-css-outlined-input"
+              value={name2 || ""}
+              variant="outlined"
+              size="small"
+              InputProps={{ style: { fontFamily: "Tormenta" } }}
+              InputLabelProps={{ style: { fontFamily: "Tormenta" } }}
+              autoComplete="off"
+              onChange={handleChange}
+              sx={{
+                gridColumn: "2/4",
+                gridRow: "3/4",
+              }}
+            />
+          </Box>
+        </Content>
+      )}
     </>
   );
 }

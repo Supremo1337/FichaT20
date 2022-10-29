@@ -1,6 +1,6 @@
 import CharacterData from "../components/CharacterData";
 import Attribute from "../components/Attribute";
-import Lifeandmane from "../components/LifeAndMane";
+import Lifeandmane from "../components/LifeandMane";
 import Skills from "../components/Skills";
 import Attack from "../components/Attack";
 import DefenseAndProfiency from "../components/DefenseAndProficiency";
