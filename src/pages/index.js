@@ -63,8 +63,8 @@ export default function Home() {
         <LogOut>Encerrar Sessão</LogOut>
       </TopBar>
       <Global>
-        <CharacterData />
-        <LifeAndMane />
+        {/* <CharacterData /> */}
+        {/* <LifeAndMane /> */}
         <Attribute />
         <Skills />
         <Attack />

@@ -137,7 +137,7 @@ export default function CharacterData() {
           {/* {inputs.map((res, index, item) => {
         return ( */}
           <Box
-            component="form"
+            component="div"
             noValidate
             // gridColumn={res.gridColumn}
             // gridRow={res.gridRow}
