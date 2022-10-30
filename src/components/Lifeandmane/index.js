@@ -16,7 +16,7 @@ import Button from "@mui/material/Button";
 import React from "react";
 import ProgressBar from "@ramonak/react-progress-bar";
 
-export default function LifeAndMane() {
+export function LifeAndMane() {
   const [actualLife, setActualLife] = useState();
   const [maxLife, setMaxLife] = useState();
   const [actualMane, setActualMane] = useState();
