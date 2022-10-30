@@ -1,6 +1,6 @@
-import CharacterDataCopy from "../components/CharacterDataCopy"
+import CharacterDataCopy from "../components/CharacterDataCopy";
 import Attribute from "../components/Attribute";
-import LifeAndManeCopy from "../components/LifeAndManeCopy"
+import LifeAndManeCopy from "../components/LifeAndManeCopy";
 import Skills from "../components/Skills";
 import Attack from "../components/Attack";
 import DefenseAndProfiency from "../components/DefenseAndProficiency";
@@ -23,6 +23,7 @@ const Global = styled.form`
   grid-template-columns: 32vw 14vw 9vw 17vw 23vw;
   grid-template-rows: 21vh 38vh 42vh 53vh 60vh 5vh;
   gap: 10px;
+  grid-template: repeat(5, auto) / 32vw 14vw 9vw 17vw 23vw; ;
 `;
 
 const TopBar = styled.div`
@@ -63,8 +64,8 @@ export default function Home() {
         <LogOut>Encerrar Sessão</LogOut>
       </TopBar>
       <Global>
-        <CharacterDataCopy />
-        <LifeAndManeCopy/>
+        <CharacterDataCopy isLightTheme={!isLightTheme} />
+        <LifeAndManeCopy />
         <Attribute />
         <Skills />
         <Attack />

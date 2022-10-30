@@ -9,7 +9,6 @@ export const Content = styled.div`
   border-radius: 10px;
   flex-direction: column;
   align-items: center;
-  margin-top: 10px;
   grid-column: 1/6;
   grid-row: 5/6;
 `;

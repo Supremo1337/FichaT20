@@ -105,12 +105,12 @@ export default function DefenseAndProficiency() {
   ];
 
   const inputsArmorAndDefense = [
-    { gridColumn: "1/2", gridRow: "2/3" },
-    { gridColumn: "1/2", gridRow: "3/4" },
-    { gridColumn: "2/3", gridRow: "2/3" },
-    { gridColumn: "2/3", gridRow: "3/4" },
-    { gridColumn: "3/4", gridRow: "2/3" },
-    { gridColumn: "3/4", gridRow: "3/4" },
+    { gridColumn: "1/2", gridRow: "2/3", placeholder: "Armadura" },
+    { gridColumn: "1/2", gridRow: "3/4", placeholder: "Escudo" },
+    { gridColumn: "2/3", gridRow: "2/3", placeholder: "10" },
+    { gridColumn: "2/3", gridRow: "3/4", placeholder: "10" },
+    { gridColumn: "3/4", gridRow: "2/3", placeholder: "10" },
+    { gridColumn: "3/4", gridRow: "3/4", placeholder: "10" },
   ];
 
   return (
@@ -149,7 +149,11 @@ export default function DefenseAndProficiency() {
                 ></InputDefense>
               </Defense>
               <ModBox>
-                <CheckSkills type={"checkbox"} gridColumn={"1/2"} gridRow={1/2}></CheckSkills>
+                <CheckSkills
+                  type={"checkbox"}
+                  gridColumn={"1/2"}
+                  gridRow={1 / 2}
+                ></CheckSkills>
                 {text.map((res, index) => {
                   return (
                     <SkillsText
@@ -186,10 +190,18 @@ export default function DefenseAndProficiency() {
                     ></InputSkills>
                   );
                 })}
-                <P gridColumn={"1/2"} gridRow={"2/3"}>+</P>
-                <P gridColumn={"3/4"} gridRow={"2/3"}>+</P>
-                <P gridColumn={"5/6"} gridRow={"2/3"}>+</P>
-                <P gridColumn={"7/8"} gridRow={"2/3"}>+</P>
+                <P gridColumn={"1/2"} gridRow={"2/3"}>
+                  +
+                </P>
+                <P gridColumn={"3/4"} gridRow={"2/3"}>
+                  +
+                </P>
+                <P gridColumn={"5/6"} gridRow={"2/3"}>
+                  +
+                </P>
+                <P gridColumn={"7/8"} gridRow={"2/3"}>
+                  +
+                </P>
               </ModBox>
             </PartsRow>
             <GropuArmorAndPenalty>
@@ -216,7 +228,7 @@ export default function DefenseAndProficiency() {
                     key={index}
                     width="100%"
                     height={"15px"}
-                    placeholder={"0"}
+                    placeholder={res.placeholder}
                     gridColumn={res.gridColumn}
                     gridRow={res.gridRow}
                     onChange={(e) => {
