@@ -1,4 +1,4 @@
-// import CharacterData from "../components/CharacterData/index.js";
+import CharacterDataCopy from "../components/CharacterDataCopy"
 import Attribute from "../components/Attribute";
 import LifeAndManeCopy from "../components/LifeAndManeCopy"
 import Skills from "../components/Skills";
@@ -63,7 +63,7 @@ export default function Home() {
         <LogOut>Encerrar Sessão</LogOut>
       </TopBar>
       <Global>
-        {/* <CharacterData /> */}
+        <CharacterDataCopy />
         <LifeAndManeCopy/>
         <Attribute />
         <Skills />
