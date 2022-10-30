@@ -1,6 +1,6 @@
-import CharacterData from "../components/CharacterData/index.js";
+// import CharacterData from "../components/CharacterData/index.js";
 import Attribute from "../components/Attribute";
-import LifeAndMane from "../components/LifeAndMane/index.js";
+// import LifeAndMane from "../components/LifeAndMane/index.js";
 import Skills from "../components/Skills";
 import Attack from "../components/Attack";
 import DefenseAndProfiency from "../components/DefenseAndProficiency";
