@@ -31,7 +31,8 @@ const CssTextField = styled(TextField)({
     },
   },
 });
-export function CharacterData() {
+
+export default function CharacterData() {
   const [name2, setName2] = useState("");
   const [player, setPlayer] = useState("");
   const [data, setData] = useState([]);
