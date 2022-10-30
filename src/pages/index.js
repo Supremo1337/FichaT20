@@ -1,28 +1,28 @@
 import CharacterData from "../components/CharacterData/index";
 import Attribute from "../components/Attribute";
-import Lifeandmane from "../components/Lifeandmane/index";
+import LifeAndMane from "../components/LifeAndMane/index";
 import Skills from "../components/Skills";
 import Attack from "../components/Attack";
 import DefenseAndProfiency from "../components/DefenseAndProficiency";
 import Notes from "../components/Notes";
 import Invetory from "../components/Inventory";
-import styled, { ThemeProvider } from "styled-components";
-import { GlobalStyles } from "../styles/globalStyles";
-import { lightTheme, darkTheme } from "../styles/Themes";
-import React, { useState, useContext } from "react";
+import styled from "styled-components";
+import React, { useContext } from "react";
 import Switch from "react-switch";
 import { shade } from "polished";
-import Magics2 from "../components/Magics2";
+import Magics from "../components/Magics";
 import { TormentaLogo } from "../../public/img/TormentaLogo";
 import { DarkLightContext } from "../components/Context/DarkLightProvider";
+import SubmitBar from "../components/SubmitBar";
 
-const Global = styled.div`
+const Global = styled.form`
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   border: 0;
+  
 `;
 
 const GlobalRow = styled.div`
@@ -99,7 +99,7 @@ export default function Home() {
         <GlobalRow>
           <RowGroup>
             <CharacterData />
-            <Lifeandmane />
+            <LifeAndMane />
             <Attribute />
           </RowGroup>
           <RowGroup>
@@ -112,7 +112,8 @@ export default function Home() {
           <Skills />
         </GlobalColumn>
         <Invetory />
-        <Magics2 />
+        <Magics />
+        <SubmitBar />
       </Global>
     </>
   );

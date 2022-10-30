@@ -70,57 +70,6 @@ export default function Attribute() {
           </Box>
         );
       })}
-
-      {/* <Box>
-        <AttributeTitle>DES</AttributeTitle>
-        <ModNumber>{attributeDes}</ModNumber>
-        <AttributeInput
-          onChange={onChange}
-          placeholder="10"
-          type="number"
-          name="DES"
-        />
-      </Box>
-      <Box>
-        <AttributeTitle>CON</AttributeTitle>
-        <ModNumber>{attributeCon}</ModNumber>
-        <AttributeInput
-          onChange={onChange}
-          placeholder="10"
-          type="number"
-          name="CON"
-        />
-      </Box>
-      <Box>
-        <AttributeTitle>INT</AttributeTitle>
-        <ModNumber>{attributeInt}</ModNumber>
-        <AttributeInput
-          onChange={onChange}
-          placeholder="10"
-          type="number"
-          name="INT"
-        />
-      </Box>
-      <Box>
-        <AttributeTitle>SAB</AttributeTitle>
-        <ModNumber>{attributeSab}</ModNumber>
-        <AttributeInput
-          onChange={onChange}
-          placeholder="10"
-          type="number"
-          name="SAB"
-        />
-      </Box>
-      <Box>
-        <AttributeTitle>CAR</AttributeTitle>
-        <ModNumber>{attributeCar}</ModNumber>
-        <AttributeInput
-          onChange={onChange}
-          placeholder="10"
-          type="number"
-          name="CAR"
-        />
-      </Box> */}
     </Content>
   );
 }

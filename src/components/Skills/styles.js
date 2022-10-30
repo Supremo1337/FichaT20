@@ -13,13 +13,6 @@ export const Content = styled.div`
   align-items: flex-end;
 `;
 
-export const SkillsTitleandValue = styled.div`
-  width: 100%;
-  height: 35px;
-  display: flex;
-  justify-content: space-between;
-`;
-
 // Reaprovei a label e "Text"
 
 export const SkillsText = styled.label`
@@ -36,19 +29,6 @@ export const SkillsText = styled.label`
   // background: yellow;
 `;
 
-export const SkillsRow = styled.div`
-  width: 100%;
-  height: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-export const NameCheckGroup = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
 export const CheckSkills = styled.input`
   width: 15px;
   height: 15px;
@@ -60,14 +40,6 @@ export const NameSkills = styled.label`
   font-size: 12px;
   padding-top: 7px;
   display: flex;
-`;
-
-export const InputSkillsGroup = styled.div`
-  width: 70%;
-  height: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 `;
 
 export const InputSkillsTotal = styled.input`

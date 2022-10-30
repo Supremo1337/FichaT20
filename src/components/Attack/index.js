@@ -5,10 +5,10 @@ import { Title } from "../../styles/global";
 export default function Attack() {
   const Rules = [
     { title: "Teste de Ataque" },
-    { title: "Dano", left1: "-50px" },
-    { title: "Crítico", left1: "-50px" },
-    { title: "Tipo", left1: "-50px" },
-    { title: "Alcance", left1: "-50px" },
+    { title: "Dano", left: "-50px" },
+    { title: "Crítico", left: "-50px" },
+    { title: "Tipo", left: "-50px" },
+    { title: "Alcance", left: "-50px" },
   ];
 
   const Inputs = [
@@ -25,11 +25,15 @@ export default function Attack() {
     <Content>
       <TextGroup>
         <Title fontSize={"20px"}>ATAQUES</Title>
-        {Rules.map((res,index) => {
-          return <SkillsText key={index} left={res.left1}>{res.title}</SkillsText>;
+        {Rules.map((res, index) => {
+          return (
+            <SkillsText key={index} left={res.left}>
+              {res.title}
+            </SkillsText>
+          );
         })}
       </TextGroup>
-      {Inputs.map((_,index) => {
+      {Inputs.map((_, index) => {
         return (
           <RulesInputsGroup key={index}>
             <RulesInputs></RulesInputs>

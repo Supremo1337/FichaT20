@@ -1,13 +1,8 @@
 import {
   Content,
-  SkillsTitleandValue,
   SkillsText,
-  SkillsRow,
-  CheckSkills,
   InputSkills,
   NameSkills,
-  NameCheckGroup,
-  InputSkillsGroup,
   InputSkillsTotal,
   Column,
   GroupInputAndOperator,

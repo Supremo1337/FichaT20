@@ -16,26 +16,26 @@ import Button from "@mui/material/Button";
 import React from "react";
 import ProgressBar from "@ramonak/react-progress-bar";
 
-export default function Lifeandmane() {
-  const [vidaAtual, setVidaAtual] = useState();
-  const [vidaMaxima, setVidaMaxima] = useState();
-  const [manaAtual, setManaAtual] = useState();
-  const [manaMaxima, setManaMaxima] = useState();
+export default function LifeAndMane() {
+  const [actualLife, setActualLife] = useState();
+  const [maxLife, setMaxLife] = useState();
+  const [actualMane, setActualMane] = useState();
+  const [maxMane, setMaxMane] = useState();
 
   const decreaseLife = (life) => {
-    setVidaAtual(vidaAtual - life);
+    setActualLife(actualLife - life);
   };
 
   const increaseLife = (life) => {
-    setVidaAtual(vidaAtual + life);
+    setActualLife(actualLife + life);
   };
 
   const decreaseMane = (mane) => {
-    setManaAtual(manaAtual - mane);
+    setActualMane(actualMane - mane);
   };
 
   const increaseMane = (mane) => {
-    setManaAtual(manaAtual + mane);
+    setActualMane(actualMane + mane);
   };
 
   return (
@@ -68,14 +68,14 @@ export default function Lifeandmane() {
             </Button>
             <ActualPoints
               type="number"
-              value={vidaAtual}
-              onChange={({ target }) => setVidaAtual(Number(target.value))}
+              value={actualLife}
+              onChange={({ target }) => setActualLife(Number(target.value))}
             ></ActualPoints>
             /
             <MaxPoints
               type="number"
-              value={vidaMaxima}
-              onChange={({ target }) => setVidaMaxima(Number(target.value))}
+              value={maxLife}
+              onChange={({ target }) => setMaxLife(Number(target.value))}
             ></MaxPoints>
             <Button
               style={{
@@ -101,9 +101,9 @@ export default function Lifeandmane() {
             </Button>
           </ButtonsAndInputs>
           <ProgressBar
-            maxCompleted={Number(vidaMaxima)}
+            maxCompleted={Number(maxLife)}
             bgColor="red"
-            completed={Number(vidaAtual)}
+            completed={Number(actualLife)}
             barContainerClassName="container"
             transitionDuration="0.5s"
           />
@@ -138,14 +138,14 @@ export default function Lifeandmane() {
             </Button>
             <ActualPoints
               type="number"
-              value={manaAtual}
-              onChange={({ target }) => setManaAtual(Number(target.value))}
+              value={actualMane}
+              onChange={({ target }) => setActualMane(Number(target.value))}
             ></ActualPoints>
             /
             <MaxPoints
               type="number"
-              value={manaMaxima}
-              onChange={({ target }) => setManaMaxima(Number(target.value))}
+              value={maxMane}
+              onChange={({ target }) => setMaxMane(Number(target.value))}
             ></MaxPoints>
             <Button
               style={{
@@ -171,9 +171,9 @@ export default function Lifeandmane() {
             </Button>
           </ButtonsAndInputs>
           <ProgressBar
-            maxCompleted={Number(manaMaxima)}
+            maxCompleted={Number(maxMane)}
             bgColor="blue"
-            completed={Number(manaAtual)}
+            completed={Number(actualMane)}
             barContainerClassName="container"
             transitionDuration="0.5s"
           />
