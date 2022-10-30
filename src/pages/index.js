@@ -1,6 +1,6 @@
 // import CharacterData from "../components/CharacterData/index.js";
 import Attribute from "../components/Attribute";
-import LifeAndMane from "../components/LifeAndMane"
+import LifeAndManeCopy from "../components/LifeAndManeCopy"
 import Skills from "../components/Skills";
 import Attack from "../components/Attack";
 import DefenseAndProfiency from "../components/DefenseAndProficiency";
@@ -64,7 +64,7 @@ export default function Home() {
       </TopBar>
       <Global>
         {/* <CharacterData /> */}
-        <LifeAndMane />
+        <LifeAndManeCopy/>
         <Attribute />
         <Skills />
         <Attack />
