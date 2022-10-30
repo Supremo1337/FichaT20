@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
-  width: 20%;
+  width: 100%;
   height: 200px;
   border: 2px solid;
   border-radius: 10px;
@@ -12,6 +12,8 @@ export const Content = styled.div`
   align-items: center;
   justify-items: center;
   gap: 10px 0;
+  grid-column: 4/5;
+  grid-row: 1/2;
 `;
 
 export const Box = styled.div`

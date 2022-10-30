@@ -5,6 +5,8 @@ export const Content = styled.div`
   height: 40px;
   display: flex;
   justify-content: flex-end;
+  grid-column: 1/6;
+  grid-row: 6/7;
 `;
 
 export const ButtonSubmit = styled.input`

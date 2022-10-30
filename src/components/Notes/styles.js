@@ -11,6 +11,8 @@ export const Content = styled.div`
   display: inline-block;
   outline: none;
   justify-content: space-between;
+  grid-column: 1/5;
+  grid-row: 3/4;
 `;
 
 export const TextArea = styled.textarea`

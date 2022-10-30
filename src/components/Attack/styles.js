@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
-  width: 64%;
+  width: 100%;
   height: 100%;
   border: 2px solid;
   border-radius: 10px;
@@ -10,6 +10,8 @@ export const Content = styled.div`
   flex-direction: column;
   align-content: center;
   align-items: flex-end;
+  grid-column: 1/3;
+  grid-row: 2/3;
 `;
 export const TextGroup = styled.div`
   width: 100%;

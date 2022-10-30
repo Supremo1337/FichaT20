@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
-  width: 49%;
+  width: 100%;
   height: 200px;
   border: 2px solid;
   border-radius: 10px;
@@ -12,5 +12,7 @@ export const Content = styled.div`
   padding-left: 10px;
   padding-top: 10px;
   box-sizing: border-box;
+  grid-column:1/2;
+  grid-row: 1/2;
 `;
 

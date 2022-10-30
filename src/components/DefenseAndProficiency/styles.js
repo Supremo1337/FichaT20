@@ -1,13 +1,15 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
-  width: 35%;
+  width: 100%;
   height: 100%;
   border: 2px solid;
   border-radius: 10px;
   padding: 10px;
   display: flex;
   justify-content: space-between;
+  grid-column: 3/5;
+  grid-row: 2/3;
 `;
 
 export const DefenseGroup = styled.div`

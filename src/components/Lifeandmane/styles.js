@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
-  width: 29%;
+  width: 100%;
   height: 200px;
   // background: pink;
   border: 2px solid;
@@ -10,6 +10,8 @@ export const Content = styled.div`
   flex-direction: column;
   padding: 10px;
   justify-content: space-around;
+  grid-column: 2/4;
+  grid-row: 1/2;
 `;
 
 export const StatusGroup = styled.div`

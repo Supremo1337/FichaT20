@@ -2,15 +2,16 @@ import styled from "styled-components";
 
 export const Content = styled.div`
   width: 100%;
-  height: 960px;
+  height: 978px;
   border: 2px solid;
   border-radius: 10px;
-  margin-left: 10px;
   padding: 10px;
   display: grid;
   grid-template-columns: 6vw 3vw 2vw 2vw 2vw 2vw;
   gap: 15px;
   align-items: flex-end;
+  grid-column: 5/6;
+  grid-row: 1/4;
 `;
 
 // Reaprovei a label e "Text"

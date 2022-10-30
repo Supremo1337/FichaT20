@@ -9,7 +9,8 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 10px;
+  grid-column: 1/6;
+  grid-row: 4/5;
 `;
 
 // Reaproveite o Title "EQUIPAMENTO"

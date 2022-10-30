@@ -18,38 +18,11 @@ import SubmitBar from "../components/SubmitBar";
 const Global = styled.form`
   width: 100%;
   height: auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   border: 0;
-  
-`;
-
-const GlobalRow = styled.div`
-  width: 77%;
-  height: auto;
-  // background: orange;
-  display: flex;
-  flex-direction: column;
-  border: 0;
-`;
-
-const RowGroup = styled.div`
-  width: 100%;
-  height: auto;
-  display: flex;
-  margin-bottom: 10px;
-  justify-content: space-between;
-  // background: purple;
-  border: 0;
-`;
-
-const GlobalColumn = styled.div`
-  width: 23%;
-  height: 960px;
-  display: flex;
-  // background: purple;
-  border: 0;
+  display: grid;
+  grid-template-columns: 32vw 14vw 9vw 17vw 23vw;
+  grid-template-rows: 21vh 38vh 42vh 53vh 60vh 5vh;
+  gap: 10px;
 `;
 
 const TopBar = styled.div`
@@ -60,12 +33,6 @@ const TopBar = styled.div`
   border: 2px solid;
   border-radius: 10px;
   margin-bottom: 10px;
-`;
-
-const Logo = styled.div`
-  width: 10%;
-  height: 50px;
-  background: red;
 `;
 
 const LogOut = styled.button`
@@ -96,21 +63,13 @@ export default function Home() {
         <LogOut>Encerrar Sessão</LogOut>
       </TopBar>
       <Global>
-        <GlobalRow>
-          <RowGroup>
-            <CharacterData />
-            <LifeAndMane />
-            <Attribute />
-          </RowGroup>
-          <RowGroup>
-            <Attack />
-            <DefenseAndProfiency />
-          </RowGroup>
-          <Notes />
-        </GlobalRow>
-        <GlobalColumn>
-          <Skills />
-        </GlobalColumn>
+        <CharacterData />
+        <LifeAndMane />
+        <Attribute />
+        <Skills />
+        <Attack />
+        <DefenseAndProfiency />
+        <Notes />
         <Invetory />
         <Magics />
         <SubmitBar />
