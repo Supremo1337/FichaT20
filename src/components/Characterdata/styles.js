@@ -9,8 +9,6 @@ export const Content = styled.div`
   /* grid-template-columns: 1.3fr 1fr 0.4fr;
   grid-template-rows: 6vh 6vh 6vh; */
   align-content: center;
-  padding-left: 10px;
-  padding-top: 10px;
   box-sizing: border-box;
   grid-column:1/2;
   grid-row: 1/2;

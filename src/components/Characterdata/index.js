@@ -5,6 +5,7 @@ import TextField from "@mui/material/TextField";
 import axios from "axios";
 import { useAmp } from "next/amp";
 import { useEffect, useState } from "react";
+import { lightTheme, darkTheme } from "../../styles/Themes";
 
 const ApiFodaDoGabrielCards = axios.create({
   baseURL: "http://localhost:8000",
@@ -20,7 +21,7 @@ const CssTextField = styled(TextField)({
   },
   "& .MuiOutlinedInput-root": {
     "& fieldset": {
-      borderColor: "black",
+      borderColor: lightTheme ? "black" : darkTheme ? "white" : "",
     },
     "&:hover fieldset": {
       borderColor: "black",
@@ -146,6 +147,7 @@ export default function CharacterData() {
               gridTemplateRows: "6vh 6vh 6vh",
               width: "100%",
               background: "red",
+              padding: "10px",
               "& .MuiTextField-root": {
                 m: 0.5,
               },
