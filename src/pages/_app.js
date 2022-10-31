@@ -8,9 +8,10 @@ import {
   DarkLightProvider,
   DarkLightContext,
 } from "../components/Context/DarkLightProvider";
+import usePersistedState from "../utils/usePersistedState";
 
 function MyApp({ Component, pageProps }) {
-  const [isLightTheme, setLightTheme] = useState(true);
+  const [isLightTheme, setLightTheme] = usePersistedState('theme', true);
   useEffect(() => {}, [isLightTheme]);
 
   return (

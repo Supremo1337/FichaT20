@@ -61,6 +61,7 @@ export default function DefenseAndProficiency() {
   const [shieldNumber, setShieldNumber] = useState(0);
   const [penaltyArmor, setPenaltyArmor] = useState(0);
   const [penaltyShield, setPenaltyShield] = useState(0);
+  const [other, setOther] = useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -97,11 +98,16 @@ export default function DefenseAndProficiency() {
   ];
 
   const inputs = [
-    { gridColumn: "2/3", gridRow: "2/3", nameValue: "" },
-    { gridColumn: "4/5", gridRow: "2/3", nameValue: "armorNumber" },
-    { gridColumn: "6/7", gridRow: "2/3", nameValue: "shieldNumber" },
-    { gridColumn: "8/9", gridRow: "2/3", nameValue: "" },
-    { gridColumn: "5/9", gridRow: "3/4", nameValue: "Penalty of Armor" },
+    { gridColumn: "2/3", gridRow: "2/3", nameValue: "", name: "" },
+    { gridColumn: "4/5", gridRow: "2/3", nameValue: "armorNumber", name: "" },
+    { gridColumn: "6/7", gridRow: "2/3", nameValue: "shieldNumber", name: "" },
+    { gridColumn: "8/9", gridRow: "2/3", nameValue: "other", name: "Other" },
+    {
+      gridColumn: "5/9",
+      gridRow: "3/4",
+      nameValue: "Penalty of Armor",
+      name: "",
+    },
   ];
 
   const inputsArmorAndDefense = [
@@ -112,6 +118,10 @@ export default function DefenseAndProficiency() {
     { gridColumn: "3/4", gridRow: "2/3", placeholder: "10" },
     { gridColumn: "3/4", gridRow: "3/4", placeholder: "10" },
   ];
+
+  const onChange = (e) => {
+    e.target.name == "Other" ? setOther(event.target.value) : "";
+  };
 
   return (
     <Content>
@@ -175,14 +185,16 @@ export default function DefenseAndProficiency() {
                       placeholder={"0"}
                       gridColumn={res.gridColumn}
                       gridRow={res.gridRow}
-                      readOnly
+                      readOnly={res.name == "Other" ? false : true}
+                      name={res.name}
+                      onChange={onChange}
                       value={
                         res.nameValue == "armorNumber"
                           ? armorNumber
                           : res.nameValue == "shieldNumber"
                           ? shieldNumber
-                          : res.nameValue == "penaltyArmor"
-                          ? penaltyArmor
+                          : res.nameValue == "other"
+                          ? other
                           : res.nameValue == "Penalty of Armor"
                           ? sumPenalty
                           : ""
