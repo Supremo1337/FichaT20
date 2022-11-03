@@ -12,7 +12,7 @@ import {
   P,
 } from "./styles";
 import { CheckSkills, InputSkills, SkillsText } from "../Skills/styles";
-import { Title } from "../../styles/global";
+import { Option, Title } from "../../styles/global";
 import { useEffect, useState } from "react";
 import * as React from "react";
 import PropTypes from "prop-types";
@@ -21,6 +21,7 @@ import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Others from "../Others";
+import { Select } from "../Others/styles";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -72,12 +73,6 @@ export default function DefenseAndProficiency() {
   const text = [
     {
       fontSize: "10px",
-      name: "Modificador de Des",
-      gridColumn: "2/3",
-      gridRow: "1/2",
-    },
-    {
-      fontSize: "10px",
       name: "Bônus de Armadura",
       gridColumn: "4/5",
       gridRow: "1/2",
@@ -113,10 +108,10 @@ export default function DefenseAndProficiency() {
   const inputsArmorAndDefense = [
     { gridColumn: "1/2", gridRow: "2/3", placeholder: "Armadura" },
     { gridColumn: "1/2", gridRow: "3/4", placeholder: "Escudo" },
-    { gridColumn: "2/3", gridRow: "2/3", placeholder: "10" },
-    { gridColumn: "2/3", gridRow: "3/4", placeholder: "10" },
-    { gridColumn: "3/4", gridRow: "2/3", placeholder: "10" },
-    { gridColumn: "3/4", gridRow: "3/4", placeholder: "10" },
+    { gridColumn: "2/3", gridRow: "2/3", placeholder: "0" },
+    { gridColumn: "2/3", gridRow: "3/4", placeholder: "0" },
+    { gridColumn: "3/4", gridRow: "2/3", placeholder: "0" },
+    { gridColumn: "3/4", gridRow: "3/4", placeholder: "0" },
   ];
 
   const onChange = (e) => {
@@ -162,8 +157,29 @@ export default function DefenseAndProficiency() {
                 <CheckSkills
                   type={"checkbox"}
                   gridColumn={"1/2"}
-                  gridRow={1 / 2}
+                  gridRow={"1/2"}
                 ></CheckSkills>
+                <SkillsText
+                  fontSize={"10px"}
+                  gridColumn={"2/3"}
+                  gridRow={"1/2"}
+                >
+                  Modificador de
+                </SkillsText>
+                <Select
+                  position={"relative"}
+                  top={"5px"}
+                  gridColumn={"2/3"}
+                  gridRow={"1/2"}
+                  defaultValue={"DES"}
+                >
+                  <Option value="FOR">FOR</Option>
+                  <Option value="DES">DES</Option>
+                  <Option value="CON">CON</Option>
+                  <Option value="INT">INT</Option>
+                  <Option value="SAB">SAB</Option>
+                  <Option value="CAR">CAR</Option>
+                </Select>
                 {text.map((res, index) => {
                   return (
                     <SkillsText

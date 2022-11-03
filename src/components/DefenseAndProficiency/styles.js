@@ -14,7 +14,7 @@ export const Content = styled.div`
 
 export const DefenseGroup = styled.div`
   width: 100%;
-  height: 30vh;
+  height: 290px;
   // background: yellow;
   display: flex;
   flex-direction: column;

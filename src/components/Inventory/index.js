@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Title } from "../../styles/global";
 import { InputSkills, NameSkills } from "../Skills/styles";
 import {
@@ -16,11 +17,39 @@ import {
 } from "./styles";
 
 export default function Invetory() {
+  const [weight, setWeight] = useState({
+    num: "",
+    num2: "",
+  });
+  const [result, setResult] = useState("");
+
   const InputsItensBox = [{}, {}];
-  const InputsRows = [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}];
-  const InputsRows5 = [{}, {}, {}, {}, {}];
+  const InputsRows = [
+    { name: "num" },
+    { name: "num2" },
+    { name: "" },
+    { name: "" },
+    { name: "" },
+    { name: "" },
+    { name: "" },
+    { name: "" },
+    { name: "" },
+    { name: "" },
+  ];
+  const InputsRowsHalf = [{}, {}, {}, {}, {}];
   const Tibars = [{ title: "T$:" }, { title: "TO:" }];
 
+  const handleInput = function (e) {
+    setWeight({
+      ...weight,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const sum = function () {
+    const { weight, weight2 } = input;
+    setResult(Number(num) + Number(num2));
+  };
   return (
     <Content>
       <Title>EQUIPAMENTO</Title>
@@ -42,13 +71,15 @@ export default function Invetory() {
               </ColumnItens>
               <ColumnItens width={"30%"}>
                 <ItensTitle>Peso</ItensTitle>
-                {InputsRows.map((_, index) => {
+                {InputsRows.map((res, index) => {
                   return (
                     <InputSkills
                       key={index}
                       width={"100%"}
                       height={"25px"}
                       placeholder={"0.00"}
+                      name={res.name}
+                      onChange={handleInput}
                     ></InputSkills>
                   );
                 })}
@@ -60,7 +91,7 @@ export default function Invetory() {
           <ItensBox height={"51%"}>
             <ColumnItens width={"100%"}>
               <ItensTitle>Item</ItensTitle>
-              {InputsRows5.map((_, index) => {
+              {InputsRowsHalf.map((_, index) => {
                 return (
                   <InputSkills
                     key={index}
@@ -72,7 +103,7 @@ export default function Invetory() {
             </ColumnItens>
             <ColumnItens width={"30%"}>
               <ItensTitle>Peso</ItensTitle>
-              {InputsRows5.map((_, index) => {
+              {InputsRowsHalf.map((_, index) => {
                 return (
                   <InputSkills
                     key={index}
@@ -99,6 +130,7 @@ export default function Invetory() {
                     width={"45%"}
                     height={"25px"}
                     placeholder={"0.00"}
+                    value={sum}
                   ></InputSkills>
                   <ItensTitle>de</ItensTitle>
                   <InputSkills

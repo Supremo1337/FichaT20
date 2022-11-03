@@ -20,7 +20,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import AddBoxOutlinedIcon from "@mui/icons-material/AddBoxOutlined";
-import { Title } from "../../styles/global";
+import { Option, Title } from "../../styles/global";
 import PropTypes from "prop-types";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
@@ -161,12 +161,12 @@ export default function Magics() {
                 <TextAndInput width={"55%"}>
                   <SkillsText>Atributo-chave</SkillsText>
                   <Select defaultValue={"INT"}>
-                    <option value="FOR">FOR</option>
-                    <option value="DES">DES</option>
-                    <option value="CON">CON</option>
-                    <option value="INT">INT</option>
-                    <option value="SAB">SAB</option>
-                    <option value="CAR">CAR</option>
+                    <Option value="FOR">FOR</Option>
+                    <Option value="DES">DES</Option>
+                    <Option value="CON">CON</Option>
+                    <Option value="INT">INT</Option>
+                    <Option value="SAB">SAB</Option>
+                    <Option value="CAR">CAR</Option>
                   </Select>
                 </TextAndInput>
                 <TextAndInput width={"65%"}>

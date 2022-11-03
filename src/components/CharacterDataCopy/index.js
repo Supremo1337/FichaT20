@@ -144,9 +144,9 @@ export default function CharacterDataCopy() {
             sx={{
               display: "grid",
               gridTemplateColumns: "1.3fr 1fr 0.4fr",
-              gridTemplateRows: "6vh 6vh 6vh",
+              gridTemplateRows: "1fr 1fr 1fr",
               width: "100%",
-              background: "red",
+              gap: "5px",
               padding: "10px",
               "& .MuiTextField-root": {
                 m: 0.5,

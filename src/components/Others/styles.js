@@ -40,8 +40,11 @@ export const Size = styled.div`
 `;
 
 export const Select = styled.select`
-  /* background: none; */
-  margin-left: 10px;
+  background: red;
+  grid-column: ${(props) =>props.gridColumn};
+  grid-row: ${(props) =>props.gridRow};
+  position: ${(props) =>props.position};
+  top: ${(props) => props.top};
 `;
 
 export const Numbers = styled.label`

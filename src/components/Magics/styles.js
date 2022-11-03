@@ -15,7 +15,7 @@ export const Content = styled.div`
 
 export const Group = styled.div`
   width: 100%;
-  height: 48vh;
+  height: 400px;
   background: green;
   display: flex;
   justify-content: space-between;

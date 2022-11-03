@@ -65,15 +65,15 @@ export default function Home() {
       </TopBar>
       <Global>
         <CharacterDataCopy isLightTheme={!isLightTheme} />
-        <LifeAndManeCopy />
-        <Attribute />
-        <Skills />
-        <Attack />
-        <DefenseAndProfiency />
-        <Notes />
-        <Invetory />
-        <Magics />
-        <SubmitBar />
+        {/* <LifeAndManeCopy /> */}
+        {/* <Attribute /> */}
+        {/* <Skills /> */}
+        {/* <Attack /> */}
+        {/* <DefenseAndProfiency /> */}
+        {/* <Notes /> */}
+        {/* <Invetory /> */}
+        {/* <Magics /> */}
+        {/* <SubmitBar /> */}
       </Global>
     </>
   );
