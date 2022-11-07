@@ -96,7 +96,13 @@ export default function DefenseAndProficiency() {
     { gridColumn: "2/3", gridRow: "2/3", nameValue: "", name: "" },
     { gridColumn: "4/5", gridRow: "2/3", nameValue: "armorNumber", name: "" },
     { gridColumn: "6/7", gridRow: "2/3", nameValue: "shieldNumber", name: "" },
-    { gridColumn: "8/9", gridRow: "2/3", nameValue: "other", name: "Other" },
+    {
+      gridColumn: "8/9",
+      gridRow: "2/3",
+      nameValue: "other",
+      name: "Other",
+      type: "number",
+    },
     {
       gridColumn: "5/9",
       gridRow: "3/4",
@@ -108,10 +114,16 @@ export default function DefenseAndProficiency() {
   const inputsArmorAndDefense = [
     { gridColumn: "1/2", gridRow: "2/3", placeholder: "Armadura" },
     { gridColumn: "1/2", gridRow: "3/4", placeholder: "Escudo" },
-    { gridColumn: "2/3", gridRow: "2/3", placeholder: "0" },
-    { gridColumn: "2/3", gridRow: "3/4", placeholder: "0" },
-    { gridColumn: "3/4", gridRow: "2/3", placeholder: "0" },
-    { gridColumn: "3/4", gridRow: "3/4", placeholder: "0" },
+    { gridColumn: "2/3", gridRow: "2/3", placeholder: "0", type: "number" },
+    { gridColumn: "2/3", gridRow: "3/4", placeholder: "0", type: "number" },
+    {
+      gridColumn: "3/4",
+      gridRow: "2/3",
+      placeholder: "0",
+      type: "number",
+      type: "number",
+    },
+    { gridColumn: "3/4", gridRow: "3/4", placeholder: "0", type: "number" },
   ];
 
   const onChange = (e) => {
@@ -215,6 +227,7 @@ export default function DefenseAndProficiency() {
                           ? sumPenalty
                           : ""
                       }
+                      type={res.type == "number" ? "number" : ""}
                     ></InputSkills>
                   );
                 })}
@@ -270,6 +283,7 @@ export default function DefenseAndProficiency() {
                         ? setPenaltyShield(Number(e.target.value))
                         : "";
                     }}
+                    type={res.type == "number" ? "number" : ""}
                   ></InputSkills>
                 );
               })}
