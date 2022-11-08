@@ -75,13 +75,6 @@ export default function LoginPages() {
         {/* <Invetory /> */}
         <Magics />
         {/* <SubmitBar /> */}
-        <Link href={"/loginscreen"}>
-          <ul>
-            <li>
-              <a>TeladeLOGIn</a>
-            </li>
-          </ul>
-        </Link>
       </Global>
     </>
   );

@@ -43,7 +43,7 @@ export default function CharacterDataCopy() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/api/users/")
+      .get("http://localhost:8000/api/users/Hik")
       .then((res) => {
         setAccount(res.data);
       })
