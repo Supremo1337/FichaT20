@@ -16,4 +16,5 @@ export const TextTitle = styled.label`
   position: relative;
   top: ${(props) => props.top};
   left: ${(props) => props.left};
+  background: ${(props) => props.background};
 `;

@@ -3,22 +3,23 @@ import { TextTitle } from "../../styles/global";
 import {
   BackgroundOverlay,
   Content,
+  ForgetAndLogin,
   FormLogin,
   GroupCheckBoxAndButton,
   Header,
   InputAndText,
   InputLogin,
   LoginBox,
+  LoginButton,
+  TextForgetAndLogin,
 } from "./styles";
-import Vector from "../../../public/img/Vector";
 import { TormentaLogoLogin } from "../../../public/img/TormentaLogoLogin";
 import {
   CheckboxContainer,
   HiddenCheckbox,
   StyledCheckbox,
-  Text,
 } from "./CheckBoxLogin";
-import CheckIcon from "../../../public/icon/icons8-done.svg";
+import { Envelope, Lock } from "phosphor-react";
 
 export default function Login() {
   const [checked, setChecked] = useState(false);
@@ -42,8 +43,6 @@ export default function Login() {
 
   return (
     <Content>
-      {/* <Vector style={{ width: "99vw", position: "absolute", bottom: "0px" }} /> */}
-      {/* <BackgroundOverlay> */}
       <LoginBox>
         <Header>
           <TormentaLogoLogin />
@@ -53,7 +52,14 @@ export default function Login() {
         </Header>
         <FormLogin onSubmit={handleSubmit}>
           <InputAndText controlId="email">
-            <TextTitle fontSize={"20px"}>Endereço de e-mail</TextTitle>
+            <TextTitle fontSize={"16px"} color={"#000"}>
+              Endereço de e-mail
+            </TextTitle>
+            <Envelope
+              size={24}
+              color="#7C7C8A"
+              style={{ position: "relative", top: "29px", left: "10px" }}
+            />
             <InputLogin
               autoFocus
               type="email"
@@ -63,7 +69,14 @@ export default function Login() {
             />
           </InputAndText>
           <InputAndText controlId="password">
-            <TextTitle fontSize={"20px"}>Insira sua Senha</TextTitle>
+            <TextTitle fontSize={"16px"} color={"#000"}>
+              Insira sua Senha
+            </TextTitle>
+            <Lock
+              size={24}
+              color="#7C7C8A"
+              style={{ position: "relative", top: "29px", left: "10px" }}
+            />
             <InputLogin
               type="password"
               value={password}
@@ -78,20 +91,37 @@ export default function Login() {
                 checked={checked}
               />
               <StyledCheckbox checked={checked}>
-                <img
-                  alt="tick icon"
-                  style={{ width: "15px" }}
-                  src={require("../../../public/icon/icons8-done.svg")}
-                />
+                <div
+                  style={{
+                    width: "20px",
+                    height: "20px",
+                    backgroundImage: `url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 20 20' width='20px' height='20px'%3E%3Cg id='surface74776010'%3E%3Crect x='0' y='0' width='20' height='20' style='fill:rgb(75.294119%25,18.82353%25,23.529412%25);fill-opacity:1;stroke:none;'/%3E%3Cpath style=' stroke:none;fill-rule:nonzero;fill:rgb(100%25,100%25,100%25);fill-opacity:1;' d='M 17.988281 3.992188 C 17.8125 4 17.648438 4.070312 17.527344 4.195312 L 7.332031 14.390625 L 3.136719 10.195312 C 2.972656 10.019531 2.722656 9.949219 2.488281 10.011719 C 2.253906 10.074219 2.074219 10.253906 2.011719 10.488281 C 1.949219 10.722656 2.019531 10.972656 2.195312 11.136719 L 6.863281 15.804688 C 7.121094 16.066406 7.542969 16.066406 7.804688 15.804688 L 18.472656 5.136719 C 18.667969 4.945312 18.726562 4.652344 18.621094 4.398438 C 18.511719 4.148438 18.261719 3.984375 17.988281 3.992188 Z M 17.988281 3.992188 '/%3E%3C/g%3E%3C/svg%3E%0A")`,
+                  }}
+                ></div>
               </StyledCheckbox>
-              <Text checked={checked}>Instagram</Text>
+              <TextTitle fontSize={"14px"} color={"#1C1917"} checked={checked}>
+                Lembrar de mim por 30 dias
+              </TextTitle>
             </CheckboxContainer>
-
-            {/* <CheckBoxLogin type={"checkbox"} /> */}
+            <LoginButton>
+              <TextTitle
+                fontSize={"16px"}
+                color={"#F0CBAD"}
+                background={"#2f1e22"}
+              >
+                ENTRAR NA SUA CONTA
+              </TextTitle>
+            </LoginButton>
           </GroupCheckBoxAndButton>
         </FormLogin>
+        <ForgetAndLogin>
+          <TextForgetAndLogin>Esqueceu sua senha?</TextForgetAndLogin>
+          <TextForgetAndLogin>
+            não possui conta? crie uma agora!
+          </TextForgetAndLogin>
+        </ForgetAndLogin>
       </LoginBox>
-      {/* </BackgroundOverlay> */}
+      <BackgroundOverlay></BackgroundOverlay>
     </Content>
   );
 }

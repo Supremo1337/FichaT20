@@ -16,6 +16,10 @@ import { DarkLightContext } from "../components/Context/DarkLightProvider";
 import Link from "next/link";
 import SubmitBar from "../components/SubmitBar";
 
+const Wrapper = styled.div`
+  margin: 20px;
+`;
+
 const Global = styled.div`
   width: 100%;
   height: auto;
@@ -44,38 +48,40 @@ const LogOut = styled.button`
   color: #ff0000;
 `;
 
-export default function LoginPages() {
+export default function Ficha() {
   const { toggleTheme, isLightTheme } = useContext(DarkLightContext);
   return (
     <>
-      <TopBar>
-        <Switch
-          onChange={() => toggleTheme()}
-          checked={!isLightTheme}
-          checkedIcon={false}
-          uncheckedIcon={false}
-          height={10}
-          width={40}
-          handleDiameter={20}
-          onHandleColor="#67070e"
-          offHandleColor={shade(0.2, "#67070e")}
-          onColor="#888888"
-        />
-        <TormentaLogo width={"200px"} />
-        <LogOut>Encerrar Sessão</LogOut>
-      </TopBar>
-      <Global>
-        <CharacterDataCopy isLightTheme={!isLightTheme} />
-        <LifeAndManeCopy />
-        <Attribute />
-        <Skills />
-        <Attack />
-        <DefenseAndProfiency />
-        <Notes />
-        {/* <Invetory /> */}
-        <Magics />
-        {/* <SubmitBar /> */}
-      </Global>
+      <Wrapper>
+        <TopBar>
+          <Switch
+            onChange={() => toggleTheme()}
+            checked={!isLightTheme}
+            checkedIcon={false}
+            uncheckedIcon={false}
+            height={10}
+            width={40}
+            handleDiameter={20}
+            onHandleColor="#67070e"
+            offHandleColor={shade(0.2, "#67070e")}
+            onColor="#888888"
+          />
+          <TormentaLogo width={"200px"} />
+          <LogOut>Encerrar Sessão</LogOut>
+        </TopBar>
+        <Global>
+          <CharacterDataCopy isLightTheme={!isLightTheme} />
+          <LifeAndManeCopy />
+          <Attribute />
+          <Skills />
+          <Attack />
+          <DefenseAndProfiency />
+          <Notes />
+          {/* <Invetory /> */}
+          <Magics />
+          {/* <SubmitBar /> */}
+        </Global>
+      </Wrapper>
     </>
   );
 }
