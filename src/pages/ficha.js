@@ -84,7 +84,6 @@ export default function Ficha() {
           <Notes />
           {/* <Invetory /> */}
           <Magics />
-          {/* <SubmitBar /> */}
         </Global>
       </Wrapper>
     </>

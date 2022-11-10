@@ -12,7 +12,7 @@ export const Content = styled.div`
 export const ButtonSubmit = styled.input`
   width: 100%;
   height: 40px;
-  background: red;
+  background: #ff7215;
   border-radius: 10px;
   border: none;
 `;

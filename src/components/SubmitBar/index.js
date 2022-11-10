@@ -1,10 +1,10 @@
 import { ButtonSubmit, Content } from "./styles";
 
-export default function SubmitBar(submit) {
+export default function SubmitBar() {
   return (
     <Content>
       {console.log()}
-      <ButtonSubmit onSubmit={submit} type={"submit"} value={"Salvar"} />
+      <ButtonSubmit type={"submit"} value={"Salvar"} />
     </Content>
   );
 }
