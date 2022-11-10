@@ -6,7 +6,7 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("/img/loboborgestormenta20capa.jpg");
+  background-image: url("/img/singupbg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 `;
@@ -46,7 +46,7 @@ export const Header = styled.div`
 
 export const FormLogin = styled.form`
   width: 448px;
-  height: 290px;
+  height:320px;
   display: flex;
   flex-direction: column;
   /* background: blue; */
@@ -83,7 +83,7 @@ export const InputAndText = styled.div`
 
 export const GroupCheckBoxAndButton = styled.div`
   width: 100%;
-  height: 106px;
+  height: 50px;
   /* background: pink; */
   display: flex;
   flex-direction: column;

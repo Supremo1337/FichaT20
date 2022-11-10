@@ -22,6 +22,9 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Others from "../Others";
 import { Select } from "../Others/styles";
+import { textTitleOfModAndBonus } from "./textTitleOfModAndBonus";
+import { inputsOfModAndBonus } from "./inputsOfModAndBonus";
+import { inputsArmorAndShield } from "./inputsArmorAndShield";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -69,62 +72,6 @@ export default function DefenseAndProficiency() {
   };
 
   const sumPenalty = penaltyArmor + penaltyShield;
-
-  const text = [
-    {
-      fontSize: "10px",
-      name: "Bônus de Armadura",
-      gridColumn: "4/5",
-      gridRow: "1/2",
-    },
-    {
-      fontSize: "10px",
-      name: "Bônus de Escudo",
-      gridColumn: "6/7",
-      gridRow: "1/2",
-    },
-    { fontSize: "10px", name: "Outros", gridColumn: "8/9", gridRow: "1/2" },
-    {
-      fontSize: "14px",
-      name: "Penalidade de Armadura",
-      gridColumn: "1/5",
-      gridRow: "3/4",
-    },
-  ];
-
-  const inputs = [
-    { gridColumn: "2/3", gridRow: "2/3", nameValue: "", name: "" },
-    { gridColumn: "4/5", gridRow: "2/3", nameValue: "armorNumber", name: "" },
-    { gridColumn: "6/7", gridRow: "2/3", nameValue: "shieldNumber", name: "" },
-    {
-      gridColumn: "8/9",
-      gridRow: "2/3",
-      nameValue: "other",
-      name: "Other",
-      type: "number",
-    },
-    {
-      gridColumn: "5/9",
-      gridRow: "3/4",
-      nameValue: "Penalty of Armor",
-      name: "",
-    },
-  ];
-
-  const inputsArmorAndDefense = [
-    { gridColumn: "1/2", gridRow: "2/3", placeholder: "Armadura" },
-    { gridColumn: "1/2", gridRow: "3/4", placeholder: "Escudo" },
-    { gridColumn: "2/3", gridRow: "2/3", placeholder: "0", type: "number" },
-    { gridColumn: "2/3", gridRow: "3/4", placeholder: "0", type: "number" },
-    {
-      gridColumn: "3/4",
-      gridRow: "2/3",
-      placeholder: "0",
-      type: "number",
-      type: "number",
-    },
-    { gridColumn: "3/4", gridRow: "3/4", placeholder: "0", type: "number" },
-  ];
 
   const onChange = (e) => {
     e.target.name == "Other" ? setOther(event.target.value) : "";
@@ -192,7 +139,7 @@ export default function DefenseAndProficiency() {
                   <Option value="SAB">SAB</Option>
                   <Option value="CAR">CAR</Option>
                 </Select>
-                {text.map((res, index) => {
+                {textTitleOfModAndBonus.map((res, index) => {
                   return (
                     <SkillsText
                       key={index}
@@ -204,7 +151,7 @@ export default function DefenseAndProficiency() {
                     </SkillsText>
                   );
                 })}
-                {inputs.map((res, index) => {
+                {inputsOfModAndBonus.map((res, index) => {
                   return (
                     <InputSkills
                       key={index}
@@ -263,7 +210,7 @@ export default function DefenseAndProficiency() {
               >
                 Penalidade
               </SkillsText>
-              {inputsArmorAndDefense.map((res, index) => {
+              {inputsArmorAndShield.map((res, index) => {
                 return (
                   <InputSkills
                     key={index}

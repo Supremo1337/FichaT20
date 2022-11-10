@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import { inputs } from "./config";
 import { useFormik } from "formik";
 import { ButtonSubmit } from "../SubmitBar/styles";
+import SubmitBar from "../SubmitBar";
 
 const CssTextField = styled(TextField)({
   "& label.Mui-focused": {
@@ -92,7 +93,7 @@ export default function CharacterDataCopy() {
           </Box>
         );
       })}
-      <ButtonSubmit type={"submit"} value={"Salvar"} />
+      <SubmitBar/>
     </Content>
   );
 }

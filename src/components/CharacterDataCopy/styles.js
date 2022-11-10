@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Content = styled.form`
   width: 100%;
-  height: 200px;
+  height: 250px;
   border: 2px solid;
   border-radius: 10px;
   display: grid;

@@ -17,4 +17,5 @@ export const TextTitle = styled.label`
   top: ${(props) => props.top};
   left: ${(props) => props.left};
   background: ${(props) => props.background};
+  cursor: ${(props) => props.cursor};
 `;

@@ -15,6 +15,7 @@ import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import Button from "@mui/material/Button";
 import React from "react";
 import ProgressBar from "@ramonak/react-progress-bar";
+import SubmitBar from "../SubmitBar";
 
 export default function LifeAndManeCopy() {
   const [actualLife, setActualLife] = useState();
@@ -179,6 +180,7 @@ export default function LifeAndManeCopy() {
           />
         </GroupStates>
       </StatusGroup>
+      <SubmitBar />
     </Content>
   );
 }

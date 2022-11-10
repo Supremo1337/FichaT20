@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SubmitBar from "../SubmitBar";
 import {
   Content,
   Box,
@@ -34,19 +35,55 @@ export default function Attribute() {
   };
 
   const boxs = [
-    { title: "FOR", modNumber: "attributeFor", name: "FOR" },
-    { title: "DES", modNumber: "attributeDes", name: "DES" },
-    { title: "CON", modNumber: "attributeCon", name: "CON" },
-    { title: "INT", modNumber: "attributeInt", name: "INT" },
-    { title: "SAB", modNumber: "attributeSab", name: "SAB" },
-    { title: "CAR", modNumber: "attributeCar", name: "CAR" },
+    {
+      title: "FOR",
+      modNumber: "attributeFor",
+      name: "FOR",
+      gridColumn: "1/2",
+      gridRow: "1/2",
+    },
+    {
+      title: "DES",
+      modNumber: "attributeDes",
+      name: "DES",
+      gridColumn: "2/3",
+      gridRow: "1/2",
+    },
+    {
+      title: "CON",
+      modNumber: "attributeCon",
+      name: "CON",
+      gridColumn: "3/4",
+      gridRow: "1/2",
+    },
+    {
+      title: "INT",
+      modNumber: "attributeInt",
+      name: "INT",
+      gridColumn: "1/2",
+      gridRow: "2/3",
+    },
+    {
+      title: "SAB",
+      modNumber: "attributeSab",
+      name: "SAB",
+      gridColumn: "2/3",
+      gridRow: "2/3",
+    },
+    {
+      title: "CAR",
+      modNumber: "attributeCar",
+      name: "CAR",
+      gridColumn: "3/4",
+      gridRow: "2/3",
+    },
   ];
 
   return (
     <Content>
       {boxs.map((res, index) => {
         return (
-          <Box key={index}>
+          <Box gridColumn={res.gridColumn} gridRow={res.gridRow} key={index}>
             <AttributeTitle>{res.title}</AttributeTitle>
             <ModNumber>
               {res.modNumber == "attributeFor"
@@ -70,6 +107,7 @@ export default function Attribute() {
           </Box>
         );
       })}
+      <SubmitBar />
     </Content>
   );
 }

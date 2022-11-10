@@ -46,6 +46,7 @@ const LogOut = styled.button`
   border: none;
   border-radius: 10px;
   color: #ff0000;
+  cursor:pointer;
 `;
 
 export default function Ficha() {
@@ -67,7 +68,11 @@ export default function Ficha() {
             onColor="#888888"
           />
           <TormentaLogo width={"200px"} />
-          <LogOut>Encerrar Sessão</LogOut>
+          <Link href="./">
+            <a>
+              <LogOut>Encerrar Sessão</LogOut>
+            </a>
+          </Link>
         </TopBar>
         <Global>
           <CharacterDataCopy isLightTheme={!isLightTheme} />
