@@ -1,5 +1,8 @@
+import { useContext } from "react";
 import { useState } from "react";
+import { UseStateProvider } from "../Context/UseStateProvider";
 import SubmitBar from "../SubmitBar";
+import { boxs } from "./boxs";
 import {
   Content,
   Box,
@@ -33,51 +36,6 @@ export default function Attribute() {
       ? setAttributeSab(calcu(e.target.value))
       : setAttributeCar(calcu(e.target.value));
   };
-
-  const boxs = [
-    {
-      title: "FOR",
-      modNumber: "attributeFor",
-      name: "FOR",
-      gridColumn: "1/2",
-      gridRow: "1/2",
-    },
-    {
-      title: "DES",
-      modNumber: "attributeDes",
-      name: "DES",
-      gridColumn: "2/3",
-      gridRow: "1/2",
-    },
-    {
-      title: "CON",
-      modNumber: "attributeCon",
-      name: "CON",
-      gridColumn: "3/4",
-      gridRow: "1/2",
-    },
-    {
-      title: "INT",
-      modNumber: "attributeInt",
-      name: "INT",
-      gridColumn: "1/2",
-      gridRow: "2/3",
-    },
-    {
-      title: "SAB",
-      modNumber: "attributeSab",
-      name: "SAB",
-      gridColumn: "2/3",
-      gridRow: "2/3",
-    },
-    {
-      title: "CAR",
-      modNumber: "attributeCar",
-      name: "CAR",
-      gridColumn: "3/4",
-      gridRow: "2/3",
-    },
-  ];
 
   return (
     <Content>

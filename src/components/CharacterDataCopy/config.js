@@ -5,7 +5,7 @@ export const inputs = (account) => [
     gridRow: "1/2",
     width: "95%",
     value: account.character,
-    name: "character"
+    name: "character",
   },
   {
     title: "Jogador",
@@ -13,7 +13,7 @@ export const inputs = (account) => [
     gridRow: "2/3",
     width: "95%",
     value: account.name,
-    name: "name"
+    name: "name",
   },
   {
     title: "Raça",
@@ -21,7 +21,7 @@ export const inputs = (account) => [
     gridRow: "3/4",
     width: "95%",
     value: account.race,
-    name: "race"
+    name: "race",
   },
   {
     title: "Origem",
@@ -29,7 +29,7 @@ export const inputs = (account) => [
     gridRow: "1/2",
     width: "95%",
     value: account.origin,
-    name: "origin"
+    name: "origin",
   },
   {
     title: "Classe",
@@ -37,7 +37,7 @@ export const inputs = (account) => [
     gridRow: "2/3",
     width: "95%",
     value: account.role,
-    name: "role"
+    name: "role",
   },
   {
     title: "Nível",
@@ -46,7 +46,7 @@ export const inputs = (account) => [
     width: "84%",
     type: "number",
     value: account.level,
-    name: "level"
+    name: "level",
   },
   {
     title: "Divindade",
@@ -54,6 +54,6 @@ export const inputs = (account) => [
     gridRow: "3/4",
     width: "95%",
     value: account.divinity,
-    name: "divinity"
+    name: "divinity",
   },
 ];

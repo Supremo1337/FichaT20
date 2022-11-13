@@ -9,13 +9,19 @@ import {
   DarkLightContext,
 } from "../components/Context/DarkLightProvider";
 import usePersistedState from "../utils/usePersistedState";
+import {
+  UseStateContext,
+  UseStateProvider,
+} from "../components/Context/UseStateProvider";
+import useLocalStorage from "use-local-storage";
 
 function MyApp({ Component, pageProps }) {
-  const [isLightTheme, setLightTheme] = usePersistedState('theme', true);
+  const [isLightTheme, setLightTheme] = usePersistedState("theme", true);
   useEffect(() => {}, [isLightTheme]);
 
   return (
     <>
+      {/* <UseStateProvider> */}
       <DarkLightProvider
         isLightTheme={isLightTheme}
         setLightTheme={setLightTheme}
@@ -25,6 +31,7 @@ function MyApp({ Component, pageProps }) {
           <Component {...pageProps} />
         </ThemeProvider>
       </DarkLightProvider>
+      {/* </UseStateProvider> */}
     </>
   );
 }

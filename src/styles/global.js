@@ -18,4 +18,5 @@ export const TextTitle = styled.label`
   left: ${(props) => props.left};
   background: ${(props) => props.background};
   cursor: ${(props) => props.cursor};
+  user-select: none;
 `;

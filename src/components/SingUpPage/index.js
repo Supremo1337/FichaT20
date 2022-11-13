@@ -21,14 +21,15 @@ import {
 } from "./CheckBoxLogin";
 import { Envelope, Lock } from "phosphor-react";
 import Link from "next/link";
+import axios from "axios";
 
 export default function Login() {
-  const [checked, setChecked] = useState(false);
-  const [first, setFirst] = useState("");
-  const [second, setSecond] = useState("");
   const [email, setEmail] = useState("");
-
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [checked, setChecked] = useState(false);
+  const [comparativeSingUp, setComparativeSingUp] = useState("");
+  const [second, setSecond] = useState("");
 
   function validateForm() {
     return email.length > 0 && password.length > 0;
@@ -36,6 +37,20 @@ export default function Login() {
 
   function handleSubmit(event) {
     event.preventDefault();
+    console.log(email);
+    console.log(password);
+    const jsonSingUp = { email, password, confirmPassword };
+    axios
+      .post("http://localhost:8000/api/authme/register", JSON.stringify(jsonSingUp), {
+        headers: { "Content-Type": "application/json" },
+      })
+      .then((res) => {
+        window.location.href = "/";
+      })
+      .catch((error) => {
+        console.log(error);
+        setComparativeSingUp(error);
+      });
   }
 
   function handleCheckboxChange() {
@@ -96,25 +111,18 @@ export default function Login() {
             />
             <InputLogin
               type="password"
-              value={password}
+              value={confirmPassword}
               placeholder="********"
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={(e) => setConfirmPassword(e.target.value)}
             />
           </InputAndText>
           <GroupCheckBoxAndButton>
-            <Link href="./">
-              <a>
-                <LoginButton>
-                  <TextTitle
-                    fontSize={"16px"}
-                    color={"#F0CBAD"}
-                    background={"#2f1e22"}
-                  >
-                    CRIAR SUA CONTA
-                  </TextTitle>
-                </LoginButton>
-              </a>
-            </Link>
+            {/* <Link href="./"> */}
+            <a>
+              <LoginButton type={"submit"} value="CRIAR SUA CONTA" />
+              <TextTitle background={"#2f1e22"}></TextTitle>
+            </a>
+            {/* </Link> */}
           </GroupCheckBoxAndButton>
         </FormLogin>
       </LoginBox>

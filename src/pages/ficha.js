@@ -15,8 +15,11 @@ import { TormentaLogo } from "../../public/img/TormentaLogo";
 import { DarkLightContext } from "../components/Context/DarkLightProvider";
 import Link from "next/link";
 import SubmitBar from "../components/SubmitBar";
+import useLocalStorage from "use-local-storage";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
   margin: 20px;
 `;
 
@@ -31,7 +34,7 @@ const Global = styled.div`
   grid-template: repeat(5, auto) / 32vw 14vw 9vw 17vw 23vw; ;
 `;
 
-const TopBar = styled.div`
+export const TopBar = styled.div`
   height: 50px;
   display: flex;
   justify-content: space-between;
@@ -41,16 +44,29 @@ const TopBar = styled.div`
   margin-bottom: 10px;
 `;
 
-const LogOut = styled.button`
+export const LogOut = styled.button`
   width: 10%;
   border: none;
   border-radius: 10px;
   color: #ff0000;
-  cursor:pointer;
+  cursor: pointer;
 `;
 
 export default function Ficha() {
   const { toggleTheme, isLightTheme } = useContext(DarkLightContext);
+  const [token, setToken] = useLocalStorage("tokenTormenta20", null);
+  const router = useRouter();
+  const logOut = () => {
+    setToken(null);
+    router.push("/");
+  };
+
+  useEffect(() => {
+    if (!token) {
+      router.push("/");
+    }
+  }, [token]);
+
   return (
     <>
       <Wrapper>
@@ -68,22 +84,22 @@ export default function Ficha() {
             onColor="#888888"
           />
           <TormentaLogo width={"200px"} />
-          <Link href="./">
+          {/* <Link href="./"> */}
             <a>
-              <LogOut>Encerrar Sessão</LogOut>
+              <LogOut onClick={logOut}>Encerrar Sessão</LogOut>
             </a>
-          </Link>
+          {/* </Link> */}
         </TopBar>
         <Global>
           <CharacterDataCopy isLightTheme={!isLightTheme} />
-          <LifeAndManeCopy />
-          <Attribute />
-          <Skills />
-          <Attack />
-          <DefenseAndProfiency />
-          <Notes />
+          {/* <LifeAndManeCopy /> */}
+          {/* <Attribute /> */}
+          {/* <Skills /> */}
+          {/* <Attack /> */}
+          {/* <DefenseAndProfiency /> */}
+          {/* <Notes /> */}
           {/* <Invetory /> */}
-          <Magics />
+          {/* <Magics /> */}
         </Global>
       </Wrapper>
     </>

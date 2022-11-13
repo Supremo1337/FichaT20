@@ -2,12 +2,11 @@ import { Content } from "./styles";
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
-import axios from "axios";
 import { useState, useEffect } from "react";
 import { inputs } from "./config";
-import { useFormik } from "formik";
-import { ButtonSubmit } from "../SubmitBar/styles";
 import SubmitBar from "../SubmitBar";
+import request from "../../services/api.js";
+import { PushUserById } from "./services";
 
 const CssTextField = styled(TextField)({
   "& label.Mui-focused": {
@@ -30,32 +29,42 @@ const CssTextField = styled(TextField)({
 });
 
 export default function CharacterDataCopy() {
-  const [saveUserName, setSaveUserName] = useState();
+  const [token, setToken] = useState("");
+  const [account, setAccount] = useState("");
 
-  const [account, setAccount] = useState({
+  const accountFake = {
     name: "",
     character: "",
     origin: "",
     role: "",
     race: "",
     divinity: "",
-    level: 4,
-  });
+    level: 0,
+  };
 
   useEffect(() => {
-    axios
-      .get("http://localhost:8000/api/users/Hik")
+    request
+      .get(
+        `/authme/users?token=${window.localStorage.getItem("tokenTormenta20")}`
+      )
       .then((res) => {
-        setAccount(res.data);
+        console.log("ESSE É O RES", res);
+        setAccount(PushUserById(request, res.data.user._id));
       })
-      .catch((error) => {
-        console.log(error, "erro");
+      .catch((err) => {
+        console.log("ESSE É O ERRO", err);
       });
   }, []);
 
   const teste = async (event) => {
-    event.preventDefault();
-    await axios.post("http://localhost:8000/api/users", account);
+    try {
+      event.preventDefault();
+      const passAcess = window.localStorage.getItem("tokenTormenta20");
+      setToken(window.localStorage.getItem("tokenTormenta20"));
+      await request.post("/ficha/character", { passAcess, account });
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -76,24 +85,25 @@ export default function CharacterDataCopy() {
             <CssTextField
               label={res.title}
               id="custom-css-outlined-input"
-              value={res.value}
+              value={res.value || ""}
               variant="outlined"
               size="small"
               InputProps={{ style: { fontFamily: "Tormenta" } }}
               InputLabelProps={{ style: { fontFamily: "Tormenta" } }}
               autoComplete="off"
               type={res.type == "number" ? "number" : ""}
-              onChange={(e) =>
+              onChange={(event) => {
+                window.localStorage.setItem(res.name, event.target.value);
                 setAccount({
                   ...account,
                   [res.name]: event.target.value,
-                })
-              }
+                });
+              }}
             />
           </Box>
         );
       })}
-      <SubmitBar/>
+      <SubmitBar />
     </Content>
   );
 }

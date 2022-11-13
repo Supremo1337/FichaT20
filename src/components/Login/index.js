@@ -10,7 +10,7 @@ import {
   InputAndText,
   InputLogin,
   LoginBox,
-  LoginButton,
+  LoginSubmit,
   TextForgetAndLogin,
 } from "./styles";
 import { TormentaLogoLogin } from "../../../public/img/TormentaLogoLogin";
@@ -19,24 +19,55 @@ import {
   HiddenCheckbox,
   StyledCheckbox,
 } from "./CheckBoxLogin";
-import { Envelope, Lock } from "phosphor-react";
+import { Envelope, Lock, WindowsLogo } from "phosphor-react";
 import Link from "next/link";
+import axios from "axios";
+import useLocalStorage from "use-local-storage";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 export default function Login() {
   const [checked, setChecked] = useState(false);
-  const [first, setFirst] = useState("");
-  const [second, setSecond] = useState("");
   const [email, setEmail] = useState("");
-
   const [password, setPassword] = useState("");
+  const [comparativeLogin, setComparativeLogin] = useState("");
+  const [token, setToken] = useLocalStorage("tokenTormenta20", null);
+  const router = useRouter();
+
+  useEffect(() => {
+    if (token) {
+      router.push("/ficha");
+    }
+  }, [token]);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const jsonLogin = { email, password };
+    const res = axios
+      .post(
+        "http://localhost:8000/api/authme/authenticate", jsonLogin,{ headers: { "Content-Type": "application/json" },}
+      )
+      .then((res) => {
+        if (!res.data.token) return;
+        setToken(res.data.token);
+        console.log("ESSE É O RES", res);
+      })
+      .catch((error) => {
+        console.log("ERRO AQ", error);
+        setComparativeLogin(error.response.data);
+      });
+    console.log("RESDATA AQ",res.data);
+  };
 
   function validateForm() {
     return email.length > 0 && password.length > 0;
   }
 
-  function handleSubmit(event) {
-    event.preventDefault();
-  }
+  // function handleSubmit(event) {
+  //   event.preventDefault();
+  //   console.log("CONSOLE DENTRO DO HANDLE SUBMIT", event);
+  //   const teste = (e, id) => {};
+  // }
 
   function handleCheckboxChange() {
     setChecked(!checked);
@@ -104,20 +135,11 @@ export default function Login() {
                 Lembrar de mim por 30 dias
               </TextTitle>
             </CheckboxContainer>
-            <Link href="./ficha">
-              <a>
-                <LoginButton>
-                  <TextTitle
-                    fontSize={"16px"}
-                    color={"#F0CBAD"}
-                    background={"#2f1e22"}
-                    cursor={"pointer"}
-                  >
-                    ENTRAR NA SUA CONTA
-                  </TextTitle>
-                </LoginButton>
-              </a>
-            </Link>
+            {/* <Link href="./ficha"> */}
+            <a>
+              <LoginSubmit type={"submit"} value="ENTRAR NA SUA CONTA" />
+            </a>
+            {/* </Link> */}
           </GroupCheckBoxAndButton>
         </FormLogin>
         <ForgetAndLogin>

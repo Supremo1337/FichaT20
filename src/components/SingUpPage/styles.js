@@ -46,7 +46,7 @@ export const Header = styled.div`
 
 export const FormLogin = styled.form`
   width: 448px;
-  height:320px;
+  height: 320px;
   display: flex;
   flex-direction: column;
   /* background: blue; */
@@ -67,9 +67,9 @@ export const InputLogin = styled.input`
     font-size: 14px;
     color: #6b7280;
   }
-  :focus { 
-    border-color: #C0303C;
- }
+  :focus {
+    border-color: #c0303c;
+  }
 `;
 
 export const InputAndText = styled.div`
@@ -90,7 +90,7 @@ export const GroupCheckBoxAndButton = styled.div`
   justify-content: space-between;
 `;
 
-export const LoginButton = styled.div`
+export const LoginButton = styled.input`
   width: 100%;
   height: 50px;
   border-radius: 4px;
@@ -99,8 +99,12 @@ export const LoginButton = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 16px;
+  color: #f0cbad;
+  cursor: pointer;
+  user-select: none;
   :hover {
-    background: #3E282D;
+    background: #3e282d;
   }
 `;
 

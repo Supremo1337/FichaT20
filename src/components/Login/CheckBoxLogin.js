@@ -5,6 +5,7 @@ export const CheckboxContainer = styled.div`
   display: flex;
   align-items: center;
   width: 60%;
+  user-select: none;
 `;
 export const HiddenCheckbox = styled.input.attrs({ type: "checkbox" })`
   overflow: hidden;
@@ -13,6 +14,7 @@ export const HiddenCheckbox = styled.input.attrs({ type: "checkbox" })`
   height: 1px;
   margin: -1px;
   padding: 0;
+  user-select: none;
 `;
 export const StyledCheckbox = styled.label`
   width: 24px;
@@ -24,6 +26,7 @@ export const StyledCheckbox = styled.label`
   display: flex;
   justify-content: center;
   align-items: center;
+  user-select: none;
   div {
     display: ${(props) => (props.checked ? "flex" : "none")};
     filter: invert(75%) sepia(11%) saturate(6042%) hue- rotate(30deg)
