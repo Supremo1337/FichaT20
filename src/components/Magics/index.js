@@ -120,11 +120,7 @@ export default function Magics() {
             <ModalDiv id="modal-modal-description" sx={{ mt: 2 }}>
               {MagicInputs.map((res, index) => {
                 return (
-                  <InputModal
-                    key={index}
-                    height={"5%"}
-                    value={res.value}
-                  ></InputModal>
+                  <InputModal key={index} height={"5%"} value={res.value} />
                 );
               })}
               <InputProfieciency
@@ -132,7 +128,7 @@ export default function Magics() {
                 borderRadius={"5px"}
                 height={"50%"}
                 placeholder="Descrição:"
-              ></InputProfieciency>
+              />
             </ModalDiv>
           </Box>
         </Modal>
@@ -144,14 +140,8 @@ export default function Magics() {
             onChange={handleChange}
             aria-label="basic tabs example"
           >
-            <Tab
-              label="Nome da Magia"
-              {...a11yProps(1)}
-            />
-            <Tab
-              label="Nome da Magia"
-              {...a11yProps(2)}
-            />
+            <Tab label="Nome da Magia" {...a11yProps(1)} />
+            <Tab label="Nome da Magia" {...a11yProps(2)} />
           </Tabs>
         </Box>
         <TabPanel value={value} index={0}>
@@ -171,12 +161,12 @@ export default function Magics() {
                 </TextAndInput>
                 <TextAndInput width={"65%"}>
                   <SkillsText>MOD</SkillsText>
-                  <InputSkills width={"65%"} placeholder={"0"}></InputSkills>
+                  <InputSkills width={"65%"} placeholder={"0"} />
                 </TextAndInput>
                 <TestResistance>
                   <TextAndInput>
                     <SkillsText>TESTE DE RESISTÊNCIA</SkillsText>
-                    <InputSkills width={"40%"} placeholder={"0"}></InputSkills>
+                    <InputSkills width={"40%"} placeholder={"0"} />
                   </TextAndInput>
                   <ItensTitle>
                     (10 + 1/2 nível + mod. atributo-chave)
@@ -191,7 +181,7 @@ export default function Magics() {
                       defaultValue={res.value}
                       gridColumn={res.gridColumn}
                       gridRow={res.gridRow}
-                    ></InputMagics>
+                    />
                   );
                 })}
               </InputsDiv>
@@ -201,7 +191,7 @@ export default function Magics() {
                 placeholder="Descrição:"
                 height={"98%"}
                 border={"none"}
-              ></InputProfieciency>
+              />
             </Description>
           </Group>
         </TabPanel>

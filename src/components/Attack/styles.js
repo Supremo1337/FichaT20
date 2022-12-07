@@ -7,10 +7,11 @@ export const Content = styled.div`
   border-radius: 10px;
   padding: 10px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-content: center;
-  align-items: flex-end;
+  justify-content: space-between;
   @media (min-width: 1024px) {
+    align-items: flex-end;
     grid-column: 1/3;
     grid-row: 2/3;
   }
@@ -37,13 +38,13 @@ export const RulesInputsGroup = styled.div`
 
 export const RulesInputs = styled.input`
   width: ${(props) => props.width};
-  height: 35px;
   border: 0px;
   background: none;
   border-bottom: 2px solid;
   box-shadow: 0 0 0 0;
   outline: 0;
   text-align: center;
+  font-size: 1.2rem;
   @media (min-width: 1024px) {
   }
 `;
@@ -51,3 +52,12 @@ export const RulesInputs = styled.input`
 {
   /* < Reaproveitei o "SkillsText"> */
 }
+
+export const TESTE = styled.div`
+  width: ${(props) => props.width};
+  height: 300px;
+  /* background: red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;

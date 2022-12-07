@@ -201,7 +201,7 @@ export default function DefenseAndProficiency() {
                     : ""
                 }
                 type={res.type == "number" ? "number" : ""}
-              ></InputSkills>
+              />
             );
           })}
           {/* <P gridColumn={"1/2"} gridRow={"2/3"}>
@@ -257,7 +257,7 @@ export default function DefenseAndProficiency() {
                         : "";
                     }}
                     type={res.type == "number" ? "number" : ""}
-                  ></InputSkills>
+                  />
                 );
               })}
             </GropuArmorAndPenalty>

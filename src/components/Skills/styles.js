@@ -20,14 +20,14 @@ export const Content = styled.div`
 // Reaprovei a label e "Text"
 
 export const SkillsText = styled.label`
-  width: 40px;
+  height: 16px;
   font-size: ${(props) => props.fontSize};
   background: yellow;
   position: relative;
   left: ${(props) => props.left};
   @media (min-width: 1024px) {
-    padding-top: ${(props) => props.paddingTop};
     margin-left: ${(props) => props.marginLeft};
+    padding-top: ${(props) => props.paddingTop};
     grid-column: ${(props) => props.gridColumn};
     grid-row: ${(props) => props.gridRow};
     text-align: ${(props) => props.textAling};

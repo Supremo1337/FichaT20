@@ -40,7 +40,11 @@ export default function Others() {
     <Content>
       <Proficiency>
         <Title>Proficiências</Title>
-        <InputProfieciency height={"100%"} border={"none"} background={"none"}></InputProfieciency>
+        <InputProfieciency
+          height={"100%"}
+          border={"none"}
+          background={"none"}
+        />
       </Proficiency>
       <Size>
         <Title>TAMANHO</Title>
@@ -61,7 +65,7 @@ export default function Others() {
       </Size>
       <Displacement>
         <Title>Deslocamento</Title>
-        <Move width={"75%"}></Move>
+        <Move width={"75%"} />
       </Displacement>
     </Content>
   );
