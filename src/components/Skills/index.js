@@ -24,31 +24,31 @@ export default function Skills() {
             <NameSkills key={index}>
               {res.title}
               {res.simbolo == "+" ? (
-                <OpenWithIcon sx={{ fontSize: 10 }}></OpenWithIcon>
+                <OpenWithIcon sx={{ fontSize: 10 }} />
               ) : res.simbolo == "*" ? (
-                <AcUnitIcon sx={{ fontSize: 10 }}></AcUnitIcon>
+                <AcUnitIcon sx={{ fontSize: 10 }} />
               ) : null}
 
               {res.simbolo2 == "+" ? (
-                <OpenWithIcon sx={{ fontSize: 10 }}></OpenWithIcon>
+                <OpenWithIcon sx={{ fontSize: 10 }} />
               ) : null}
             </NameSkills>
           );
         })}
       </Column>
       <Column gap={"10px"} height={"935px"} gridColumn={"2/3"}>
-        <TextTitle fontSize={"12px"}>Total</TextTitle>
+        <TextTitle fontSize={"10px"}>Total</TextTitle>
         {skillsAttributes.map((res, index) => {
           return (
             <GroupInputAndOperator key={index}>
-              <InputSkillsTotal right={"5px"}></InputSkillsTotal>
+              <InputSkillsTotal right={"5px"} />
               <label>=</label>
             </GroupInputAndOperator>
           );
         })}
       </Column>
       <Column gap={"10px"} height={"935px"} gridColumn={"3/4"}>
-        <SkillsText fontSize={"10px"}>1/2 do Nível</SkillsText>
+        <SkillsText fontSize={"8px"}>1/2 do Nível</SkillsText>
         {skillsAttributes.map((res, index) => {
           return (
             <GroupInputAndOperator key={index}>
@@ -59,7 +59,7 @@ export default function Skills() {
         })}
       </Column>
       <Column gap={"10px"} height={"935px"} gridColumn={"4/5"}>
-        <SkillsText fontSize={"10px"}>Mod. de Atributo</SkillsText>
+        <SkillsText fontSize={"8px"}>Mod. de Atributo</SkillsText>
         {skillsAttributes.map((res, index) => {
           return (
             <GroupInputAndOperator key={index}>
@@ -70,7 +70,7 @@ export default function Skills() {
         })}
       </Column>
       <Column gap={"10px"} height={"935px"} gridColumn={"5/6"}>
-        <SkillsText fontSize={"10px"}>Treino</SkillsText>
+        <SkillsText fontSize={"8px"}>Treino</SkillsText>
         {skillsAttributes.map((res, index) => {
           return (
             <GroupInputAndOperator key={index}>
@@ -81,7 +81,7 @@ export default function Skills() {
         })}
       </Column>
       <Column gap={"10px"} height={"935px"} gridColumn={"6/7"}>
-        <SkillsText fontSize={"10px"}>Outros</SkillsText>
+        <SkillsText fontSize={"8px"}>Outros</SkillsText>
         {skillsAttributes.map((res, index) => {
           return (
             <GroupInputAndOperator key={index}>

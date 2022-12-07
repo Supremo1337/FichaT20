@@ -10,7 +10,6 @@ import { useContext } from "react";
 import { DarkLightContext } from "../Context/DarkLightProvider";
 import { shade } from "polished";
 import { TormentaLogo } from "../../../public/img/TormentaLogo";
-import useLocalStorage from "use-local-storage";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { useState } from "react";
@@ -20,20 +19,19 @@ import AddBoxOutlinedIcon from "@mui/icons-material/AddBoxOutlined";
 
 export default function SelectYourCharacter() {
   const { toggleTheme, isLightTheme } = useContext(DarkLightContext);
-  const [token, setToken] = useLocalStorage("tokenTormenta20", null);
   const [nameCharacter, setNameCharacter] = useState();
 
-  const router = useRouter();
-  const logOut = () => {
-    setToken(null);
-    router.push("/");
-  };
+  // const router = useRouter();
+  // const logOut = () => {
+  //   setToken(null);
+  //   router.push("/");
+  // };
 
-  useEffect(() => {
-    if (!token) {
-      router.push("/");
-    }
-  }, [token]);
+  // useEffect(() => {
+  //   if (!token) {
+  //     router.push("/");
+  //   }
+  // }, [token]);
   return (
     <Wrapper>
       <Content>

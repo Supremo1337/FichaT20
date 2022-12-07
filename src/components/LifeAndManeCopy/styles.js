@@ -30,12 +30,19 @@ export const ButtonsAndInputs = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  p {
+    font-size: 1.6rem;
+  }
 `;
 
 export const Buttons = styled.div`
-  width: 35px;
-  height: 25px;
-  background: #000;
+  width: 42px;
+  height: 30px;
+  /* background: red; */
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const ActualPoints = styled.input`
@@ -43,6 +50,8 @@ export const ActualPoints = styled.input`
   height: 70%;
   border: 0.1px solid;
   text-align: right;
+  font-size: 1.6rem;
+  outline: none;
   ::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
@@ -57,6 +66,8 @@ export const MaxPoints = styled.input`
   width: 30%;
   height: 70%;
   border: 0.1px solid;
+  font-size: 1.6rem;
+  outline: none;
   ::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;

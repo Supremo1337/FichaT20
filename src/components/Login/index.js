@@ -22,7 +22,6 @@ import {
 import { Envelope, Lock, WindowsLogo } from "phosphor-react";
 import Link from "next/link";
 import axios from "axios";
-import useLocalStorage from "use-local-storage";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 
@@ -31,43 +30,37 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [comparativeLogin, setComparativeLogin] = useState("");
-  const [token, setToken] = useLocalStorage("tokenTormenta20", null);
   const router = useRouter();
 
   useEffect(() => {
-    if (token) {
+    const checkToken = localStorage.getItem("tokenTormenta20");
+    if (checkToken) {
       router.push("/ficha");
     }
-  }, [token]);
+  }, []);
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    console.log("ENTROU AQ");
     const jsonLogin = { email, password };
     const res = axios
-      .post(
-        "http://localhost:8000/api/authme/authenticate", jsonLogin,{ headers: { "Content-Type": "application/json" },}
-      )
+      .post("http://localhost:8000/api/authme/authenticate", jsonLogin, {
+        headers: { "Content-Type": "application/json" },
+      })
       .then((res) => {
         if (!res.data.token) return;
-        setToken(res.data.token);
+        localStorage.setItem("tokenTormenta20", res.data.token);
+        router.push("/ficha");
         console.log("ESSE É O RES", res);
       })
       .catch((error) => {
         console.log("ERRO AQ", error);
-        setComparativeLogin(error.response.data);
+        setComparativeLogin(error.response);
       });
-    console.log("RESDATA AQ",res.data);
+    console.log("RESDATA AQ", res.data);
   };
 
-  function validateForm() {
-    return email.length > 0 && password.length > 0;
-  }
-
-  // function handleSubmit(event) {
-  //   event.preventDefault();
-  //   console.log("CONSOLE DENTRO DO HANDLE SUBMIT", event);
-  //   const teste = (e, id) => {};
-  // }
+  
 
   function handleCheckboxChange() {
     setChecked(!checked);
@@ -98,6 +91,7 @@ export default function Login() {
               value={email}
               placeholder="johndoe@gmail.com"
               onChange={(e) => setEmail(e.target.value)}
+              required
             />
           </InputAndText>
           <InputAndText controlId="password">

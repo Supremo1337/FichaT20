@@ -4,11 +4,11 @@ import { Title } from "../../styles/global";
 
 export default function Attack() {
   const Rules = [
-    { title: "Teste de Ataque" },
-    { title: "Dano", left: "-50px" },
-    { title: "Crítico", left: "-50px" },
-    { title: "Tipo", left: "-50px" },
-    { title: "Alcance", left: "-50px" },
+    { title: "Teste de Ataque", left: "0px" },
+    { title: "Dano", left: "0px" },
+    { title: "Crítico", left: "0px" },
+    { title: "Tipo", left: "0px" },
+    { title: "Alcance", left: "-0px" },
   ];
 
   const Inputs = [
@@ -27,7 +27,7 @@ export default function Attack() {
         <Title fontSize={"20px"}>ATAQUES</Title>
         {Rules.map((res, index) => {
           return (
-            <SkillsText key={index} left={res.left}>
+            <SkillsText key={index} left={res.left} fontSize="0.8rem">
               {res.title}
             </SkillsText>
           );
@@ -36,12 +36,13 @@ export default function Attack() {
       {Inputs.map((_, index) => {
         return (
           <RulesInputsGroup key={index}>
-            <RulesInputs></RulesInputs>
-            <RulesInputs></RulesInputs>
-            <RulesInputs></RulesInputs>
-            <RulesInputs></RulesInputs>
-            <RulesInputs></RulesInputs>
-            <RulesInputs></RulesInputs>
+            {/* <SkillsText fontSize="0.8rem">Teste de Ataque</SkillsText> */}
+            <RulesInputs width="25%" />
+            {/* <RulesInputs width="10%" /> */}
+            {/* <RulesInputs width="10%" /> */}
+            {/* <RulesInputs width="10%" /> */}
+            {/* <RulesInputs width="10%" /> */}
+            {/* <RulesInputs width="10%" /> */}
           </RulesInputsGroup>
         );
       })}

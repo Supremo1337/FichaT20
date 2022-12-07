@@ -10,27 +10,33 @@ export const Content = styled.div`
   flex-direction: column;
   align-content: center;
   align-items: flex-end;
-  grid-column: 1/3;
-  grid-row: 2/3;
+  @media (min-width: 1024px) {
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
 `;
 export const TextGroup = styled.div`
   width: 100%;
   height: auto;
-  // background: cyan;
+  background: cyan;
   display: flex;
   justify-content: space-between;
+  @media (min-width: 1024px) {
+  }
 `;
 
 export const RulesInputsGroup = styled.div`
   width: 100%;
   height: 45px;
-  // background: red;
+  background: red;
   display: flex;
   justify-content: space-between;
+  @media (min-width: 1024px) {
+  }
 `;
 
 export const RulesInputs = styled.input`
-  width: 15%;
+  width: ${(props) => props.width};
   height: 35px;
   border: 0px;
   background: none;
@@ -38,6 +44,8 @@ export const RulesInputs = styled.input`
   box-shadow: 0 0 0 0;
   outline: 0;
   text-align: center;
+  @media (min-width: 1024px) {
+  }
 `;
 
 {

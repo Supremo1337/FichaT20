@@ -27,7 +27,6 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [checked, setChecked] = useState(false);
   const [comparativeSingUp, setComparativeSingUp] = useState("");
   const [second, setSecond] = useState("");
 
@@ -41,9 +40,13 @@ export default function Login() {
     console.log(password);
     const jsonSingUp = { email, password, confirmPassword };
     axios
-      .post("http://localhost:8000/api/authme/register", JSON.stringify(jsonSingUp), {
-        headers: { "Content-Type": "application/json" },
-      })
+      .post(
+        "http://localhost:8000/api/authme/register",
+        JSON.stringify(jsonSingUp),
+        {
+          headers: { "Content-Type": "application/json" },
+        }
+      )
       .then((res) => {
         window.location.href = "/";
       })
@@ -51,10 +54,6 @@ export default function Login() {
         console.log(error);
         setComparativeSingUp(error);
       });
-  }
-
-  function handleCheckboxChange() {
-    setChecked(!checked);
   }
 
   return (

@@ -12,8 +12,10 @@ export const Content = styled.div`
   align-items: center;
   justify-items: center;
   gap: 10px 0;
-  grid-column: 4/5;
-  grid-row: 1/2;
+  @media (min-width: 1024px) {
+    grid-column: 4/5;
+    grid-row: 1/2;
+  }
 `;
 
 export const Box = styled.div`
@@ -31,7 +33,7 @@ export const Box = styled.div`
 
 export const AttributeTitle = styled.label`
   width: 100%;
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: bold;
   border: 1px solid;
   border-left: none;
@@ -48,6 +50,7 @@ export const AttributeInput = styled.input`
   border: 2px solid;
   position: relative;
   top: 12px;
+  font-size: 1.6rem;
   ::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
@@ -58,4 +61,6 @@ export const AttributeInput = styled.input`
   }
 `;
 
-export const ModNumber = styled.label``;
+export const ModNumber = styled.label`
+  font-size: 1.6rem;
+`;

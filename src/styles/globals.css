@@ -19,7 +19,13 @@ a {
 * {
   box-sizing: border-box;
   font-family: Tormenta;
+  font-size: 62.5%;
 }
+/* @media (max-width: 1024px) {
+  .css-63bbwe .MuiTextField-root {
+    width: 95%;
+  }
+} */
 
 @media (prefers-color-scheme: dark) {
   html {

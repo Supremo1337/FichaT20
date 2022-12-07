@@ -7,27 +7,31 @@ export const Content = styled.div`
   border-radius: 10px;
   padding: 10px;
   display: grid;
-  grid-template-columns: 6vw 3vw 2vw 2vw 2vw 2vw;
+  grid-template-columns: 20vw 14vw 9vw 10vw 6vw 8vw;
   gap: 15px;
   align-items: flex-end;
-  grid-column: 5/6;
-  grid-row: 1/4;
+  @media (min-width: 1024px) {
+    grid-template-columns: 6vw 3vw 2vw 2vw 2vw 2vw;
+    grid-column: 5/6;
+    grid-row: 1/4;
+  }
 `;
 
 // Reaprovei a label e "Text"
 
 export const SkillsText = styled.label`
-  width: ${(props) => props.width};
-  height: 30px;
+  width: 40px;
   font-size: ${(props) => props.fontSize};
-  padding-top: ${(props) => props.paddingTop};
-  margin-left: ${(props) => props.marginLeft};
+  background: yellow;
   position: relative;
   left: ${(props) => props.left};
-  grid-column: ${(props) => props.gridColumn};
-  grid-row: ${(props) => props.gridRow};
-  text-align: ${(props) => props.textAling};
-  // background: yellow;
+  @media (min-width: 1024px) {
+    padding-top: ${(props) => props.paddingTop};
+    margin-left: ${(props) => props.marginLeft};
+    grid-column: ${(props) => props.gridColumn};
+    grid-row: ${(props) => props.gridRow};
+    text-align: ${(props) => props.textAling};
+  }
 `;
 
 export const CheckSkills = styled.input`
@@ -35,10 +39,11 @@ export const CheckSkills = styled.input`
   height: 15px;
   grid-column: ${(props) => props.gridColumn};
   grid-row: ${(props) => props.gridRow};
+  font-size: 1.6rem;
 `;
 
 export const NameSkills = styled.label`
-  font-size: 12px;
+  font-size: 1rem;
   padding-top: 7px;
   display: flex;
 `;
@@ -51,6 +56,7 @@ export const InputSkillsTotal = styled.input`
   border-radius: 5px;
   // left: ${(props) => props.left};
   // right: ${(props) => props.right};
+  font-size: 1.6rem;
 `;
 
 export const InputSkills = styled.input`
@@ -66,6 +72,7 @@ export const InputSkills = styled.input`
   grid-column: ${(props) => props.gridColumn};
   grid-row: ${(props) => props.gridRow};
   outline: none;
+  font-size: 1.6rem;
 `;
 
 export const Column = styled.div`
@@ -83,4 +90,7 @@ export const GroupInputAndOperator = styled.div`
   height: 40px;
   display: flex;
   justify-content: space-between;
+  label {
+    font-size: 1rem;
+  }
 `;

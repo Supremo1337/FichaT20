@@ -5,6 +5,7 @@ import {
   ActualPoints,
   MaxPoints,
   GroupStates,
+  Buttons,
 } from "./styles";
 import { TextTitle } from "../../styles/global";
 import { useState } from "react";
@@ -42,64 +43,36 @@ export default function LifeAndManeCopy() {
   return (
     <Content>
       <StatusGroup>
-        <TextTitle>Vida</TextTitle>
+        <TextTitle fontSize="1.6rem">Vida</TextTitle>
         <GroupStates>
           <ButtonsAndInputs>
-            <Button
-              style={{
-                color: "black",
-                height: "30px",
-                minWidth: "42px",
-              }}
-              onClick={() => decreaseLife(5)}
-            >
+            <Buttons onClick={() => decreaseLife(5)}>
               <KeyboardDoubleArrowLeftIcon />
               <p>-5</p>
-            </Button>
-            <Button
-              style={{
-                color: "black",
-                height: "30px",
-                minWidth: "42px",
-              }}
-              onClick={() => decreaseLife(1)}
-            >
+            </Buttons>
+            <Buttons onClick={() => decreaseLife(1)}>
               <KeyboardArrowLeftIcon />
               <p>-1</p>
-            </Button>
+            </Buttons>
             <ActualPoints
               type="number"
               value={actualLife}
               onChange={({ target }) => setActualLife(Number(target.value))}
             ></ActualPoints>
-            /
+            <p>/</p>
             <MaxPoints
               type="number"
               value={maxLife}
               onChange={({ target }) => setMaxLife(Number(target.value))}
             ></MaxPoints>
-            <Button
-              style={{
-                color: "black",
-                height: "30px",
-                minWidth: "42px",
-              }}
-              onClick={() => increaseLife(1)}
-            >
+            <Buttons onClick={() => increaseLife(1)}>
               <p>+1</p>
               <KeyboardArrowRightIcon />
-            </Button>
-            <Button
-              style={{
-                color: "black",
-                height: "30px",
-                minWidth: "42px",
-              }}
-              onClick={() => increaseLife(5)}
-            >
+            </Buttons>
+            <Buttons onClick={() => increaseLife(5)}>
               <p>+5</p>
               <KeyboardDoubleArrowRightIcon />
-            </Button>
+            </Buttons>
           </ButtonsAndInputs>
           <ProgressBar
             maxCompleted={Number(maxLife)}
@@ -112,64 +85,36 @@ export default function LifeAndManeCopy() {
       </StatusGroup>
       {/* Space */}
       <StatusGroup>
-        <TextTitle>Mana</TextTitle>
+        <TextTitle fontSize="1.6rem">Mana</TextTitle>
         <GroupStates>
           <ButtonsAndInputs>
-            <Button
-              style={{
-                color: "black",
-                height: "30px",
-                minWidth: "42px",
-              }}
-              onClick={() => decreaseMane(5)}
-            >
+            <Buttons onClick={() => decreaseMane(5)}>
               <KeyboardDoubleArrowLeftIcon />
               <p>-5</p>
-            </Button>
-            <Button
-              style={{
-                color: "black",
-                height: "30px",
-                minWidth: "42px",
-              }}
-              onClick={() => decreaseMane(1)}
-            >
+            </Buttons>
+            <Buttons onClick={() => decreaseMane(1)}>
               <KeyboardArrowLeftIcon />
               <p>-1</p>
-            </Button>
+            </Buttons>
             <ActualPoints
               type="number"
               value={actualMane}
               onChange={({ target }) => setActualMane(Number(target.value))}
             ></ActualPoints>
-            /
+            <p>/</p>
             <MaxPoints
               type="number"
               value={maxMane}
               onChange={({ target }) => setMaxMane(Number(target.value))}
             ></MaxPoints>
-            <Button
-              style={{
-                color: "black",
-                height: "30px",
-                minWidth: "42px",
-              }}
-              onClick={() => increaseMane(1)}
-            >
+            <Buttons onClick={() => increaseMane(1)}>
               <p>+1</p>
               <KeyboardArrowRightIcon />
-            </Button>
-            <Button
-              style={{
-                color: "black",
-                height: "30px",
-                minWidth: "42px",
-              }}
-              onClick={() => increaseMane(5)}
-            >
+            </Buttons>
+            <Buttons onClick={() => increaseMane(5)}>
               <p>+5</p>
               <KeyboardDoubleArrowRightIcon />
-            </Button>
+            </Buttons>
           </ButtonsAndInputs>
           <ProgressBar
             maxCompleted={Number(maxMane)}
