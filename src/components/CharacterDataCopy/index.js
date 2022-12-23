@@ -1,5 +1,6 @@
-import { Content } from "./styles";
+import { Content, theme } from "./styles";
 import { styled } from "@mui/material/styles";
+import { ThemeProvider } from "@mui/material";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { useState, useEffect } from "react";
@@ -9,7 +10,7 @@ import request from "../../services/api.js";
 import { PushUserById } from "./services";
 import axios from "axios";
 
-const CssTextField = styled(TextField)({
+const CssTextField = styled(TextField)(({ theme }) => ({
   "& label.Mui-focused": {
     color: "black",
   },
@@ -27,7 +28,15 @@ const CssTextField = styled(TextField)({
       borderColor: "black",
     },
   },
-});
+  "&.MuiFormControl-root": {
+    [theme.breakpoints.up("desktop")]: {
+      // gridColumn: res.gridColumn,
+      width: "46%",
+      marginRight: "10px",
+      marginBottom: "10px",
+    },
+  },
+}));
 
 export default function CharacterDataCopy() {
   const [account, setAccount] = useState("");
@@ -114,36 +123,40 @@ export default function CharacterDataCopy() {
   // }, []);
 
   return (
-    <Content onSubmit={handleSubmit}>
-      {inputs(account).map((res, index) => {
-        return (
-          <CssTextField
-            sx={{
-              "& .MuiFormLabel-root": { fontSize: "1.6rem" },
-              "& .MuiOutlinedInput-root": {
-                fontSize: "1.6rem",
-              },
-            }}
-            label={res.title}
-            id="custom-css-outlined-input"
-            value={res.value || ""}
-            variant="outlined"
-            size="small"
-            InputProps={{ style: { fontFamily: "Tormenta" } }}
-            InputLabelProps={{ style: { fontFamily: "Tormenta" } }}
-            autoComplete="off"
-            type={res.type == "number" ? "number" : ""}
-            onChange={(event) => {
-              window.localStorage.setItem(res.name, event.target.value);
-              setAccount({
-                ...account,
-                [res.name]: event.target.value,
-              });
-            }}
-          />
-        );
-      })}
-      <SubmitBar />
-    </Content>
+    <ThemeProvider theme={theme}>
+      <Content onSubmit={handleSubmit}>
+        {inputs(account).map((res, index) => {
+          return (
+            <CssTextField
+              key={index}
+              sx={{
+                "& .MuiFormLabel-root": { fontSize: "1.6rem" },
+                "& .MuiOutlinedInput-root": {
+                  fontSize: "1.6rem",
+                  width: res.width,
+                },
+              }}
+              label={res.title}
+              id="custom-css-outlined-input"
+              value={res.value || ""}
+              variant="outlined"
+              size="small"
+              InputProps={{ style: { fontFamily: "Tormenta" } }}
+              InputLabelProps={{ style: { fontFamily: "Tormenta" } }}
+              autoComplete="off"
+              type={res.type == "number" ? "number" : ""}
+              onChange={(event) => {
+                window.localStorage.setItem(res.name, event.target.value);
+                setAccount({
+                  ...account,
+                  [res.name]: event.target.value,
+                });
+              }}
+            />
+          );
+        })}
+        <SubmitBar />
+      </Content>
+    </ThemeProvider>
   );
 }

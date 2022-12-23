@@ -6,6 +6,7 @@ export const inputs = (account) => [
     width: "100%",
     value: account.character,
     name: "character",
+    gridColumn: "1/2",
   },
   {
     title: "Jogador",
@@ -14,6 +15,7 @@ export const inputs = (account) => [
     width: "100%",
     value: account.name,
     name: "name",
+    gridColumn: "2/3",
   },
   {
     title: "Raça",
