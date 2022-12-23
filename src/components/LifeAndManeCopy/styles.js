@@ -10,8 +10,14 @@ export const Content = styled.div`
   flex-direction: column;
   padding: 10px;
   justify-content: space-around;
-  grid-column: 2/4;
-  grid-row: 1/2;
+  @media (min-width: 102px) {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  @media (min-width: 1366px) {
+    grid-column: 2/4;
+    grid-row: 1/2;
+  }
 `;
 
 export const StatusGroup = styled.div`

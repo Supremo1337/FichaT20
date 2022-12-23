@@ -9,8 +9,18 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  grid-column: 1/6;
-  grid-row: 4/5;
+  /* grid-column: 1/6; */
+  /* grid-row: 4/5; */
+  @media (min-width: 1024px) {
+    height: auto;
+    grid-column: 1/4;
+    grid-row: 6/7;
+  }
+  @media (min-width: 1366px) {
+    grid-column: 1/6;
+    grid-row: 4/5;
+    height: 400px;
+  }
 `;
 
 // Reaproveite o Title "EQUIPAMENTO"
@@ -82,6 +92,9 @@ export const MoreContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media (min-width: 1024px) {
+    height: 42%;
+  }
 `;
 // Reaproveite o "ItensTitle"
 

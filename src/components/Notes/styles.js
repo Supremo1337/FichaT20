@@ -11,13 +11,23 @@ export const Content = styled.div`
   display: inline-block;
   outline: none;
   justify-content: space-between;
-  grid-column: 1/5;
-  grid-row: 3/4;
+  /* grid-column: 1/5; */
+  /* grid-row: 3/4; */
+  @media (min-width: 1024px) {
+    height: 100%;
+    grid-column: 2/4;
+    grid-row: 5/6;
+  }
+  @media (min-width: 1366px) {
+    grid-column: 1/5;
+    grid-row: 3/4;
+  }
 `;
 
 export const TextArea = styled.textarea`
   width: 100%;
   min-height: 10%;
+  background-color: red;
   height: auto;
   resize: vertical;
   overflow: hidden;

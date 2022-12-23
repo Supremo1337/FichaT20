@@ -11,9 +11,15 @@ export const Content = styled.div`
   gap: 15px;
   align-items: flex-end;
   @media (min-width: 1024px) {
+    height: 959px;
     grid-template-columns: 6vw 3vw 2vw 2vw 2vw 2vw;
+    grid-column: 1/2;
+    grid-row: 3/6;
+  }
+  @media (min-width: 1366px) {
     grid-column: 5/6;
     grid-row: 1/4;
+    align-items: normal;
   }
 `;
 

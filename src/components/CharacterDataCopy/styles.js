@@ -21,6 +21,12 @@ export const Content = styled.form`
   justify-content: space-between;
   flex-direction: column;
   padding: 10px;
+  /* grid-column: 1/2;
+  grid-row: 1/3; */
+  @media (min-width: 1024px) {
+    grid-column: 1/2;
+    grid-row: 1/3;
+  }
   @media (min-width: 1366px) {
     width: 100%;
     height: 265px;
@@ -28,6 +34,8 @@ export const Content = styled.form`
     flex-wrap: wrap;
     margin-right: 10px;
     margin-bottom: 10px;
+    grid-column: 1/2;
+    grid-row: 1/2;
     /* display: grid; */
     /* grid-template-columns: 1.3fr 1fr 0.4fr; */
     /* grid-template-rows: 6vh 6vh 6vh; */

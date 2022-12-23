@@ -9,8 +9,16 @@ export const Content = styled.div`
   border-radius: 10px;
   flex-direction: column;
   align-items: center;
-  grid-column: 1/6;
-  grid-row: 5/6;
+  /* grid-column: 1/6;
+  grid-row: 5/6; */
+  @media (min-width: 1024px) {
+    grid-column: 1/4;
+    grid-row: 7/8;
+  }
+  @media (min-width: 1366px) {
+    grid-column: 1/6;
+    grid-row: 5/6;
+  }
 `;
 
 export const Group = styled.div`
@@ -48,6 +56,9 @@ export const TextAndInput = styled.div`
   background: pink;
   display: flex;
   justify-content: space-between;
+  @media (min-width: 1366px) {
+    width: ${(props) => props.widthDesktop};
+  }
 `;
 
 export const TestResistance = styled.div`
@@ -71,6 +82,7 @@ export const InputMagics = styled.input`
   outline: 0;
   grid-column: ${(props) => props.gridColumn};
   grid-row: ${(props) => props.gridRow};
+  font-size: 1.6rem;
 `;
 
 export const Description = styled.div`
@@ -93,4 +105,5 @@ export const InputModal = styled.input`
   border: 1px solid;
   border-radius: 5px;
   outline: 0;
+  font-size: 1.6rem;
 `;

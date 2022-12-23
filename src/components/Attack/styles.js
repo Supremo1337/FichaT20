@@ -12,6 +12,10 @@ export const Content = styled.div`
   justify-content: space-between;
   @media (min-width: 1024px) {
     align-items: flex-end;
+    grid-column: 2/4;
+    grid-row: 2/4;
+  }
+  @media (min-width: 1366px) {
     grid-column: 1/3;
     grid-row: 2/3;
   }

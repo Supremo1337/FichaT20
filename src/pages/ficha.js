@@ -30,9 +30,14 @@ const Global = styled.div`
   flex-direction: column;
   @media (min-width: 1024px) {
     display: grid;
-    grid-template-columns: 32vw 14vw 9vw 17vw 23vw;
-    grid-template-rows: 21vh 38vh 42vh 53vh 60vh 5vh;
-    grid-template: repeat(5, auto) / 32vw 14vw 9vw 17vw 23vw;
+    grid-template: repeat(7, auto) / 32vw 32vw 32vw;
+    /* grid-template-rows: 30vh 16vh 21vh 31vh 60vh 59vh; */
+    gap: 10px;
+  }
+  @media (min-width: 1366px) {
+    display: grid;
+    grid-template: repeat(5, auto) / 31.6vw 14vw 9vw 17vw 24vw;
+    /* grid-template-rows: 31vh 39vh 47vh 54vh 58vh; */
     gap: 10px;
   }
   /* @media (max-width: 890px) {
@@ -97,14 +102,14 @@ export default function Ficha() {
         </TopBar>
         <Global>
           <CharacterDataCopy isLightTheme={!isLightTheme} />
-          {/* <LifeAndManeCopy /> */}
-          {/* <Attribute /> */}
-          {/* <Skills /> */}
-          {/* <Attack /> */}
-          {/* <DefenseAndProfiency /> */}
-          {/* <Notes /> */}
-          {/* <Invetory /> */}
-          {/* <Magics /> */}
+          <LifeAndManeCopy />
+          <Attribute />
+          <Skills />
+          <Attack />
+          <DefenseAndProfiency />
+          <Notes />
+          <Invetory />
+          <Magics />
         </Global>
       </Wrapper>
     </>

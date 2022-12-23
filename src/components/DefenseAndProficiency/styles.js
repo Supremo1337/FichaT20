@@ -8,8 +8,14 @@ export const Content = styled.div`
   padding: 10px;
   display: flex;
   justify-content: space-between;
-  grid-column: 3/5;
-  grid-row: 2/3;
+  @media (min-width: 1024px) {
+    grid-column: 2/4;
+    grid-row: 4/5;
+  }
+  @media (min-width: 1366px) {
+    grid-column: 3/5;
+    grid-row: 2/3;
+  }
 `;
 
 export const DefenseGroup = styled.div`
@@ -20,7 +26,7 @@ export const DefenseGroup = styled.div`
   flex-direction: column;
   justify-content: space-between;
   @media (min-width: 1024px) {
-    height: 290px;
+    height: 205px;
   }
 `;
 
@@ -91,7 +97,7 @@ export const ModBox = styled.div`
   column-gap: 5px;
   @media (min-width: 1024px) {
     grid-template-columns: 4vw 4vw 1vw 3vw 1vw 3vw 1vw 2vw;
-    height: 100%;
+    height: 87px;
   }
 `;
 

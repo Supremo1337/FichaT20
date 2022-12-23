@@ -94,7 +94,7 @@ export default function Magics() {
 
   return (
     <Content>
-      <Title>Magias</Title>
+      <Title fontSize="1.6rem">Magias</Title>
       <div>
         <Button
           style={{
@@ -115,7 +115,7 @@ export default function Magics() {
         >
           <Box sx={style}>
             <Typography id="modal-modal-title" variant="h6" component="h2">
-              <Title>Adicionar Nova Mágia</Title>
+              <Title fontSize="1.6rem">Adicionar Nova Mágia</Title>
             </Typography>
             <ModalDiv id="modal-modal-description" sx={{ mt: 2 }}>
               {MagicInputs.map((res, index) => {
@@ -148,8 +148,8 @@ export default function Magics() {
           <Group>
             <ConditionAndInputsDiv>
               <Conditions>
-                <TextAndInput width={"55%"}>
-                  <SkillsText>Atributo-chave</SkillsText>
+                <TextAndInput width={"55%"} widthDesktop={"80%"}>
+                  <SkillsText fontSize="1.4rem">Atributo-chave</SkillsText>
                   <Select defaultValue={"INT"}>
                     <Option value="FOR">FOR</Option>
                     <Option value="DES">DES</Option>
@@ -159,13 +159,13 @@ export default function Magics() {
                     <Option value="CAR">CAR</Option>
                   </Select>
                 </TextAndInput>
-                <TextAndInput width={"65%"}>
-                  <SkillsText>MOD</SkillsText>
+                <TextAndInput width={"65%"} widthDesktop={"55%"}>
+                  <SkillsText fontSize="1.4rem">MOD</SkillsText>
                   <InputSkills width={"65%"} placeholder={"0"} />
                 </TextAndInput>
                 <TestResistance>
                   <TextAndInput>
-                    <SkillsText>TESTE DE RESISTÊNCIA</SkillsText>
+                    <SkillsText fontSize="1.4rem">TESTE DE RESISTÊNCIA</SkillsText>
                     <InputSkills width={"40%"} placeholder={"0"} />
                   </TextAndInput>
                   <ItensTitle>
