@@ -25,6 +25,8 @@ export const SkillsText = styled.label`
   background: yellow;
   position: relative;
   left: ${(props) => props.left};
+  grid-column: ${(props) => props.gridColumn};
+  grid-row: ${(props) => props.gridRow};
   @media (min-width: 1024px) {
     margin-left: ${(props) => props.marginLeft};
     padding-top: ${(props) => props.paddingTop};

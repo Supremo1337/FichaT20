@@ -15,7 +15,7 @@ export const textTitleOfModAndBonus = [
     {
       fontSize: "14px",
       name: "Penalidade de Armadura",
-      gridColumn: "1/5",
+      gridColumn: "1/7",
       gridRow: "3/4",
     },
   ];

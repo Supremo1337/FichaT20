@@ -14,11 +14,14 @@ export const Content = styled.div`
 
 export const DefenseGroup = styled.div`
   width: 100%;
-  height: 290px;
+  height: 202px;
   // background: yellow;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media (min-width: 1024px) {
+    height: 290px;
+  }
 `;
 
 export const PartsRow = styled.div`
@@ -28,20 +31,29 @@ export const PartsRow = styled.div`
 `;
 
 export const Defense = styled.div`
-  width: 25%;
-  height: 100px;
+  width: 92px;
+  height: 84px;
+  background: red;
   display: flex;
   align-items: center;
+  @media (min-width: 1024px) {
+    width: 25%;
+    height: 100px;
+  }
 `;
 
 export const DefenseCard = styled.div`
-  width: 60%;
-  height: 100px;
+  width: 57px;
+  height: 81px;
   border: 1px solid;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (min-width: 1024px) {
+    width: 60%;
+    height: 100px;
+  }
 `;
 
 export const InputDefense = styled.input`
@@ -55,6 +67,7 @@ export const InputDefense = styled.input`
   border: ${(props) => props.border};
   border-radius: ${(props) => props.borderRadius};
   text-align: center;
+  font-size: 1.6rem;
   ::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
@@ -67,15 +80,19 @@ export const InputDefense = styled.input`
 
 export const ModBox = styled.div`
   width: 75%;
-  height: 100%;
+  height: 87px;
   border: 2px solid;
   border-radius: 10px;
   padding: 5px;
   display: grid;
-  grid-template-columns: 1vw 4vw 1vw 3vw 1vw 3vw 1vw 2vw;
+  grid-template-columns: 5vw 10vw 4vw 11vw 4vw 11vw 4vw 8vw;
   grid-template-rows: 3vh 4vh 2vh;
   align-items: center;
   column-gap: 5px;
+  @media (min-width: 1024px) {
+    grid-template-columns: 4vw 4vw 1vw 3vw 1vw 3vw 1vw 2vw;
+    height: 100%;
+  }
 `;
 
 export const RowLines = styled.div`
@@ -96,10 +113,14 @@ export const GropuArmorAndPenalty = styled.div`
   border: 2px solid;
   border-radius: 10px;
   display: grid;
-  grid-template-columns: 11vw 5vw 6.5vw;
+  grid-template-columns: 40vw 16vw 23vw;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 10px;
   padding: 10px;
+  @media (min-width: 1024px) {
+    grid-template-columns: 11vw 5vw 6.5vw;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
 `;
 
 export const EXP = styled.div`
@@ -119,6 +140,7 @@ export const EXPInput = styled.input`
   box-shadow: 0 0 0 0;
   outline: 0;
   text-align: center;
+  font-size: 1.6rem;
   ::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
@@ -134,4 +156,5 @@ export const P = styled.p`
   grid-row: ${(props) => props.gridRow};
   margin: 0px;
   margin-left: 5px;
+  font-size: 1.6rem;
 `;

@@ -53,7 +53,7 @@ export const RulesInputs = styled.input`
   /* < Reaproveitei o "SkillsText"> */
 }
 
-export const TESTE = styled.div`
+export const PlaceTextAndInputsInColumn = styled.div`
   width: ${(props) => props.width};
   height: 300px;
   /* background: red; */

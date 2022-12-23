@@ -19,7 +19,7 @@ export const Proficiency = styled.div`
   align-items: center;
 `;
 
-export const InputProfieciency = styled.textarea`
+export const TextAreaProfieciency = styled.textarea`
   width: 100%;
   height: ${(props) => props.height};
   background: ${(props) => props.background};
@@ -27,6 +27,7 @@ export const InputProfieciency = styled.textarea`
   border: ${(props) => props.border};
   border-radius: ${(props) => props.borderRadius};
   outline: none;
+  font-size: 1.6rem;
 `;
 
 export const Size = styled.div`
@@ -45,6 +46,7 @@ export const Select = styled.select`
   grid-row: ${(props) =>props.gridRow};
   position: ${(props) =>props.position};
   top: ${(props) => props.top};
+  font-size: 1.2rem;
 `;
 
 export const Numbers = styled.label`
@@ -54,6 +56,7 @@ export const Numbers = styled.label`
   border-radius: 10px;
   text-align: center;
   margin-left: 10px;
+  font-size: 1.6rem;
 `;
 
 export const Displacement = styled.div`
@@ -75,4 +78,5 @@ export const Move = styled.input`
   text-align: center;
   margin-left: 10px;
   outline: none;
+  font-size: 1.6rem;
 `;

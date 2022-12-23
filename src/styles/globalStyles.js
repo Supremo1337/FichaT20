@@ -19,7 +19,7 @@ export const GlobalStyles = createGlobalStyle`
   .css-1h9z7r5-MuiButtonBase-root-MuiTab-root{
     color: ${({ theme }) => theme.text};
     font-family: "Tormenta";
-    font-size: 1.5em;
+    font-size: 2.0rem;
   }
   .container {
     background-color: ${({ theme }) => theme.bodyBar};

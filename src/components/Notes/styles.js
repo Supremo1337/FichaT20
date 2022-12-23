@@ -23,4 +23,5 @@ export const TextArea = styled.textarea`
   overflow: hidden;
   outline: none;
   border: none;
+  font-size: 1.6rem;
 `;

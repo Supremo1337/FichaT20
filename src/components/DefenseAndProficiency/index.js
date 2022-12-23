@@ -116,54 +116,58 @@ export default function DefenseAndProficiency() {
           </Tabs>
         </Box>
         <TabPanel value={value} index={0}>
-          {/* <DefenseGroup>
-            <PartsRow> */}
-          {/* <Defense>
+          <DefenseGroup>
+            <PartsRow>
+              <Defense>
                 <DefenseCard>
-                  <Title>Defesa</Title>
+                  <Title fontSize="1.2rem">Defesa</Title>
                   <InputDefense
                     type={"number"}
                     disabled
                     top={"10px"}
                     border={"none"}
                     placeholder={"10"}
-                  ></InputDefense>
+                  />
                 </DefenseCard>
                 <InputDefense
                   borderRadius={"50%"}
                   disabled
                   left={"-10px"}
                   placeholder={"=10"}
-                ></InputDefense>
+                />
               </Defense>
               <ModBox>
                 <CheckSkills
                   type={"checkbox"}
                   gridColumn={"1/2"}
                   gridRow={"1/2"}
-                ></CheckSkills> */}
-          <SkillsText fontSize={"10px"} gridColumn={"2/3"} gridRow={"1/2"}>
-            Modificador de
-          </SkillsText>
-          <Select
-            position={"relative"}
-            top={"5px"}
-            gridColumn={"2/3"}
-            gridRow={"1/2"}
-            defaultValue={"DES"}
-            onChange={(e) => {
-              setAttributeForSelect(e.target.value);
-            }}
-            value={attributeForSelect}
-          >
-            <Option value="FOR">FOR</Option>
-            <Option value="DES">DES</Option>
-            <Option value="CON">CON</Option>
-            <Option value="INT">INT</Option>
-            <Option value="SAB">SAB</Option>
-            <Option value="CAR">CAR</Option>
-          </Select>
-          {/* {textTitleOfModAndBonus.map((res, index) => {
+                />
+                <SkillsText
+                  fontSize={"10px"}
+                  gridColumn={"2/3"}
+                  gridRow={"1/2"}
+                >
+                  Mod. de
+                </SkillsText>
+                <Select
+                  position={"relative"}
+                  top={"10px"}
+                  gridColumn={"2/3"}
+                  gridRow={"1/2"}
+                  defaultValue={"DES"}
+                  onChange={(e) => {
+                    setAttributeForSelect(e.target.value);
+                  }}
+                  value={attributeForSelect}
+                >
+                  <Option value="FOR">FOR</Option>
+                  <Option value="DES">DES</Option>
+                  <Option value="CON">CON</Option>
+                  <Option value="INT">INT</Option>
+                  <Option value="SAB">SAB</Option>
+                  <Option value="CAR">CAR</Option>
+                </Select>
+                {textTitleOfModAndBonus.map((res, index) => {
                   return (
                     <SkillsText
                       key={index}
@@ -174,37 +178,8 @@ export default function DefenseAndProficiency() {
                       {res.name}
                     </SkillsText>
                   );
-                })} */}
-          {inputsOfModAndBonus.map((res, index) => {
-            return (
-              <InputSkills
-                key={index}
-                width="100%"
-                height={"15px"}
-                placeholder={"0"}
-                gridColumn={res.gridColumn}
-                gridRow={res.gridRow}
-                readOnly={res.name == "Other" ? false : true}
-                name={res.name}
-                onChange={onChange}
-                value={
-                  res.nameValue == "attributeSelected"
-                    ? selectAttribute
-                    : res.nameValue == "armorNumber"
-                    ? armorNumber
-                    : res.nameValue == "shieldNumber"
-                    ? shieldNumber
-                    : res.nameValue == "other"
-                    ? other
-                    : res.nameValue == "Penalty of Armor"
-                    ? sumPenalty
-                    : ""
-                }
-                type={res.type == "number" ? "number" : ""}
-              />
-            );
-          })}
-          {/* <P gridColumn={"1/2"} gridRow={"2/3"}>
+                })}
+                <P gridColumn={"1/2"} gridRow={"2/3"}>
                   +
                 </P>
                 <P gridColumn={"3/4"} gridRow={"2/3"}>
@@ -215,14 +190,44 @@ export default function DefenseAndProficiency() {
                 </P>
                 <P gridColumn={"7/8"} gridRow={"2/3"}>
                   +
-                </P> */}
-          {/* </ModBox> */}
-          {/* </PartsRow>
+                </P>
+                {inputsOfModAndBonus.map((res, index) => {
+                  return (
+                    <InputSkills
+                      key={index}
+                      width="100%"
+                      height={"15px"}
+                      placeholder={"0"}
+                      gridColumn={res.gridColumn}
+                      gridRow={res.gridRow}
+                      readOnly={res.name == "Other" ? false : true}
+                      name={res.name}
+                      onChange={onChange}
+                      value={
+                        res.nameValue == "attributeSelected"
+                          ? selectAttribute
+                          : res.nameValue == "armorNumber"
+                          ? armorNumber
+                          : res.nameValue == "shieldNumber"
+                          ? shieldNumber
+                          : res.nameValue == "other"
+                          ? other
+                          : res.nameValue == "Penalty of Armor"
+                          ? sumPenalty
+                          : ""
+                      }
+                      type={res.type == "number" ? "number" : ""}
+                    />
+                  );
+                })}
+              </ModBox>
+            </PartsRow>
             <GropuArmorAndPenalty>
-              <Title gridColumn={"1/2"} gridRow={"1/2"}>
+              <Title fontSize="1.6rem" gridColumn={"1/2"} gridRow={"1/2"}>
                 ARMADURA & ESCUDO
               </Title>
               <SkillsText
+                fontSize="1.6rem"
                 gridColumn={"2/3"}
                 gridRow={"1/2"}
                 textAling={"center"}
@@ -230,6 +235,7 @@ export default function DefenseAndProficiency() {
                 Defesa
               </SkillsText>
               <SkillsText
+                fontSize="1.6rem"
                 gridColumn={"3/4"}
                 gridRow={"1/2"}
                 textAling={"center"}
@@ -261,11 +267,11 @@ export default function DefenseAndProficiency() {
                 );
               })}
             </GropuArmorAndPenalty>
-            <EXP>
-              <Title>PONTOS DE EXPERIÊNCIA</Title>
+            {/* <EXP>
+              <Title fontSize="1.6rem">PONTOS DE EXPERIÊNCIA</Title>
               <EXPInput type={"number"} placeholder={"Xp"}></EXPInput>
-            </EXP>
-          </DefenseGroup> */}
+            </EXP> */}
+          </DefenseGroup>
         </TabPanel>
         <TabPanel value={value} index={1}>
           <Others />

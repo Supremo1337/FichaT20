@@ -1,5 +1,5 @@
 import { ItensTitle } from "../Inventory/styles";
-import { InputProfieciency, Select } from "../Others/styles";
+import { TextAreaProfieciency, Select } from "../Others/styles";
 import { InputSkills, SkillsText } from "../Skills/styles";
 import {
   Content,
@@ -123,7 +123,7 @@ export default function Magics() {
                   <InputModal key={index} height={"5%"} value={res.value} />
                 );
               })}
-              <InputProfieciency
+              <TextAreaProfieciency
                 border={"1px solid"}
                 borderRadius={"5px"}
                 height={"50%"}
@@ -187,7 +187,7 @@ export default function Magics() {
               </InputsDiv>
             </ConditionAndInputsDiv>
             <Description>
-              <InputProfieciency
+              <TextAreaProfieciency
                 placeholder="Descrição:"
                 height={"98%"}
                 border={"none"}

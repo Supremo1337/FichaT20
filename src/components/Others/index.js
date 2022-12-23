@@ -3,7 +3,7 @@ import { Title, Option } from "../../styles/global";
 import {
   Content,
   Proficiency,
-  InputProfieciency,
+  TextAreaProfieciency,
   Size,
   Select,
   Numbers,
@@ -39,15 +39,15 @@ export default function Others() {
   return (
     <Content>
       <Proficiency>
-        <Title>Proficiências</Title>
-        <InputProfieciency
+        <Title fontSize="1.6rem">Proficiências</Title>
+        <TextAreaProfieciency
           height={"100%"}
           border={"none"}
           background={"none"}
         />
       </Proficiency>
       <Size>
-        <Title>TAMANHO</Title>
+        <Title fontSize="1.6rem">TAMANHO</Title>
         <Select
           onChange={(e) => {
             setSize(e.target.value);
@@ -61,10 +61,10 @@ export default function Others() {
           <Option value="Enorme">Enorme</Option>
           <Option value="Colossal">Colossal</Option>
         </Select>
-        <Numbers width={"15%"}>{sizeNumber}</Numbers>
+        <Numbers width={"20%"}>{sizeNumber}</Numbers>
       </Size>
       <Displacement>
-        <Title>Deslocamento</Title>
+        <Title fontSize="1.6rem">Deslocamento</Title>
         <Move width={"75%"} />
       </Displacement>
     </Content>

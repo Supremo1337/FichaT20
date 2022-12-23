@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Title = styled.label`
- font-size: ${(props) => props.fontSize};
+  font-size: ${(props) => props.fontSize};
   font-weight: bold;
   grid-column: ${(props) => props.gridColumn};
   grid-row: ${(props) => props.gridRow};
