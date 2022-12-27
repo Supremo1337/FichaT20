@@ -96,7 +96,11 @@ export const ModBox = styled.div`
   align-items: center;
   column-gap: 5px;
   @media (min-width: 1024px) {
-    grid-template-columns: 4vw 4vw 1vw 3vw 1vw 3vw 1vw 2vw;
+    grid-template-columns: 2vw 6vw 2vw 10vw 1vw 9vw 2vw 10vw;
+    height: 87px;
+  }
+  @media (min-width: 1366px) {
+    grid-template-columns: 2vw 3vw 1vw 3vw 1vw 3vw 1vw 3vw;
     height: 87px;
   }
 `;

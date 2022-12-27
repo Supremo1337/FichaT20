@@ -23,7 +23,7 @@ export default function Invetory() {
   });
   const [result, setResult] = useState("");
 
-  const InputsItensBox = [{}, {}];
+  const InputsItensBox = [{}, { display: "none" }];
   const InputsRows = [
     { name: "num" },
     { name: "num2" },
@@ -52,25 +52,21 @@ export default function Invetory() {
   };
   return (
     <Content>
-      <Title>EQUIPAMENTO</Title>
+      <Title fontSize="1.6rem">EQUIPAMENTO</Title>
       <Group>
-        {InputsItensBox.map((_, index) => {
+        {InputsItensBox.map((res, index) => {
           return (
             <ItensBox key={index}>
               <ColumnItens width={"100%"}>
-                <ItensTitle>Item</ItensTitle>
+                <ItensTitle display={res.display}>Item</ItensTitle>
                 {InputsRows.map((_, index) => {
                   return (
-                    <InputSkills
-                      key={index}
-                      width={"90%"}
-                      height={"25px"}
-                    ></InputSkills>
+                    <InputSkills key={index} width={"90%"} height={"25px"} />
                   );
                 })}
               </ColumnItens>
-              <ColumnItens width={"30%"}>
-                <ItensTitle>Peso</ItensTitle>
+              <ColumnItens width={"35%"}>
+                <ItensTitle display={res.display}>Peso</ItensTitle>
                 {InputsRows.map((res, index) => {
                   return (
                     <InputSkills
@@ -80,7 +76,7 @@ export default function Invetory() {
                       placeholder={"0.00"}
                       name={res.name}
                       onChange={handleInput}
-                    ></InputSkills>
+                    />
                   );
                 })}
               </ColumnItens>
@@ -90,19 +86,15 @@ export default function Invetory() {
         <ThreeColumn>
           <ItensBox height={"51%"}>
             <ColumnItens width={"100%"}>
-              <ItensTitle>Item</ItensTitle>
+              <ItensTitle display="none">Item</ItensTitle>
               {InputsRowsHalf.map((_, index) => {
                 return (
-                  <InputSkills
-                    key={index}
-                    width={"90%"}
-                    height={"25px"}
-                  ></InputSkills>
+                  <InputSkills key={index} width={"90%"} height={"25px"} />
                 );
               })}
             </ColumnItens>
-            <ColumnItens width={"30%"}>
-              <ItensTitle>Peso</ItensTitle>
+            <ColumnItens width={"35%"}>
+              <ItensTitle display="none">Peso</ItensTitle>
               {InputsRowsHalf.map((_, index) => {
                 return (
                   <InputSkills
@@ -110,7 +102,7 @@ export default function Invetory() {
                     width={"100%"}
                     height={"25px"}
                     placeholder={"0.00"}
-                  ></InputSkills>
+                  />
                 );
               })}
             </ColumnItens>
@@ -131,13 +123,13 @@ export default function Invetory() {
                     height={"25px"}
                     placeholder={"0.00"}
                     value={sum}
-                  ></InputSkills>
+                  />
                   <ItensTitle>de</ItensTitle>
                   <InputSkills
                     width={"45%"}
                     height={"25px"}
                     placeholder={"30"}
-                  ></InputSkills>
+                  />
                 </InputsLoadGroup>
                 <ItensTitle>
                   CARGA MÁXIMA <br /> (3x de Força)
@@ -149,7 +141,7 @@ export default function Invetory() {
                     width={"45%"}
                     height={"25px"}
                     placeholder={"100"}
-                  ></InputSkills>
+                  />
                 </InputsLoadGroup>
                 <ItensTitle>
                   LEVANTAR <br /> (até 10x Força)
@@ -159,12 +151,12 @@ export default function Invetory() {
                 {Tibars.map((res, index) => {
                   return (
                     <Tibar key={index}>
-                      <Title>{res.title}</Title>
+                      <Title fontSize="1.6rem">{res.title}</Title>
                       <InputSkills
                         width={"70%"}
                         height={"25px"}
                         placeholder={"100"}
-                      ></InputSkills>
+                      />
                     </Tibar>
                   );
                 })}

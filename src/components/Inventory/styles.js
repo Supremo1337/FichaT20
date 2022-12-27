@@ -2,24 +2,23 @@ import styled from "styled-components";
 
 export const Content = styled.div`
   width: 100%;
-  height: 500px;
+  height: auto;
+  display: flex;
   border: 2px solid;
   border-radius: 10px;
   padding: 10px;
-  display: flex;
   flex-direction: column;
   align-items: center;
   /* grid-column: 1/6; */
   /* grid-row: 4/5; */
   @media (min-width: 1024px) {
-    height: auto;
+    height: 455px;
     grid-column: 1/4;
     grid-row: 6/7;
   }
   @media (min-width: 1366px) {
     grid-column: 1/6;
     grid-row: 4/5;
-    height: 400px;
   }
 `;
 
@@ -29,9 +28,13 @@ export const Group = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
+  /* background-color: pink; */
   justify-content: center;
-  background: blue;
   justify-content: space-between;
+  flex-direction: column;
+  @media (min-width: 1024px) {
+    flex-direction: row;
+  }
 `;
 
 // Fiz um map
@@ -39,22 +42,28 @@ export const Group = styled.div`
 export const ItensBox = styled.div`
   width: 100%;
   height: ${(props) => props.height};
-  // background: red;
+  /* background: blue; */
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr;
+  justify-items: center;
 `;
 
 export const ColumnItens = styled.div`
   width: ${(props) => props.width};
   height: 100%;
   display: flex;
+  /* background-color: red; */
   justify-content: space-between;
   flex-direction: column;
 `;
 
 export const ItensTitle = styled.label`
   font-size: 14px;
+  display: ${(props) => props.display};
+  @media (min-width: 1024px) {
+    display: block;
+  }
 `;
 
 // Fiz um map
@@ -71,7 +80,7 @@ export const ThreeColumn = styled.div`
   // background: yellow;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 30px;
 `;
 
 // Reaproveite o ItensBox
@@ -88,10 +97,11 @@ export const ThreeColumn = styled.div`
 export const MoreContent = styled.div`
   width: 100%;
   height: 30%;
-  // background: pink;
+  /* background: pink; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 15px;
   @media (min-width: 1024px) {
     height: 42%;
   }
@@ -118,7 +128,10 @@ export const Info = styled.div`
 export const InputsLoadGroup = styled.div`
   width: 100%;
   height: 50%;
-  // background: cyan;
+  /* background: cyan; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 // Reaproveite o "InputSkills"

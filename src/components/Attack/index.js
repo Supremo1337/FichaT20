@@ -20,16 +20,16 @@ export default function Attack() {
   ];
 
   const teste = [
-    { title: "Teste de Ataque", width: "55px" },
-    { title: "Dano", width: "40px" },
-    { title: "Crítico", width: "40px" },
-    { title: "Tipo", width: "45px" },
-    { title: "Alcance", width: "50px" },
+    { title: "Teste de Ataque", width: "18%", maxWidth: "" },
+    { title: "Dano", width: "11%", maxWidth: "" },
+    { title: "Crítico", width: "13%", maxWidth: "" },
+    { title: "Tipo", width: "14%", maxWidth: "" },
+    { title: "Alcance", width: "15%", maxWidth: "" },
   ];
 
   return (
     <Content>
-      <PlaceTextAndInputsInColumn width="80px">
+      <PlaceTextAndInputsInColumn width="25%" maxWidth="">
         <Title fontSize={"1.6rem"}>ATAQUES</Title>
         {inputs.map((_, index) => {
           return <RulesInputs key={index} width="100%" />;

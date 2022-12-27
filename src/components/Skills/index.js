@@ -18,7 +18,7 @@ export default function Skills() {
     <Content>
       {/* <SkillsTitleandValue> */}
       <Column height={"935px"} gridColumn={"1/2"}>
-        <Title>PERÍCIAS</Title>
+        <Title fontSize={"12px"}>PERÍCIAS</Title>
         {skillsAttributes.map((res, index) => {
           return (
             <NameSkills key={index}>

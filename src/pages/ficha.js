@@ -28,6 +28,7 @@ const Global = styled.div`
   border: 0;
   display: flex;
   flex-direction: column;
+  row-gap: 10px;
   @media (min-width: 1024px) {
     display: grid;
     grid-template: repeat(7, auto) / 32vw 32vw 32vw;
@@ -36,7 +37,7 @@ const Global = styled.div`
   }
   @media (min-width: 1366px) {
     display: grid;
-    grid-template: repeat(5, auto) / 31.6vw 14vw 9vw 17vw 24vw;
+    grid-template: repeat(5, auto) / 31.6vw 11vw 12vw 17vw 24vw;
     /* grid-template-rows: 31vh 39vh 47vh 54vh 58vh; */
     gap: 10px;
   }
@@ -109,7 +110,7 @@ export default function Ficha() {
           <DefenseAndProfiency />
           <Notes />
           <Invetory />
-          <Magics />
+          {/* <Magics /> */}
         </Global>
       </Wrapper>
     </>

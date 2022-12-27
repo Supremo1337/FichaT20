@@ -65,7 +65,7 @@ export default function Attribute() {
           </Box>
         );
       })}
-      <SubmitBar />
+      <SubmitBar gridColumn="1/4" gridRow="3/4" />
     </Content>
   );
 }

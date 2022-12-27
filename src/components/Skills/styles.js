@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Content = styled.div`
   width: 100%;
+  max-width: 500px;
   height: 978px;
   border: 2px solid;
   border-radius: 10px;
@@ -10,8 +11,11 @@ export const Content = styled.div`
   grid-template-columns: 20vw 14vw 9vw 10vw 6vw 8vw;
   gap: 15px;
   align-items: flex-end;
+  @media (min-width: 578px) {
+    grid-template-columns: 37% 14% 9% 10% 6% 8%;
+  }
   @media (min-width: 1024px) {
-    height: 959px;
+    height: 100%;
     grid-template-columns: 6vw 3vw 2vw 2vw 2vw 2vw;
     grid-column: 1/2;
     grid-row: 3/6;

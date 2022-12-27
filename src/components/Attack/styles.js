@@ -9,7 +9,7 @@ export const Content = styled.div`
   display: flex;
   flex-direction: row;
   align-content: center;
-  justify-content: space-between;
+  gap: 10px;
   @media (min-width: 1024px) {
     align-items: flex-end;
     grid-column: 2/4;
@@ -20,6 +20,7 @@ export const Content = styled.div`
     grid-row: 2/3;
   }
 `;
+
 export const TextGroup = styled.div`
   width: 100%;
   height: auto;
@@ -59,6 +60,7 @@ export const RulesInputs = styled.input`
 
 export const PlaceTextAndInputsInColumn = styled.div`
   width: ${(props) => props.width};
+  max-width: ${(props) => props.maxWidth};
   height: 300px;
   /* background: red; */
   display: flex;

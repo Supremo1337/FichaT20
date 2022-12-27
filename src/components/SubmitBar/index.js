@@ -1,8 +1,8 @@
 import { ButtonSubmit, Content } from "./styles";
 
-export default function SubmitBar() {
+export default function SubmitBar(props) {
   return (
-    <Content>
+    <Content gridColumn={props.gridColumn} gridRow={props.gridRow}>
       <ButtonSubmit type={"submit"} value={"Salvar"} />
     </Content>
   );

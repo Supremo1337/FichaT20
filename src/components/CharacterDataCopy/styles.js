@@ -29,7 +29,7 @@ export const Content = styled.form`
   }
   @media (min-width: 1366px) {
     width: 100%;
-    height: 265px;
+    height: 100%;
     display: block;
     flex-wrap: wrap;
     margin-right: 10px;
