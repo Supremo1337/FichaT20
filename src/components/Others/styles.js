@@ -41,7 +41,7 @@ export const Size = styled.div`
 `;
 
 export const Select = styled.select`
-  background: red;
+  /* background: red; */
   grid-column: ${(props) =>props.gridColumn};
   grid-row: ${(props) =>props.gridRow};
   position: ${(props) =>props.position};

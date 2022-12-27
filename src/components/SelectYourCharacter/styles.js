@@ -25,5 +25,5 @@ export const NameCharacterCLickToAcess = styled.label``;
 export const CreateNewCharacter = styled.div`
   width: 43px;
   height: auto;
-  background: red;
+  /* background: red; */
 `;

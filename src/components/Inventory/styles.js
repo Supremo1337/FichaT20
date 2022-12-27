@@ -9,6 +9,7 @@ export const Content = styled.div`
   padding: 10px;
   flex-direction: column;
   align-items: center;
+  gap: 15px;
   /* grid-column: 1/6; */
   /* grid-row: 4/5; */
   @media (min-width: 1024px) {

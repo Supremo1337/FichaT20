@@ -1,4 +1,5 @@
 import {
+  Wrapper,
   Content,
   RulesInputs,
   RulesInputsGroup,
@@ -7,6 +8,7 @@ import {
 } from "./styles";
 import { SkillsText } from "../Skills/styles";
 import { Title } from "../../styles/global";
+import SubmitBar from "../SubmitBar";
 
 export default function Attack() {
   const inputs = [
@@ -28,26 +30,29 @@ export default function Attack() {
   ];
 
   return (
-    <Content>
-      <PlaceTextAndInputsInColumn width="25%" maxWidth="">
-        <Title fontSize={"1.6rem"}>ATAQUES</Title>
-        {inputs.map((_, index) => {
-          return <RulesInputs key={index} width="100%" />;
-        })}
-      </PlaceTextAndInputsInColumn>
+    <Wrapper>
+      <Content>
+        <PlaceTextAndInputsInColumn width="25%" maxWidth="">
+          <Title fontSize={"1.6rem"}>ATAQUES</Title>
+          {inputs.map((_, index) => {
+            return <RulesInputs key={index} width="100%" />;
+          })}
+        </PlaceTextAndInputsInColumn>
 
-      {teste.map((res, index) => {
-        return (
-          <PlaceTextAndInputsInColumn key={index} width={res.width}>
-            <SkillsText key={index} left={res.left} fontSize="1.2rem">
-              {res.title}
-            </SkillsText>
-            {inputs.map((_, index) => {
-              return <RulesInputs key={index} width="100%" />;
-            })}
-          </PlaceTextAndInputsInColumn>
-        );
-      })}
-    </Content>
+        {teste.map((res, index) => {
+          return (
+            <PlaceTextAndInputsInColumn key={index} width={res.width}>
+              <SkillsText key={index} left={res.left} fontSize="1.2rem">
+                {res.title}
+              </SkillsText>
+              {inputs.map((_, index) => {
+                return <RulesInputs key={index} width="100%" />;
+              })}
+            </PlaceTextAndInputsInColumn>
+          );
+        })}
+      </Content>
+      <SubmitBar gridColumn="2/7" gridRow="2/3" />
+    </Wrapper>
   );
 }

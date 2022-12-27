@@ -4,9 +4,9 @@ export const Content = styled.div`
   width: 100%;
   height: 40px;
   display: flex;
+  grid-column: ${(props) => props.gridColumn};
+  grid-row: ${(props) => props.gridRow};
   @media (min-width: 1024px) {
-    grid-column: ${(props) => props.gridColumn};
-    grid-row: ${(props) => props.gridRow};
   }
 `;
 

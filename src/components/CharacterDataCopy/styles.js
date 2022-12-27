@@ -24,6 +24,7 @@ export const Content = styled.form`
   /* grid-column: 1/2;
   grid-row: 1/3; */
   @media (min-width: 1024px) {
+    height: 100%;
     grid-column: 1/2;
     grid-row: 1/3;
   }

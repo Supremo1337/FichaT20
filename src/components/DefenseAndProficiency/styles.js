@@ -7,10 +7,12 @@ export const Content = styled.div`
   border-radius: 10px;
   padding: 10px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
   @media (min-width: 1024px) {
     grid-column: 2/4;
     grid-row: 4/5;
+    align-items: center;
   }
   @media (min-width: 1366px) {
     grid-column: 3/5;
@@ -32,17 +34,18 @@ export const DefenseGroup = styled.div`
 
 export const PartsRow = styled.div`
   width: 100%;
-  height: 35%;
+  height: 48%;
   display: flex;
 `;
 
 export const Defense = styled.div`
-  width: 92px;
+  width: 72px;
   height: 84px;
-  background: red;
+  /* background: red; */
   display: flex;
   align-items: center;
   @media (min-width: 1024px) {
+    width: 92px;
     width: 25%;
     height: 100px;
   }
@@ -85,8 +88,8 @@ export const InputDefense = styled.input`
 `;
 
 export const ModBox = styled.div`
-  width: 75%;
-  height: 87px;
+  width: 100%;
+  height: 100%;
   border: 2px solid;
   border-radius: 10px;
   padding: 5px;
@@ -96,12 +99,11 @@ export const ModBox = styled.div`
   align-items: center;
   column-gap: 5px;
   @media (min-width: 1024px) {
+    width: 75%;
     grid-template-columns: 2vw 6vw 2vw 10vw 1vw 9vw 2vw 10vw;
-    height: 87px;
   }
   @media (min-width: 1366px) {
     grid-template-columns: 2vw 3vw 1vw 3vw 1vw 3vw 1vw 3vw;
-    height: 87px;
   }
 `;
 

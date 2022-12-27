@@ -1,14 +1,13 @@
 import styled from "styled-components";
 
-export const Content = styled.div`
+export const Wrapper = styled.div`
   width: 100%;
   height: 100%;
   border: 2px solid;
   border-radius: 10px;
   padding: 10px;
   display: flex;
-  flex-direction: row;
-  align-content: center;
+  flex-direction: column;
   gap: 10px;
   @media (min-width: 1024px) {
     align-items: flex-end;
@@ -19,6 +18,16 @@ export const Content = styled.div`
     grid-column: 1/3;
     grid-row: 2/3;
   }
+`;
+
+export const Content = styled.div`
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  gap: 10px;
 `;
 
 export const TextGroup = styled.div`
@@ -34,7 +43,7 @@ export const TextGroup = styled.div`
 export const RulesInputsGroup = styled.div`
   width: 100%;
   height: 45px;
-  background: red;
+  /* background: red; */
   display: flex;
   justify-content: space-between;
   @media (min-width: 1024px) {

@@ -2,6 +2,7 @@ import { Content, TextArea } from "./styles";
 import { Title } from "../../styles/global";
 import * as React from "react";
 import Box from "@mui/material/Box";
+import SubmitBar from "../SubmitBar";
 
 export default function Notes() {
   return (
@@ -16,6 +17,7 @@ export default function Notes() {
         <Title fontSize={"20px"}>Anotações</Title>
         <TextArea rows="4" cols="20" />
       </Box>
+      <SubmitBar />
     </Content>
   );
 }

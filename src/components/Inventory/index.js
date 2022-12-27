@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Title } from "../../styles/global";
 import { InputSkills, NameSkills } from "../Skills/styles";
+import SubmitBar from "../SubmitBar";
 import {
   ColumnItens,
   Content,
@@ -165,6 +166,7 @@ export default function Invetory() {
           </MoreContent>
         </ThreeColumn>
       </Group>
+      <SubmitBar />
     </Content>
   );
 }

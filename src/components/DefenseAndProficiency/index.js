@@ -25,6 +25,7 @@ import { Select } from "../Others/styles";
 import { textTitleOfModAndBonus } from "./textTitleOfModAndBonus";
 import { inputsOfModAndBonus } from "./inputsOfModAndBonus";
 import { inputsArmorAndShield } from "./inputsArmorAndShield";
+import SubmitBar from "../SubmitBar";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -276,6 +277,7 @@ export default function DefenseAndProficiency() {
           <Others />
         </TabPanel>
       </Box>
+      <SubmitBar />
     </Content>
   );
 }

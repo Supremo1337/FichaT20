@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 100%;
   max-width: 500px;
-  height: 978px;
+  height: 100%;
   border: 2px solid;
   border-radius: 10px;
   padding: 10px;
@@ -32,7 +32,7 @@ export const Content = styled.div`
 export const SkillsText = styled.label`
   height: 16px;
   font-size: ${(props) => props.fontSize};
-  background: yellow;
+  /* background: yellow; */
   position: relative;
   left: ${(props) => props.left};
   grid-column: ${(props) => props.gridColumn};

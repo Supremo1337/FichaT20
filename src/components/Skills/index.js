@@ -12,6 +12,7 @@ import OpenWithIcon from "@mui/icons-material/OpenWith";
 import AcUnitIcon from "@mui/icons-material/AcUnit";
 import { Title } from "../../styles/global";
 import { skillsAttributes } from "./skillsAttributes";
+import SubmitBar from "../SubmitBar";
 
 export default function Skills() {
   return (
@@ -90,6 +91,7 @@ export default function Skills() {
           );
         })}
       </Column>
+      <SubmitBar gridColumn="1/7" gridRow="2/3" />
     </Content>
   );
 }
