@@ -51,7 +51,7 @@ export default function SelectYourCharacter() {
           <TormentaLogo width={"200px"} />
           {/* <Link href="./"> */}
           <a>
-            <LogOut onClick={logOut}>Encerrar Sessão</LogOut>
+            {/* <LogOut onClick={logOut}>Encerrar Sessão</LogOut> */}
           </a>
           {/* </Link> */}
         </TopBar>
