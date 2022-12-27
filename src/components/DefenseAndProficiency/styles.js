@@ -13,6 +13,7 @@ export const Content = styled.div`
     grid-column: 2/4;
     grid-row: 4/5;
     align-items: center;
+    justify-content: center;
   }
   @media (min-width: 1366px) {
     grid-column: 3/5;
