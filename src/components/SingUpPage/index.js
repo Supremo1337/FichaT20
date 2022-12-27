@@ -14,11 +14,6 @@ import {
   TextForgetAndLogin,
 } from "./styles";
 import { TormentaLogoLogin } from "../../../public/img/TormentaLogoLogin";
-import {
-  CheckboxContainer,
-  HiddenCheckbox,
-  StyledCheckbox,
-} from "./CheckBoxLogin";
 import { Envelope, Lock } from "phosphor-react";
 import Link from "next/link";
 import axios from "axios";
