@@ -154,11 +154,10 @@ export default function DefenseAndProficiency() {
                   top={"10px"}
                   gridColumn={"2/3"}
                   gridRow={"1/2"}
-                  defaultValue={"DES"}
                   onChange={(e) => {
                     setAttributeForSelect(e.target.value);
                   }}
-                  value={attributeForSelect}
+                  value={attributeForSelect || ""}
                 >
                   <Option value="FOR">FOR</Option>
                   <Option value="DES">DES</Option>

@@ -102,14 +102,14 @@ export default function Ficha() {
           {/* </Link> */}
         </TopBar>
         <Global>
-          <CharacterDataCopy isLightTheme={!isLightTheme} />
-          <LifeAndManeCopy />
-          <Attribute />
-          <Skills />
-          <Attack />
+          {/* <CharacterDataCopy isLightTheme={!isLightTheme} /> */}
+          {/* <LifeAndManeCopy /> */}
+          {/* <Attribute /> */}
+          {/* <Skills /> */}
+          {/* <Attack /> */}
           <DefenseAndProfiency />
-          <Notes />
-          <Invetory />
+          {/* <Notes /> */}
+          {/* <Invetory /> */}
           {/* <Magics /> */}
         </Global>
       </Wrapper>
