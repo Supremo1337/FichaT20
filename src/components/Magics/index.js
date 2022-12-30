@@ -24,6 +24,7 @@ import { Option, Title } from "../../styles/global";
 import PropTypes from "prop-types";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
+import SubmitBar from "../SubmitBar";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -148,7 +149,7 @@ export default function Magics() {
           <Group>
             <ConditionAndInputsDiv>
               <Conditions>
-                <TextAndInput width={"55%"} widthDesktop={"80%"}>
+                <TextAndInput width={"200px"} widthDesktop="200px">
                   <SkillsText fontSize="1.4rem">Atributo-chave</SkillsText>
                   <Select defaultValue={"INT"}>
                     <Option value="FOR">FOR</Option>
@@ -159,13 +160,15 @@ export default function Magics() {
                     <Option value="CAR">CAR</Option>
                   </Select>
                 </TextAndInput>
-                <TextAndInput width={"65%"} widthDesktop={"55%"}>
+                <TextAndInput width={"200px"} widthDesktop={"55%"}>
                   <SkillsText fontSize="1.4rem">MOD</SkillsText>
                   <InputSkills width={"65%"} placeholder={"0"} />
                 </TextAndInput>
                 <TestResistance>
-                  <TextAndInput>
-                    <SkillsText fontSize="1.4rem">TESTE DE RESISTÊNCIA</SkillsText>
+                  <TextAndInput width={"100%"} widthDesktop="100%">
+                    <SkillsText fontSize="1.4rem">
+                      TESTE DE RESISTÊNCIA
+                    </SkillsText>
                     <InputSkills width={"40%"} placeholder={"0"} />
                   </TextAndInput>
                   <ItensTitle>
@@ -189,7 +192,7 @@ export default function Magics() {
             <Description>
               <TextAreaProfieciency
                 placeholder="Descrição:"
-                height={"98%"}
+                height={"200px"}
                 border={"none"}
               />
             </Description>
@@ -197,6 +200,7 @@ export default function Magics() {
         </TabPanel>
         <TabPanel value={value} index={1}></TabPanel>
       </Box>
+      <SubmitBar />
     </Content>
   );
 }

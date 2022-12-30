@@ -11,9 +11,11 @@ export const Content = styled.div`
   align-items: center;
   /* grid-column: 1/6;
   grid-row: 5/6; */
+  padding: 5px 5px;
   @media (min-width: 1024px) {
     grid-column: 1/4;
     grid-row: 7/8;
+    padding: 10px 10px;
   }
   @media (min-width: 1366px) {
     grid-column: 1/6;
@@ -23,40 +25,56 @@ export const Content = styled.div`
 
 export const Group = styled.div`
   width: 100%;
-  height: 400px;
-  background: green;
+  height: auto;
+  /* background: green; */
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  padding-bottom: 10px;
+  @media (min-width: 1024px) {
+    padding-bottom: 0;
+  }
 `;
 
 export const ConditionAndInputsDiv = styled.div`
   width: 100%;
-  height: 50%;
-  background: purple;
+  height: 500px;
+  /* background: purple; */
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  @media (min-width: 1024px) {
+    width: 100%;
+    height: 280px;
+    flex-direction: row;
+  }
 `;
 
 export const Conditions = styled.div`
-  width: 20%;
-  height: 50%;
-  background: blue;
+  width: 100%;
+  height: 120px;
+  /* background: blue; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border: 2px solid;
   border-radius: 10px;
+  padding-left: 6px;
+  @media (min-width: 1024px) {
+    width: 30%;
+    height: 50%;
+  }
 `;
 
 export const TextAndInput = styled.div`
+  max-width: 347px;
   width: ${(props) => props.width};
   height: auto;
-  background: pink;
+  /* background: pink; */
   display: flex;
   justify-content: space-between;
-  @media (min-width: 1366px) {
+  @media (min-width: 1024px) {
     width: ${(props) => props.widthDesktop};
   }
 `;
@@ -64,15 +82,23 @@ export const TextAndInput = styled.div`
 export const TestResistance = styled.div`
   display: flex;
   flex-direction: column;
+  width: 98%;
 `;
 
 export const InputsDiv = styled.div`
-  width: 79%;
-  height: 100%;
-  background: orange;
+  width: 100%;
+  height: 350px;
+  /* background: orange; */
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 50% 50%;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  @media (min-width: 1024px) {
+    width: 68%;
+    height: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 10px;
+  }
 `;
 
 export const InputMagics = styled.input`
@@ -89,6 +115,7 @@ export const Description = styled.div`
   height: 49%;
   border: 1px solid;
   border-radius: 5px;
+  margin-bottom: 10px;
 `;
 
 export const ModalDiv = styled.div`

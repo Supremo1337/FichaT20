@@ -109,8 +109,8 @@ export default function Ficha() {
           <Attack />
           <DefenseAndProfiency />
           <Notes />
-          {/* <Invetory /> */}
-          {/* <Magics /> */}
+          <Invetory />
+          <Magics />
         </Global>
       </Wrapper>
     </>

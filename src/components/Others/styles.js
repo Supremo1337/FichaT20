@@ -23,7 +23,7 @@ export const TextAreaProfieciency = styled.textarea`
   width: 100%;
   height: ${(props) => props.height};
   background: ${(props) => props.background};
-  resize: none;
+  resize: vertical;
   border: ${(props) => props.border};
   border-radius: ${(props) => props.borderRadius};
   outline: none;
