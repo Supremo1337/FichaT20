@@ -5,6 +5,7 @@ export const Title = styled.label`
   font-weight: bold;
   grid-column: ${(props) => props.gridColumn};
   grid-row: ${(props) => props.gridRow};
+  margin-bottom: ${(props) => props.mgBottom};
 `;
 
 export const Option = styled.option``;

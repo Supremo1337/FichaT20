@@ -6,8 +6,6 @@ export const Content = styled.div`
   display: flex;
   grid-column: ${(props) => props.gridColumn};
   grid-row: ${(props) => props.gridRow};
-  @media (min-width: 1024px) {
-  }
 `;
 
 export const ButtonSubmit = styled.input`
@@ -17,7 +15,6 @@ export const ButtonSubmit = styled.input`
   border-radius: 10px;
   border: none;
   font-size: 2rem;
+  cursor: pointer;
 
-  @media (min-width: 1024px) {
-  }
 `;

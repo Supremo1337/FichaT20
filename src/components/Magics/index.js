@@ -95,7 +95,7 @@ export default function Magics() {
 
   return (
     <Content>
-      <Title fontSize="1.6rem">Magias</Title>
+      <Title mgBottom="10px" fontSize="1.6rem">Magias</Title>
       <div>
         <Button
           style={{

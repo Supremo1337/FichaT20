@@ -56,9 +56,9 @@ export default function SelectYourCharacter() {
           {/* </Link> */}
         </TopBar>
         <SelectCharacterBox >
-          <TextTitle>Personagem:</TextTitle>
+          <TextTitle fontSize="20px">Personagem:</TextTitle>
           <NameCharacterCLickToAcess>
-            Insira aqui o nome
+            Nome do Personagem
           </NameCharacterCLickToAcess>
         </SelectCharacterBox>
         <CreateNewCharacter>
@@ -74,6 +74,6 @@ export default function SelectYourCharacter() {
         </Button>
         </CreateNewCharacter>
       </Content>
-    </Wrapper>
+    </Wrapper>    
   );
 }

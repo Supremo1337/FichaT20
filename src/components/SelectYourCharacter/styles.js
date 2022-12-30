@@ -16,11 +16,13 @@ export const SelectCharacterBox = styled.div`
   border-radius: 10px;
   padding: 10px;
   display: flex;
-  align-content: center;
+  align-items: center;
   gap: 10px;
 `;
 
-export const NameCharacterCLickToAcess = styled.label``;
+export const NameCharacterCLickToAcess = styled.label`
+  font-size: 16px;
+`;
 
 export const CreateNewCharacter = styled.div`
   width: 43px;
